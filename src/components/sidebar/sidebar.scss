@@ -1,0 +1,32 @@
+.sidebar {
+    min-height: 100vh;
+    color: #94A3B8;
+    background-color: #1E293B;
+    border-right: .1px solid #E6E3E3;
+
+    .logo-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        border-bottom: .1px solid rgb(230, 227, 227);
+    }
+
+    .content {
+        div {
+            display: flex;
+        }
+
+        ul {
+            li {
+                color: #94A3B8;
+                cursor: pointer;
+                transition: all .2s linear;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

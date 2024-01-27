@@ -1,0 +1,11 @@
+.main {
+    display: flex;
+
+    .navbar {
+        flex: 4;
+    }
+
+    .sidebar {
+        flex: 1;
+    }
+}

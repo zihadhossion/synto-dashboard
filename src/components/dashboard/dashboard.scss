@@ -1,0 +1,49 @@
+.dashboard {
+    height: 100%;
+    padding: 2rem;
+
+    &-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: rgb(51 65 85);
+        margin-bottom: 1.5rem;
+        transition: all .2s linear;
+
+        &:hover {
+            color: #000;
+        }
+    }
+
+    .dashboardContainer {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        align-items: center;
+        gap: 1rem;
+
+        .box {
+            grid-column: span 3/ span 3;
+            height: 100%;
+
+        }
+
+        .box.down {
+            .item {
+                .left {
+                    .icon {
+                        background-color: #FDF7E6;
+                    }
+                }
+
+                .badge {
+                    color: rgb(234 179 8);
+                    background-color: #FDF7E6;
+                }
+
+                svg {
+                    fill: rgb(234 179 8);
+                }
+            }
+
+        }
+    }
+}

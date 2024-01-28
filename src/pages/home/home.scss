@@ -1,11 +1,12 @@
-.main {
+.home {
     display: flex;
-
-    .navbar {
-        flex: 4;
-    }
+    background-color: #F2F6F9;
 
     .sidebar {
         flex: 1;
+    }
+
+    .homeContainer {
+        flex: 4;
     }
 }

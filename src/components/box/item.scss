@@ -1,0 +1,75 @@
+.item {
+    height: 100%;
+    display: flex;
+    gap: .5rem;
+    border: 1px solid rgb(226 232 240);
+    padding: 1rem 1.2rem;
+    color: #1e293b;
+    background-color: #FFFFFF;
+    border-radius: .25rem;
+    position: relative;
+
+    .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            background: rgb(226, 232, 240);
+            border-radius: .25rem;
+            padding: .75rem;
+        }
+    }
+
+    .right {
+        margin-top: 1rem;
+        line-height: 1.5;
+        flex: 1;
+        text-align: center;
+
+        h3 {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-top: .5rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: .5rem 0;
+        }
+
+        p {
+            position: absolute;
+            font-size: .75rem;
+            color: #94a3b8;
+            text-align: end;
+            right: 10px;
+            bottom: 05px;
+        }
+    }
+
+    .badge {
+        color: #707AF3;
+        font-size: .75rem;
+        display: inline-flex;
+        align-items: center;
+        gap: .25rem;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: rgb(226, 232, 240);
+        border-radius: 9999px;
+        padding: 0.1rem .5rem;
+
+        svg {
+            font-size: .75rem;
+        }
+    }
+
+    svg {
+        fill: #707AF3;
+    }
+}

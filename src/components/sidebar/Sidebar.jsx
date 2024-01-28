@@ -1,19 +1,20 @@
 import "./sidebar.scss";
 import logo from "../../assets/desktop-logo.png";
+import darkLogo from "../../assets/desktop-dark.png";
 import DashboardIcon from '@mui/icons-material/Dashboard';
 
 function Sidebar() {
     return (
         <aside className="sidebar">
             <section className="logo-image">
-                <img src={logo} alt="" />
+                {/* <img src={logo} alt="" /> */}
+                <img src={darkLogo} alt="" />
             </section>
             <section className="content">
-                <div>
-                    <DashboardIcon />
-                    <p className="title"><span>Dashboards</span></p>
+                <div className="top">
+                    <p>Dashboards</p>
                 </div>
-                <ul>
+                <ul className="links-list">
                     <li>Sales</li>
                     <li>Ecommerce</li>
                     <li>Crypto</li>
@@ -31,7 +32,5 @@ function Sidebar() {
         </aside>
     )
 };
-
-
 
 export default Sidebar;

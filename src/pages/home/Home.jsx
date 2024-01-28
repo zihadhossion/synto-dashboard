@@ -1,12 +1,18 @@
 import "./home.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
+import Dashboard from "../../components/dashboard/dashboard";
+
 function Home() {
     return (
-        <div className="main">
+        <main className="home">
             <Sidebar />
-            <Navbar />
-        </div>
+            <div className="homeContainer">
+                <Navbar />
+                <Dashboard />
+            </div>
+
+        </main>
     )
 };
 

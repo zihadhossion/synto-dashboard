@@ -1,27 +1,42 @@
 .sidebar {
     min-height: 100vh;
-    color: #94A3B8;
+    // color: #94A3B8;
     background-color: #1E293B;
-    border-right: .1px solid #E6E3E3;
+    border-right: .1px solidrgb(255 255 255 / 0.1);
 
     .logo-image {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 70px;
-        border-bottom: .1px solid rgb(230, 227, 227);
+        border-bottom: .1px solid rgb(255 255 255 / 0.1);
     }
 
     .content {
-        div {
-            display: flex;
+        margin-top: 2rem;
+
+        .top {
+            font-size: .9rem;
+            color: gray;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            padding-left: 50px;
+            letter-spacing: .5px;
         }
 
-        ul {
+        .links-list {
+            text-align: center;
+
             li {
-                color: #94A3B8;
-                cursor: pointer;
+                font-size: 1rem;
+                font-weight: 600;
+                color: rgba(148, 163, 184, .85);
+                list-style-type: circle;
+                letter-spacing: 1px;
                 transition: all .2s linear;
+                padding: .9rem 0rem;
+                cursor: pointer;
 
                 &:hover {
                     color: #fff;

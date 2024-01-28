@@ -1,22 +1,129 @@
+%common-style {
+    color: rgb(128 135 147);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25rem;
+    transition: all .25s linear;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(248, 250, 252, .75);
+    }
+
+    &:active {
+        outline: 10px solid rgba(248, 250, 252, .75);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        cursor: pointer;
+    }
+
+    button {
+        background: transparent;
+        cursor: pointer;
+    }
+}
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: .75rem;
     padding: 20px 30px;
-    border-bottom: .1px solid #ddd;
+    border-bottom: .1px solid rgb(255 255 255 / 0.1);
     height: 70px;
+    background-color: #fff;
 
-    .flag,
-    .user {
-        width: 35px;
-        height: 35px;
+    .header {
+        &-country {
+            @extend %common-style;
 
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 100%;
-            object-fit: contain;
+            .flag {
+                width: 25px;
+                height: 25px;
+                border-radius: 100%;
+            }
+        }
+
+        &-search {
+            @extend %common-style;
+
+            .search {
+                background: transparent;
+            }
+        }
+
+        &-darkmode {
+            @extend %common-style;
+        }
+
+        &-fullscreen {
+            @extend %common-style;
+        }
+
+        &-shopcart {
+            @extend %common-style;
+            position: relative;
+        }
+
+        &-notification {
+            @extend %common-style;
+            position: relative;
+        }
+
+        &-bookmark {
+            @extend %common-style;
+        }
+
+        &-user {
+            .user {
+                width: 40px;
+                height: 40px;
+                background: none;
+
+                img {
+                    border: none;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    object-fit: contain;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .counter {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .75rem;
+        font-weight: bold;
+        position: absolute;
+        top: -3px;
+        right: -1px;
+
+        &.red {
+            top: -5px;
+            right: -1px;
+            background-color: red;
+        }
+
+        &.green {
+            top: -3px;
+            right: 3px;
+            background-color: green;
         }
     }
 }

@@ -1,3 +1,17 @@
 .salevalue {
     flex: 1;
+
+    .svContainer {
+        padding: 1rem;
+
+        .desc {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .icon {
+                display: inline-flex;
+            }
+        }
+    }
 }

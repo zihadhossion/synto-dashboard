@@ -6,7 +6,17 @@ function SaleChart() {
     return (
         <section className="salechart">
             <Topbar title={"Sales Over View"} />
-            <Barchart />
+            <div className="saleContainer">
+                <ul>
+                    <li>$7.65K <span>/Income</span></li>
+                    <li>$3.75K <span>/Expanses</span></li>
+                </ul>
+                <div>
+                    <Barchart />
+                </div>
+
+            </div>
+
         </section>
     )
 };

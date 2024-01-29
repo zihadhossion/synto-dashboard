@@ -1,14 +1,9 @@
 .user {
     display: flex;
     align-items: center;
-    margin: 1rem 0;
+    margin: .25rem 0;
     padding: .5rem;
     gap: 4rem;
-
-    &:first-child,
-    &:last-child {
-        margin: .25rem 0;
-    }
 
     img {
         width: 40px;

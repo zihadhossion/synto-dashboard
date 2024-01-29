@@ -1,0 +1,51 @@
+.user {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: .5rem;
+    gap: 4rem;
+
+    &:first-child,
+    &:last-child {
+        margin: .25rem 0;
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+
+    .content {
+        line-height: 1.4;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        .text {
+            display: block;
+
+            .title {
+                display: block;
+                font-size: .875rem;
+                font-weight: 600;
+                color: #0F172A;
+            }
+
+            .desc {
+                max-width: max-content;
+                font-size: .75rem;
+                font-weight: 400;
+                color: #94a3b8;
+            }
+        }
+    }
+
+    .price {
+        color: #1E293B;
+        align-self: center;
+        font-size: .85rem;
+        font-weight: 500;
+    }
+}

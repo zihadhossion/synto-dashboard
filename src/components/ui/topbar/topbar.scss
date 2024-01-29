@@ -1,0 +1,22 @@
+.top-header {
+    border-bottom: 1px solid rgba(226, 232, 240, 1);
+    width: 100%;
+
+    .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        svg {
+            fill: #1e293b;
+            font-size: 1.25rem;
+        }
+    }
+}

@@ -1,5 +1,4 @@
 .dashboard {
-    height: 100%;
     padding: 2rem;
 
     &-title {
@@ -23,7 +22,6 @@
         .box {
             grid-column: span 3/ span 3;
             height: 100%;
-
         }
 
         .box.down {
@@ -35,12 +33,7 @@
                 }
 
                 .badge {
-                    color: rgb(234 179 8);
                     background-color: #FDF7E6;
-                }
-
-                svg {
-                    fill: rgb(234 179 8);
                 }
             }
 

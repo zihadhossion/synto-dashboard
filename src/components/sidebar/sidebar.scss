@@ -2,7 +2,7 @@
     min-height: 100vh;
     // color: #94A3B8;
     background-color: #1E293B;
-    border-right: .1px solidrgb(255 255 255 / 0.1);
+    border-right: .1px solid rgb(255 255 255 / 0.1);
 
     .logo-image {
         display: flex;
@@ -30,12 +30,12 @@
 
             li {
                 font-size: 1rem;
-                font-weight: 600;
+                font-weight: 400;
                 color: rgba(148, 163, 184, .85);
                 list-style-type: circle;
                 letter-spacing: 1px;
                 transition: all .2s linear;
-                padding: .9rem 0rem;
+                padding: .75rem 0rem;
                 cursor: pointer;
 
                 &:hover {

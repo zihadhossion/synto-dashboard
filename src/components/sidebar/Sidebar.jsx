@@ -6,11 +6,11 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 function Sidebar() {
     return (
         <aside className="sidebar">
-            <section className="logo-image">
+            <div className="logo-image">
                 {/* <img src={logo} alt="" /> */}
                 <img src={darkLogo} alt="" />
-            </section>
-            <section className="content">
+            </div>
+            <div className="content">
                 <div className="top">
                     <p>Dashboards</p>
                 </div>
@@ -28,7 +28,7 @@ function Sidebar() {
                     <li>Stocks</li>
                     <li>Course</li>
                 </ul>
-            </section>
+            </div>
         </aside>
     )
 };

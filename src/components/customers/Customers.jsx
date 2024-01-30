@@ -7,7 +7,7 @@ function Customers() {
     return (
         <section className="customers">
             <Topbar title={"Top Customers"} />
-            <div className="bottom">
+            <div className="customer-list">
                 <User />
                 <User />
                 <User />

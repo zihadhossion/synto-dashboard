@@ -12,14 +12,14 @@ function SaleValue() {
                 <Piechart />
                 <div className="desc">
                     <div className="left">
-                        <p>Sale Items</p>
-                        <p>567</p>
-                        <p className="icon"><ArrowDropUpIcon />0.23%</p>
+                        <p className="title">Sale Items</p>
+                        <p className="price">567</p>
+                        <p className="icon"><ArrowDropUpIcon /><span>0.23%</span></p>
                     </div>
                     <div className="right">
-                        <p>Sale Revenue</p>
-                        <p>$11197</p>
-                        <p className="icon"><ArrowDropDownIcon />0.15%</p>
+                        <p className="title">Sale Revenue</p>
+                        <p className="price">$11197</p>
+                        <p className="icon"><ArrowDropDownIcon /><span>0.15%</span></p>
                     </div>
                 </div>
             </div>

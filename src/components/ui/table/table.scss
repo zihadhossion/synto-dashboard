@@ -1,0 +1,17 @@
+.table {
+    padding: 1rem;
+
+    .cellWrapper {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .image {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+}

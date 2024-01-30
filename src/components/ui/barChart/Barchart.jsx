@@ -50,7 +50,7 @@ const data = [
 function Chart() {
 
     return (
-        <ResponsiveContainer aspect={3 / 1} width={"100%"} height={"100%"}>
+        <ResponsiveContainer aspect={4 / 1} width={"100%"} height={"100%"}>
             <BarChart data={data}
                 margin={{
                     top: 20,

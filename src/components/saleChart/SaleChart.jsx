@@ -8,15 +8,13 @@ function SaleChart() {
             <Topbar title={"Sales Over View"} />
             <div className="saleContainer">
                 <ul>
-                    <li>$7.65K <span>/Income</span></li>
-                    <li>$3.75K <span>/Expanses</span></li>
+                    <li><span className="bullet"></span>$7.65K<span className="desc">/ Income</span></li>
+                    <li><span className="bullet"></span>$3.75K<span className="desc">/ Expanses</span></li>
                 </ul>
                 <div>
                     <Barchart />
                 </div>
-
             </div>
-
         </section>
     )
 };

@@ -1,8 +1,15 @@
 .customers {
     width: 100%;
-    flex: 1;
+    grid-column: span 3/span 3;
+
 
     .customer-list {
         padding: .5rem;
+    }
+}
+
+@media (max-width:1400px) {
+    .customers {
+        grid-column: span 6/span 6;
     }
 }

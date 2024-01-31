@@ -23,7 +23,6 @@ const rows = [
         img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
         category: "Michael Doe",
         totalSale: 900,
-
         stock: "Out Of Stock",
     },
     {

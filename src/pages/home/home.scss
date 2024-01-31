@@ -1,17 +1,13 @@
 .home {
-    display: flex;
     background-color: #F2F6F9;
 
-    .sidebar {
-        flex: 1;
-    }
-
     .homeContainer {
-        flex: 6;
+        // flex: 6;
+        margin-left: 15rem;
+        margin-top: 70px;
 
         .center {
-            display: flex;
-            gap: 1rem;
+            @extend %grid-base;
             padding: 0 2rem;
             margin-bottom: 1rem;
         }
@@ -20,6 +16,21 @@
             padding: 0 2rem;
             display: flex;
             gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .orderDetail {
+            margin: 0 2rem;
+
+            .odContainer {
+                padding: 1rem;
+            }
         }
     }
+}
+
+%grid-base {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
 }

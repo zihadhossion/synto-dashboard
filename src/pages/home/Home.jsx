@@ -8,13 +8,16 @@ import SaleValue from "../../components/saleValue/SaleValue";
 import ComingProduct from "../../components/comingProduct/ComingProduct";
 import Visitor from "../../components/visitor/Visitor";
 import SellProduct from "../../components/sellProduct/SellProduct";
+import BasicTable from "../../components/ui/table/BasicTable";
+import Topbar from "../../components/ui/topbar/Topbar";
+import Footer from "../../components/footer/Footer";
 
 function Home() {
     return (
         <main className="home">
             <Sidebar />
+            <Navbar />
             <div className="homeContainer">
-                <Navbar />
                 <Dashboard />
                 <div className="center">
                     <SaleChart />
@@ -26,6 +29,13 @@ function Home() {
                     <Visitor />
                     <SellProduct />
                 </div>
+                <section className="orderDetail">
+                    <Topbar title={"Recent Order Details"} />
+                    <div className="odContainer">
+                        <BasicTable />
+                    </div>
+                </section>
+                <Footer />
             </div>
         </main>
     )

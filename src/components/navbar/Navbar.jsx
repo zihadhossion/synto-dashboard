@@ -33,14 +33,18 @@ function Navbar() {
             </div>
             <div className="header-shopcart">
                 <button className="shopcart">
-                    <ShoppingBasketIcon />
+                    <ShoppingBasketIcon className="icon" />
                     <p className="counter red">4</p>
                 </button>
             </div>
             <div className="header-notification">
                 <button className="notification">
-                    <NotificationsNoneOutlinedIcon />
-                    <p className="counter green">3</p>
+                    <NotificationsNoneOutlinedIcon className="icon" />
+                    <span className="outer">
+                        <span className="animate-ping"></span>
+                        <span className="counter green">3</span>
+                    </span>
+
                 </button>
             </div>
             <div className="header-bookmark">
@@ -49,7 +53,7 @@ function Navbar() {
                 </button>
             </div>
             <div className="header-user">
-                <button className="user">
+                <button className="profile">
                     <img src={profile} alt="" />
                 </button>
             </div>

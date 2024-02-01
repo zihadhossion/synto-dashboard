@@ -8,15 +8,10 @@
 
         .center {
             @extend %grid-base;
-            padding: 0 2rem;
-            margin-bottom: 1rem;
         }
 
         .bottom {
-            padding: 0 2rem;
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
+            @extend %grid-base;
         }
 
         .orderDetail {
@@ -33,4 +28,6 @@
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 1rem;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
 }

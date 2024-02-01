@@ -29,9 +29,10 @@ function Sidebar() {
         <aside className={sidebarActive ? "sidebar" : "sidebar active"} >
             <div className="logo-image">
                 <Link to={"/"}>
-                    <img src={toggleLogo} alt="" />
+                    {sidebarActive ? <img src={darkLogo} alt="" /> : <img src={toggleLogo} alt="" />}
+
                     {/* <img src={logo} alt="" /> */}
-                    {/* <img src={darkLogo} alt="" /> */}
+
                 </Link>
             </div>
             <div className="content">

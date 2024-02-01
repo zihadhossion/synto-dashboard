@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./navbar.scss";
 import SearchIcon from '@mui/icons-material/Search';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
@@ -10,14 +10,15 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import flag from "../../assets/flag.png";
 import profile from "../../assets/profile.jpg";
+import { SidebarContext } from "../../context/SidebarContext";
 
 function Navbar() {
-    const [sidebarActive, setSidebarActive] = useState(true);
+    const { sidebarActive, setSidebarActive } = useContext(SidebarContext);
 
     return (
-        <header id="header">
+        <header className={sidebarActive ? "header" : "header active"}>
             <nav className="navbar">
-                <div className="left">
+                <div className="left" onClick={() => setSidebarActive((e) => !e)}>
                     {sidebarActive ? <ArrowForwardIcon /> : <ArrowBackIcon />}
                 </div>
                 <div className="right">

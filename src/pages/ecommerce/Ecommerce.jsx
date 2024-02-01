@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import "./home.scss";
+import "./ecommerce.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Dashboard from "../../components/dashboard/dashboard";
@@ -12,13 +11,10 @@ import SellProduct from "../../components/sellProduct/SellProduct";
 import BasicTable from "../../components/ui/table/BasicTable";
 import Topbar from "../../components/ui/topbar/Topbar";
 import Footer from "../../components/footer/Footer";
-import { SidebarContext } from "../../context/SidebarContext";
 
-function Home() {
-    const { sidebarActive } = useContext(SidebarContext);
-
+function Ecommerce() {
     return (
-        <main className={sidebarActive ? "home" : "home active"}>
+        <main className="home">
             <Sidebar />
             <Navbar />
             <div className="homeContainer">
@@ -45,4 +41,4 @@ function Home() {
     )
 };
 
-export default Home;
+export default Ecommerce;

@@ -3,7 +3,10 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    display: block;
+    // display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: .25rem;
     transition: all .25s linear;
     cursor: pointer;
@@ -36,7 +39,7 @@
     }
 }
 
-#header {
+.header {
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -52,6 +55,10 @@
     padding-left: 15rem;
     transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
 
+    &.active {
+        padding-left: 5rem;
+    }
+
     .navbar {
         width: 100%;
         display: flex;
@@ -63,12 +70,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 2.25rem;
-            height: 2.25rem;
+            width: 1.5rem;
+            height: 1.5rem;
             color: #808793;
             background-color: transparent;
             border: 2px solid #808793;
             border-radius: 50%;
+            cursor: pointer;
+
+            svg {
+                font-size: 1rem;
+            }
         }
 
         .right {

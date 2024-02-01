@@ -13,7 +13,7 @@ const svgIcon = {
 function Dashboard() {
     return (
         <div className="dashboard">
-            < h1 className="dashboard-title" > Sales Dashboard</ h1>
+            <h1 className="dashboard-title">Sales Dashboard</ h1>
             <div className="dashboardContainer">
                 <div className="box">
                     <Item title="Total Revenue" amount="$26,35,262" MySvg={svgIcon.one} BadgeIcon={TrendingUpIcon} badge="2.2%" />

@@ -9,7 +9,7 @@ function SaleChart() {
             <div className="saleContainer">
                 <ul>
                     <li><span className="bullet"></span>$7.65K<span className="desc">/ Income</span></li>
-                    <li><span className="bullet"></span>$3.75K<span className="desc">/ Expanses</span></li>
+                    <li><span className="bullet expanse"></span>$3.75K<span className="desc">/ Expanses</span></li>
                 </ul>
                 <div>
                     <Barchart />

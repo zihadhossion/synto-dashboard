@@ -19,7 +19,7 @@ function Navbar() {
         <header className={sidebarActive ? "header" : "header active"}>
             <nav className="navbar">
                 <div className="left" onClick={() => setSidebarActive((e) => !e)}>
-                    {sidebarActive ? <ArrowForwardIcon /> : <ArrowBackIcon />}
+                    {sidebarActive ? <ArrowBackIcon /> : <ArrowForwardIcon />}
                 </div>
                 <div className="right">
                     <div className="header-country">

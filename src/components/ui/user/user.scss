@@ -1,9 +1,9 @@
 .user {
+    width: 100%;
     display: flex;
     align-items: center;
-    margin: .25rem 0;
-    padding: .5rem;
-    gap: 4rem;
+    justify-content: space-around;
+    padding: 0 1rem;
 
     img {
         width: 40px;
@@ -37,10 +37,16 @@
         }
     }
 
-    .price {
-        color: #1E293B;
-        align-self: center;
-        font-size: .85rem;
-        font-weight: 500;
+    .price_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .price {
+            color: #1E293B;
+            align-self: center;
+            font-size: .85rem;
+            font-weight: 500;
+        }
     }
 }

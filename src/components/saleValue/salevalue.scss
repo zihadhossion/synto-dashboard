@@ -1,58 +1,69 @@
 .salevalue {
     grid-column: span 3/span 3;
+    height: 100%;
 
     .svContainer {
-        .desc {
-            border-top: 1px solid rgb(226 232 240);
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            text-align: center;
-            font-weight: 500;
+        height: 100%;
 
-            .left,
-            .right {
-                line-height: 1.4;
-            }
+        .chartContainer {
+            margin: 1rem 0;
+        }
 
-            .left {
-                border-right: 1px solid rgb(226 232 240);
-                padding: 1.25rem;
-            }
+        .descBox {
+            .desc {
+                border-top: 1px solid rgb(226 232 240);
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                text-align: center;
+                font-weight: 500;
 
-            .right {
-                padding: 1.25rem;
+                .left,
+                .right {
+                    line-height: 1.4;
+                }
+
+                .left {
+                    border-right: 1px solid rgb(226 232 240);
+                    padding: 1.25rem;
+                }
+
+                .right {
+                    padding: 1.25rem;
+
+                    .icon {
+                        color: rgb(244 63 94);
+                    }
+                }
+
+                .title {
+                    font-size: .875rem;
+                    color: rgb(100 116 139);
+                }
+
+                .price {
+                    font-size: 1.5rem;
+                    color: #1e293b;
+                }
 
                 .icon {
-                    color: rgb(244 63 94);
-                }
-            }
+                    color: rgb(34 197 94);
+                    font-size: .875rem;
+                    font-weight: 600;
+                    display: inline-flex;
+                    align-items: center;
 
-            .title {
-                font-size: .875rem;
-                color: rgb(100 116 139);
-            }
+                    svg {
+                        font-size: 1.25rem;
+                    }
 
-            .price {
-                font-size: 1.5rem;
-                color: #1e293b;
-            }
-
-            .icon {
-                color: rgb(34 197 94);
-                font-size: .875rem;
-                font-weight: 600;
-                display: inline-flex;
-                align-items: center;
-
-                svg {
-                    font-size: 1.25rem;
-                }
-
-                span {
-                    margin-left: -.2rem;
+                    span {
+                        margin-left: -.2rem;
+                    }
                 }
             }
         }
+
+
     }
 }
 

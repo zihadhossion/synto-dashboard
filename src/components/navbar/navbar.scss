@@ -43,7 +43,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    border-bottom: 1px solid rgb(255 255 255 / 0.1);
+    border-bottom: 1px solid rgb(226, 232, 240);
     height: 71px;
     color: rgb(51 65 85);
     background-color: #fff;
@@ -53,7 +53,7 @@
     left: 0;
     z-index: 49;
     padding-left: 15rem;
-    transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
 
     &.active {
         padding-left: 5rem;
@@ -209,8 +209,6 @@
         }
     }
 }
-
-
 
 @keyframes ring {
     0% {

@@ -6,3 +6,10 @@
         background: #ddd;
     }
 }
+
+@media (max-width:1400px) {
+    .sellproduct {
+        grid-column: span 12 /span 12;
+    }
+
+}

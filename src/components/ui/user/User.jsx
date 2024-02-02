@@ -11,7 +11,7 @@ function User() {
                     <p className="desc">15 purchases</p>
                 </div>
             </div>
-            <div>
+            <div className="price_box">
                 <span className="price">$1,835</span>
             </div>
         </div>

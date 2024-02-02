@@ -5,3 +5,9 @@
         padding: .5rem;
     }
 }
+
+@media (max-width:1400px) {
+    .comingproduct {
+        grid-column: span 6 /span 6;
+    }
+}

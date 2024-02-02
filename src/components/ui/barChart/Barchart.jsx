@@ -1,77 +1,67 @@
 import "./barchart.scss";
-import React, { PureComponent } from 'react';
-import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import ReactApexCharts from 'react-apexcharts';
 
-const data = [
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        amt: 2290,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        amt: 2000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 2181,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        amt: 2500,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        amt: 2100,
-    },
-];
+const data = {
+    series: [{
+        name: 'Income',
+        data: [54, 27, 65, 56, 81, 58, 45, 81, 70, 56, 87, 75]
+    }, {
+        name: 'Expanses',
+        data: [45, 36, 41, 86, 45, 68, 52, 53, 91, 55, 60, 48]
+    }],
+    options: {
+        chart: {
+            type: 'bar',
+            height: 350,
+            toolbar: {
+                show: false,
+            }
+        },
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '55%',
+                endingShape: 'rounded',
+            },
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            show: true,
+            width: 2,
+            colors: ['transparent']
+        },
+        xaxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        },
+        fill: {
+            opacity: 1
+        },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return "$ " + val
+                }
+            }
+        }
+        ,
+        colors: ['#8a96ff', '#d2d8f0'],
+    }
+}
 
-function Chart() {
+function BarChart() {
 
     return (
-        <ResponsiveContainer aspect={4 / 1} width={"100%"} height={"100%"}>
-            <BarChart data={data}
-                margin={{
-                    top: 20,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                }} width={100} height={500}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis yAxisId="left" orientation="left" stroke="#8884d8" />
-                <YAxis yAxisId="right" orientation="right" stroke="#82ca9d" />
-                <Tooltip />
-                <Legend />
-                <Bar yAxisId="left" dataKey="pv" fill="#8884d8" />
-                <Bar yAxisId="right" dataKey="uv" fill="#82ca9d" />
-            </BarChart>
-        </ResponsiveContainer>
+        <>
+            <div id="chart">
+                <ReactApexCharts options={data.options} series={data.series} type="bar" height={350} />
+            </div>
+            <div id="html-dist"></div>
+        </>
     )
 };
-export default Chart;
+export default BarChart;
 
 
 

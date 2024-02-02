@@ -5,6 +5,9 @@
 
     .customer-list {
         padding: .5rem;
+        display: grid;
+        place-items: center;
+        height: 90%;
     }
 }
 

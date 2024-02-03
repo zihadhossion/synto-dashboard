@@ -1,10 +1,10 @@
 .sellproduct {
     grid-column: span 6 /span 6;
 
-    ::-webkit-scrollbar {
-        width: .1px;
-        background: #ddd;
-    }
+    // ::-webkit-scrollbar {
+    //     width: .1px;
+    //     background: #ddd;
+    // }
 }
 
 @media (max-width:1400px) {

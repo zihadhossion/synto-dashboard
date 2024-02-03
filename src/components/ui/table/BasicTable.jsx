@@ -53,37 +53,35 @@ const rows = [
 
 function BasicTable() {
     return (
-        <div className="table">
-            <TableContainer component={Paper}>
+        <>
+            <TableContainer component={Paper} className="table">
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>Product</TableCell>
-                            <TableCell align="right">Category</TableCell>
-                            <TableCell align="right">Stock</TableCell>
-                            <TableCell align="right">Total Sales</TableCell>
+                    <TableHead className="tableHead">
+                        <TableRow className="tableRow">
+                            <TableCell className="tableCell">Product</TableCell>
+                            <TableCell className="tableCell">Category</TableCell>
+                            <TableCell className="tableCell">Stock</TableCell>
+                            <TableCell className="tableCell">Total Sales</TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody>
+                    <TableBody >
                         {rows.map((row) => (
-                            <TableRow
-                                key={row.id}
-                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                                <TableCell>
+                            <TableRow key={row.id} className="tableRow">
+                                <TableCell className="tableCell">
                                     <div className="cellWrapper">
                                         <img src={row.img} alt="" className="image" />
                                         {row.product}
                                     </div>
                                 </TableCell>
-                                <TableCell align="right">{row.category}</TableCell>
-                                <TableCell align="right">{row.stock}</TableCell>
-                                <TableCell align="right">{row.totalSale}</TableCell>
+                                <TableCell className="tableCell">{row.category}</TableCell>
+                                <TableCell className="tableCell">{row.stock}</TableCell>
+                                <TableCell className="tableCell">{row.totalSale}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
                 </Table>
             </TableContainer>
-        </div>
+        </>
     )
 };
 

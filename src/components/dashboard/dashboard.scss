@@ -44,47 +44,11 @@
 
 @media (max-width:1300px) {
     .dashboard {
-        // padding: 2rem 2rem 0 2rem;
-        // margin-bottom: 1rem;
-
-        // &-title {
-        //     font-size: 1.5rem;
-        //     font-weight: 500;
-        //     color: rgb(51 65 85);
-        //     margin-bottom: 1.5rem;
-        //     transition: all .2s linear;
-
-        //     &:hover {
-        //         color: #000;
-        //     }
-        // }
-
         .dashboardContainer {
-            // display: grid;
-            // grid-template-columns: repeat(12, minmax(0, 1fr));
-            // align-items: center;
-            // gap: 1rem;
-
             .box {
                 grid-column: span 6/ span 6;
                 position: relative;
-                // height: 100%;
             }
-
-            // .box.down {
-            //     .item {
-            //         .left {
-            //             .icon {
-            //                 background-color: #FDF7E6;
-            //             }
-            //         }
-
-            //         .badge {
-            //             background-color: #FDF7E6;
-            //         }
-            //     }
-
-            // }
         }
     }
 }

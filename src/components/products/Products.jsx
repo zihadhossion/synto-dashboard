@@ -1,14 +1,14 @@
 import Product from "../ui/product/Product";
 import Topbar from "../ui/topbar/Topbar";
-import "./comingproduct.scss";
+import "./products.scss";
 import item1 from "../../assets/item-1.jpg";
 import item2 from "../../assets/item-2.jpg";
 import item3 from "../../assets/item-3.jpg";
 
-function ComingProduct() {
+function Products({ title }) {
     return (
         <section className="comingproduct">
-            <Topbar title={"Upcoming Products"} />
+            <Topbar title={title} />
             <div className="cpContainer">
                 <Product product={item1} title={"Smart Phone"} desc={"Mobiles"} price={"$199.99"} date={"1 Apr 2023"} />
                 <Product product={item2} title={"Nikon Camera"} desc={"Electronics"} price={"$899.00"} date={"1 Apr 2023"} />
@@ -21,4 +21,4 @@ function ComingProduct() {
     )
 };
 
-export default ComingProduct;
+export default Products;

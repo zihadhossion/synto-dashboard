@@ -54,28 +54,28 @@ const rows = [
 function BasicTable() {
     return (
         <>
-            <TableContainer component={Paper} className="table">
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableContainer className="table">
+                <Table aria-label="simple table" spacing={0}>
                     <TableHead className="tableHead">
                         <TableRow className="tableRow">
-                            <TableCell className="tableCell">Product</TableCell>
-                            <TableCell className="tableCell">Category</TableCell>
-                            <TableCell className="tableCell">Stock</TableCell>
-                            <TableCell className="tableCell">Total Sales</TableCell>
+                            <TableCell className="tableCell" >Product</TableCell>
+                            <TableCell className="tableCell" >Category</TableCell>
+                            <TableCell className="tableCell" >Stock</TableCell>
+                            <TableCell className="tableCell" >Total Sales</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody >
                         {rows.map((row) => (
                             <TableRow key={row.id} className="tableRow">
-                                <TableCell className="tableCell">
+                                <TableCell className="tableCell" >
                                     <div className="cellWrapper">
                                         <img src={row.img} alt="" className="image" />
                                         {row.product}
                                     </div>
                                 </TableCell>
-                                <TableCell className="tableCell">{row.category}</TableCell>
-                                <TableCell className="tableCell">{row.stock}</TableCell>
-                                <TableCell className="tableCell">{row.totalSale}</TableCell>
+                                <TableCell className="tableCell" >{row.category}</TableCell>
+                                <TableCell className="tableCell" >{row.stock}</TableCell>
+                                <TableCell className="tableCell" >{row.totalSale}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
@@ -83,6 +83,7 @@ function BasicTable() {
             </TableContainer>
         </>
     )
+
 };
 
 export default BasicTable;

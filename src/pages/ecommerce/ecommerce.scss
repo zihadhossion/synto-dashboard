@@ -2,12 +2,6 @@
     background-color: #F2F6F9;
     transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
 
-    &.active {
-        .homeContainer {
-            margin-left: 5rem;
-        }
-    }
-
     &-Container {
         margin-left: 15rem;
         margin-top: 70px;
@@ -86,10 +80,26 @@
     }
 }
 
+.main {
+    .main-container {
+        margin-left: 15rem;
+    }
+}
+
 %grid-base {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 1rem;
     padding: 0 2rem;
     margin-bottom: 1rem;
+}
+
+.app {
+    &.active {
+        .main {
+            .main-container {
+                margin-left: 5rem !important;
+            }
+        }
+    }
 }

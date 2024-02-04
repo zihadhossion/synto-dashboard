@@ -30,9 +30,7 @@ function Sidebar() {
             <div className="logo-image">
                 <Link to={"/"}>
                     {sidebarActive ? <img src={darkLogo} alt="" /> : <img src={toggleLogo} alt="" />}
-
                     {/* <img src={logo} alt="" /> */}
-
                 </Link>
             </div>
             <div className="content">

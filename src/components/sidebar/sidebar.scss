@@ -1,6 +1,5 @@
 .sidebar {
     height: 100%;
-    // color: #94A3B8;
     background-color: #1E293B;
     border-right: .1px solid rgb(255 255 255 / 0.1);
     position: fixed;
@@ -31,7 +30,7 @@
                     width: 100%;
 
                     svg {
-                        font-size: 1.5rem;
+                        font-size: 1.25rem;
                     }
 
                     span {
@@ -62,23 +61,18 @@
             color: gray;
             font-weight: 500;
             text-transform: uppercase;
-            margin-bottom: 2rem;
-            padding-left: 50px;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
             letter-spacing: .5px;
         }
 
         .links-list {
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
-            // align-items: center;
             margin: 0 3rem;
 
             li {
                 width: 100px;
                 display: flex;
                 align-items: center;
-                // justify-content: space-between;
                 gap: .5rem;
                 font-size: 1rem;
                 font-weight: 400;
@@ -86,7 +80,7 @@
                 list-style-type: circle;
                 letter-spacing: 1px;
                 transition: all .2s linear;
-                padding: .75rem 0rem;
+                padding: .85rem 0rem;
                 cursor: pointer;
 
                 &:hover {

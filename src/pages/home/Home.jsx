@@ -5,13 +5,12 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Customers from "../../components/customers/Customers";
 import SaleChart from "../../components/saleChart/SaleChart";
 import SaleValue from "../../components/saleValue/SaleValue";
-import ComingProduct from "../../components/comingProduct/ComingProduct";
+import Products from "../../components/products/Products";
 import Visitor from "../../components/visitor/Visitor";
 import SellProduct from "../../components/sellProduct/SellProduct";
 import BasicTable from "../../components/ui/table/BasicTable";
 import Topbar from "../../components/ui/topbar/Topbar";
 import Footer from "../../components/footer/Footer";
-import { SidebarContext } from "../../context/SidebarContext";
 import Item from "../../components/ui/item/Item";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
@@ -24,13 +23,12 @@ const svgIcon = {
 }
 
 function Home() {
-    const { sidebarActive } = useContext(SidebarContext);
 
     return (
-        <main className={sidebarActive ? "home" : "home active"}>
+        <main className="main home">
             <Sidebar />
             <Navbar />
-            <div className="homeContainer">
+            <div className="main-container homeContainer">
                 <div className="dashboard">
                     <h1 className="dashboard-title">Sales Dashboard</ h1>
                     <div className="dashboardContainer">
@@ -54,9 +52,9 @@ function Home() {
                     <SaleValue />
                 </div>
                 <div className="bottom">
-                    <ComingProduct />
+                    <Products title={"Upcoming Products"} />
                     <Visitor />
-                    <SellProduct />
+                    <SellProduct title={"Top Selling Products"} />
                 </div>
                 <section className="orderDetail">
                     <Topbar title={"Recent Order Details"} />

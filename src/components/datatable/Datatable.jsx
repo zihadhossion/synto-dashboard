@@ -2,37 +2,56 @@ import React from "react";
 // import TableRow from "./TableRow";
 // import TableHeadItem from "./TableHead";
 
-const theadData = ["Name", "Email", "Date"];
+// const theadData = ["Name", "Email", "Date"];
 
-const tbodyData = [
+const tName = [
     {
         id: "1",
-        items: ["John", "john@email.com", "01/01/2021"]
+        items: ["John"]
     },
     {
         id: "2",
-        items: ["Sally", "sally@email.com", "12/24/2020"]
+        items: ["Sally",]
     },
     {
         id: "3",
-        items: ["Maria", "maria@email.com", "12/01/2020"]
+        items: ["Maria",]
+    },
+]
+const tPrice = [
+    {
+        id: "1",
+        items: ["229$"]
+    },
+    {
+        id: "2",
+        items: ["129$"]
+    },
+    {
+        id: "3",
+        items: ["199$"]
+    },
+]
+const tDate = [
+    {
+        id: "1",
+        items: ["01/01/2021"]
+    },
+    {
+        id: "2",
+        items: ["12/24/2020"]
+    },
+    {
+        id: "3",
+        items: ["12/01/2020"]
     },
 ]
 
 const Datatable = () => {
     return (
         <table>
-            <thead>
-                <tr>
-                    {theadData.map((h) => {
-                        return <TableHeadItem key={h} item={h} />;
-                    })}
-                </tr>
-            </thead>
             <tbody>
-                {tbodyData.map((item) => {
-                    return <TableRow key={item.id} data={item.items} />;
-                })}
+                <TableRow />
             </tbody>
         </table>
     );
@@ -40,27 +59,95 @@ const Datatable = () => {
 
 export default Datatable;
 
-
-const TableHeadItem = ({ item }) => {
-    return (
-        <td title={item}>
-            {item}
-        </td>
-    );
-};
-
-// export default TableHeadItem;
-
-// import React from "react";
-
 const TableRow = ({ data }) => {
     return (
-        <tr>
-            {data.map((item) => {
-                return <td key={item}>{item}</td>;
-            })}
-        </tr>
+        <>
+            <tr>
+                <TableName />
+            </tr>
+            <tr>
+                <TablePrice />
+            </tr>
+            <tr>
+                <TableDate />
+            </tr>
+        </>
     );
 };
 
+const TableName = () => {
+    return (
+        <td>
+            {tName.map((item) => {
+                return <td key={item.id}>
+                    <div>
+                        <p>Name</p>
+                        <p>{item.items}</p>
+                    </div>
+                </td>;
+            })}
+        </td>
+    )
+}
+const TablePrice = () => {
+    return (
+        <td>
+            {tPrice.map((item) => {
+                return <td key={item.id}>
+                    <div>
+                        <p>Price</p>
+                        <p>{item.items}</p>
+                    </div>
+                </td>;
+            })}
+        </td>
+    )
+}
+const TableDate = () => {
+    return (
+        <td>
+            {tDate.map((item) => {
+                return <td key={item.id}>
+                    <div>
+                        <p>Delivery Date</p>
+                        <p>{item.items}</p>
+                    </div>
+                </td>;
+            })}
+        </td>
+    )
+}
+
 // export default TableRow;
+
+// const TableRow = ({ data }) => {
+//     return (
+//         <tr>
+
+//             {tName.map((item) => {
+//                 return <td key={item.id}>
+//                     <div>
+//                         <p>Name</p>
+//                         {item.items}
+//                     </div>
+//                 </td>;
+//             })}
+//             {tPrice.map((item) => {
+//                 return <td key={item.id}>
+//                     <div>
+//                         <p>Price</p>
+//                         {item.items}
+//                     </div>
+//                 </td>;
+//             })}
+//             {tDate.map((item) => {
+//                 return <td key={item.id}>
+//                     <div>
+//                         <p>Delivery Time</p>
+//                         {item.items}
+//                     </div>
+//                 </td>;
+//             })}
+//         </tr>
+//     );
+// };

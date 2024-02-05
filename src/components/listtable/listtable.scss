@@ -1,0 +1,53 @@
+.table {
+    width: 100%;
+
+    .table-Row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: .75rem;
+        padding: 1.5rem 2rem;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .table-Cell {
+            font-weight: 500;
+
+            .text {
+                text-align: left;
+            }
+
+            .tiHead {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+            }
+
+            span {
+                color: #64748b;
+                font-size: .75rem;
+                line-height: 1.5;
+            }
+
+            p {
+                color: #1e293b;
+                line-height: 1.5;
+                font-size: .85rem;
+            }
+
+            .price {
+                font-weight: 600;
+            }
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+}

@@ -103,3 +103,27 @@
         }
     }
 }
+
+@media (max-width:1300px) {
+    .ecommerce {
+
+        &-Container {
+
+            @media (max-width:1300px) {
+                .dashboard {
+                    .dashboardContainer {
+                        .box {
+                            grid-column: span 6/ span 6;
+                            position: relative;
+                        }
+                    }
+                }
+            }
+
+            .center {
+                @extend %grid-base;
+            }
+
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import BasicTable from "../ui/table/BasicTable";
+import Table from "../ui/table/Table";
 import Topbar from "../ui/topbar/Topbar";
 import "./sellproduct.scss";
 
@@ -7,7 +7,7 @@ function SellProduct({ title }) {
         <section className="sellproduct">
             <Topbar title={title} />
             <div className="spContaier">
-                <BasicTable />
+                <Table />
             </div>
         </section>
     )

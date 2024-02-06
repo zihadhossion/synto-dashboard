@@ -1,5 +1,5 @@
 .sellproduct {
-    grid-column: span 6 /span 6;
+    grid-column: span 12 /span 12;
 
     // ::-webkit-scrollbar {
     //     width: .1px;
@@ -7,9 +7,8 @@
     // }
 }
 
-@media (max-width:1400px) {
+@media (min-width:1300px) {
     .sellproduct {
-        grid-column: span 12 /span 12;
+        grid-column: span 6 /span 6;
     }
-
 }

@@ -1,3 +1,9 @@
 .mixedchart {
-    grid-column: span 6 / span 6;
+    grid-column: span 12 / span 12;
+}
+
+@media (min-width:1100px) {
+    .mixedchart {
+        grid-column: span 6 /span 6;
+    }
 }

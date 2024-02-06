@@ -1,5 +1,5 @@
 .reviews {
-    grid-column: span 3 /span 3;
+    grid-column: span 6 /span 6;
 
     .reviewContainer {
         text-align: center;
@@ -52,5 +52,11 @@
                 }
             }
         }
+    }
+}
+
+@media (min-width:1100px) {
+    .reviews {
+        grid-column: span 3 /span 3;
     }
 }

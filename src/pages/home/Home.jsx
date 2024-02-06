@@ -8,7 +8,7 @@ import SaleValue from "../../components/saleValue/SaleValue";
 import Products from "../../components/products/Products";
 import Visitor from "../../components/visitor/Visitor";
 import SellProduct from "../../components/sellProduct/SellProduct";
-import BasicTable from "../../components/ui/table/BasicTable";
+import Table from "../../components/ui/table/Table";
 import Topbar from "../../components/ui/topbar/Topbar";
 import Footer from "../../components/footer/Footer";
 import Item from "../../components/ui/item/Item";
@@ -59,7 +59,7 @@ function Home() {
                 <section className="orderDetail">
                     <Topbar title={"Recent Order Details"} />
                     <div className="odContainer">
-                        <BasicTable />
+                        <Table />
                     </div>
                 </section>
                 <Footer />

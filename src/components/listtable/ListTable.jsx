@@ -5,13 +5,13 @@ export default function ListTable() {
 
     return (
         <>
-            <table className="table">
+            <table className="table" key={tasks.id}>
                 <tbody className="tableBody">
-                    <TableRow key={tasks.id} userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
-                    <TableRow key={tasks.id} userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
-                    <TableRow key={tasks.id} userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
-                    <TableRow key={tasks.id} userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
-                    <TableRow key={tasks.id} userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
+                    <TableRow userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
+                    <TableRow userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
+                    <TableRow userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
+                    <TableRow userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
+                    <TableRow userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
                 </tbody>
             </table>
         </>)

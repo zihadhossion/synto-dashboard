@@ -1,10 +1,8 @@
 import { useContext } from "react";
-import "./ecommerce.scss";
+import "./jobs.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import ListTable from "../../components/listtable/ListTable";
 import Products from "../../components/products/Products";
-import Visitor from "../../components/visitor/Visitor";
 import SellProduct from "../../components/sellProduct/SellProduct";
 import Table from "../../components/ui/table/Table";
 import Topbar from "../../components/ui/topbar/Topbar";
@@ -15,17 +13,18 @@ import Item from "../../components/ui/item/Item";
 import Reviews from "../../components/reviews/Reviews";
 import TaskList from "../../components/taskList/TaskList";
 import MixedChart from "../../components/ui/mixedChart/MixedChart";
+import CandleChart from "../../components/ui/candleChart/CandleChart";
 import { svgIcon } from "../../data/dashSource";
 
-function Ecommerce() {
+function Jobs() {
 
     return (
-        <main className="main ecommerce">
+        <main className="main jobs">
             <Sidebar />
             <Navbar />
-            <div className="main-container ecommerce-Container">
+            <div className="main-container jobs-Container">
                 <div className="dashboard">
-                    <h1 className="dashboard-title">E-Commerce Dashboard</ h1>
+                    <h1 className="dashboard-title">Jobs Dashboard</ h1>
                     <div className="dashboardContainer">
                         <div className="box">
                             <Item title="Total Order" amount="$26,35,262" MySvg={svgIcon.one} BadgeIcon={TrendingUpIcon} badge="2.2%" />
@@ -39,18 +38,11 @@ function Ecommerce() {
                         <div className="box">
                             <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} BadgeIcon={TrendingUpIcon} badge="1.4%" />
                         </div>
-                        <div className="box down">
-                            <Item title="Total Products" amount="$4,262" MySvg={svgIcon.three} BadgeIcon={TrendingDownIcon} badge="2.0%" />
-                        </div>
-                        <div className="box">
-                            <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} BadgeIcon={TrendingUpIcon} badge="1.4%" />
-                        </div>
                     </div>
                 </div>
                 <div className="center">
-                    <Products title={"Recent Orders"} />
+                    <Products title={"Recent Transctions"} />
                     <MixedChart />
-                    <Reviews />
                 </div>
                 <div className="bottom">
                     <TaskList />
@@ -68,4 +60,4 @@ function Ecommerce() {
     )
 };
 
-export default Ecommerce;
+export default Jobs;

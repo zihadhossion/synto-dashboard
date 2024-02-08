@@ -1,5 +1,5 @@
 .table {
-    border: none;
+    width: 100%;
     border-collapse: collapse;
 
     .table_Head {
@@ -9,7 +9,7 @@
         text-align: left;
 
         .thData {
-            padding: 1rem;
+            padding: .75rem 1rem;
             font-size: .75rem;
             font-weight: 600;
             color: #475569;

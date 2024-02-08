@@ -1,9 +1,7 @@
 .salevalue {
-    grid-column: span 3/span 3;
-    height: 100%;
-
     .svContainer {
         height: 100%;
+        display: grid;
 
         .chartContainer {
             margin: 1rem 0;
@@ -62,13 +60,5 @@
                 }
             }
         }
-
-
-    }
-}
-
-@media (max-width:1400px) {
-    .salevalue {
-        grid-column: span 6/span 6;
     }
 }

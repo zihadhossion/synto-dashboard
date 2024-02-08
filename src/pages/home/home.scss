@@ -2,26 +2,13 @@
     background-color: #F2F6F9;
     transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
 
-    .homeContainer {
+    &-Container {
         margin-left: 15rem;
         margin-top: 70px;
         transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
 
         .dashboard {
-            padding: 2rem 2rem 0 2rem;
             margin-bottom: 1rem;
-
-            &-title {
-                font-size: 1.5rem;
-                font-weight: 500;
-                color: rgb(51 65 85);
-                margin-bottom: 1.5rem;
-                transition: all .2s linear;
-
-                &:hover {
-                    color: #000;
-                }
-            }
 
             .dashboardContainer {
                 display: grid;
@@ -51,28 +38,41 @@
             }
         }
 
-        @media (max-width:1300px) {
-            .dashboard {
-                .dashboardContainer {
-                    .box {
-                        grid-column: span 6/ span 6;
-                        position: relative;
-                    }
-                }
-            }
-        }
-
         .center {
             @extend %grid-base;
+
+            .salechart {
+                grid-column: span 12/span 12;
+            }
+
+            .customers {
+                width: 100%;
+                grid-column: span 6/span 6;
+            }
+
+            .salevalue {
+                grid-column: span 6/span 6;
+            }
         }
 
         .bottom {
             @extend %grid-base;
+
+            .products {
+                grid-column: span 6 /span 6;
+            }
+
+            .visitor {
+                grid-column: span 6 /span 6;
+            }
+
+
+            .sellproduct {
+                grid-column: span 12 /span 12;
+            }
         }
 
         .orderDetail {
-            margin: 0 2rem;
-
             .odContainer {
                 padding: 1rem;
             }
@@ -90,7 +90,6 @@
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 1rem;
-    padding: 0 2rem;
     margin-bottom: 1rem;
 }
 
@@ -103,3 +102,68 @@
         }
     }
 }
+
+@media (min-width:1400px) {
+    .home {
+        &-Container {
+            .center {
+                .salechart {
+                    grid-column: span 6/span 6;
+                }
+
+                .customers {
+                    grid-column: span 3/span 3;
+                }
+
+                .salevalue {
+                    grid-column: span 3/span 3;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1300px) {
+    .home {
+        &-Container {
+            .bottom {
+                .products {
+                    grid-column: span 3 /span 3;
+                }
+
+                .visitor {
+                    grid-column: span 3 /span 3;
+                }
+
+                .sellproduct {
+                    grid-column: span 6 /span 6;
+                }
+            }
+        }
+    }
+
+    .dashboard {
+        .dashboardContainer {
+            .box {
+                grid-column: span 6/ span 6;
+                position: relative;
+            }
+        }
+    }
+}
+
+// @media (min-width:1100px) {
+//     .home {
+//         &-Container {
+//             .bottom {
+//                 .products {
+//                     grid-column: span 3 /span 3;
+//                 }
+
+//                 .visitor {
+//                     grid-column: span 3 /span 3;
+//                 }
+//             }
+//         }
+//     }
+// }

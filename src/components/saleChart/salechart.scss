@@ -1,8 +1,7 @@
 .salechart {
-    grid-column: span 6/span 6;
-
     .saleContainer {
         padding: 1rem;
+        display: grid;
 
         ul {
             display: flex;
@@ -40,11 +39,5 @@
                 }
             }
         }
-    }
-}
-
-@media (max-width:1400px) {
-    .salechart {
-        grid-column: span 12/span 12;
     }
 }

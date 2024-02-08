@@ -20,7 +20,6 @@
     "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3",
-    "recharts": "^2.11.0",
     "sass": "^1.70.0"
   },
   "devDependencies": {

@@ -1,7 +1,6 @@
 .visitor {
-    grid-column: span 3 /span 3;
-
-
+    height: 100%;
+    position: relative;
     // .visitorContainer {
     //     min-height: 100vh;
     // }
@@ -20,14 +19,5 @@
         #chart {
             height: 100%;
         }
-    }
-
-
-
-}
-
-@media (max-width:1400px) {
-    .visitor {
-        grid-column: span 6 /span 6;
     }
 }

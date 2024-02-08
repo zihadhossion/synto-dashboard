@@ -4,12 +4,11 @@ import Topbar from "../ui/topbar/Topbar";
 
 const data = {
     series: [{
-        data: [580, 690, 1100, 1200, 1380]
+        data: [480, 690, 1100, 1200, 1380]
     }],
     options: {
         chart: {
             type: 'bar',
-            height: 350,
             toolbar: {
                 show: false,
             },
@@ -17,6 +16,7 @@ const data = {
         plotOptions: {
             bar: {
                 horizontal: true,
+                barHeight: '50%',
             },
         },
         dataLabels: {
@@ -79,7 +79,7 @@ function Visitor() {
             <Topbar title={"Social Visitors"} />
             <div className="visitorContainer">
                 <div id="chart">
-                    <ReactApexChart options={data.options} series={data.series} type="bar" height={"80%"} />
+                    <ReactApexChart options={data.options} series={data.series} type="bar" height={'100%'} />
                 </div>
                 <div id="html-dist"></div>
             </div>

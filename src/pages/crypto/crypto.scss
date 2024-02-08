@@ -8,20 +8,7 @@
         transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
 
         .dashboard {
-            padding: 2rem 2rem 0 2rem;
             margin-bottom: 1rem;
-
-            &-title {
-                font-size: 1.5rem;
-                font-weight: 500;
-                color: rgb(51 65 85);
-                margin-bottom: 1.5rem;
-                transition: all .2s linear;
-
-                &:hover {
-                    color: #000;
-                }
-            }
 
             .dashboardContainer {
                 display: grid;
@@ -68,14 +55,14 @@
         }
 
         .orderDetail {
-            margin: 0 2rem;
-
             .odContainer {
                 padding: 1rem;
             }
         }
+
     }
 }
+
 
 .main {
     .main-container {
@@ -87,7 +74,6 @@
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 1rem;
-    padding: 0 2rem;
     margin-bottom: 1rem;
 }
 
@@ -122,15 +108,3 @@
         }
     }
 }
-
-// @media (min-width:1200px) {
-//     .ecommerce {
-
-//         &-Container {
-
-//             .center {
-//                 gap: 1rem;
-//             }
-//         }
-//     }
-// }

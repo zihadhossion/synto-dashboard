@@ -1,18 +1,12 @@
 .customers {
     width: 100%;
-    grid-column: span 3/span 3;
-
+    height: 100%;
 
     .customer-list {
         padding: .5rem;
         display: grid;
-        place-items: center;
-        height: 90%;
-    }
-}
-
-@media (max-width:1400px) {
-    .customers {
-        grid-column: span 6/span 6;
+        row-gap: 2rem;
+        // align-content: space-around;
+        // place-items: center;
     }
 }

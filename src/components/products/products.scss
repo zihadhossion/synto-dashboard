@@ -1,16 +1,8 @@
-.comingproduct {
-    grid-column: span 6 /span 6;
-
-    .cpContainer {
+.products {
+    &Container {
         padding: 0 1.5rem;
         display: grid;
         place-items: center;
         height: 85%;
-    }
-}
-
-@media (min-width:1100px) {
-    .comingproduct {
-        grid-column: span 3 /span 3;
     }
 }

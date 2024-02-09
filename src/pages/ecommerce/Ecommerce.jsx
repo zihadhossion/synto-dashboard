@@ -6,7 +6,6 @@ import ListTable from "../../components/listtable/ListTable";
 import Products from "../../components/products/Products";
 import Visitor from "../../components/visitor/Visitor";
 import SellProduct from "../../components/sellProduct/SellProduct";
-import Table from "../../components/ui/table/Table";
 import Topbar from "../../components/ui/topbar/Topbar";
 import Footer from "../../components/footer/Footer";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
@@ -17,6 +16,7 @@ import TaskList from "../../components/taskList/TaskList";
 import MixedChart from "../../components/ui/mixedChart/MixedChart";
 import { svgIcon } from "../../data/dashSource";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
+import Statistics from "../../components/statistics/Statistics";
 
 function Ecommerce() {
 
@@ -51,7 +51,7 @@ function Ecommerce() {
                     </div>
                     <div className="center">
                         <Products title={"Recent Orders"} />
-                        <MixedChart />
+                        <Statistics />
                         <Reviews />
                     </div>
                     <div className="bottom">
@@ -60,9 +60,7 @@ function Ecommerce() {
                     </div>
                     <section className="orderDetail">
                         <Topbar title={"Recent Order Details"} />
-                        <div className="odContainer">
-                            <Table />
-                        </div>
+                        <ListTable />
                     </section>
                 </div>
                 <Footer />

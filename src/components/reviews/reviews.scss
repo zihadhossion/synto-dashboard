@@ -1,6 +1,4 @@
 .reviews {
-    grid-column: span 6 /span 6;
-
     .reviewContainer {
         text-align: center;
 
@@ -17,7 +15,6 @@
                     fill: #5A66F1;
                 }
             }
-
         }
 
         .review {
@@ -52,11 +49,5 @@
                 }
             }
         }
-    }
-}
-
-@media (min-width:1100px) {
-    .reviews {
-        grid-column: span 3 /span 3;
     }
 }

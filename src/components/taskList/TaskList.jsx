@@ -15,6 +15,7 @@ function TaskList() {
                     <TableRow userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
                     <TableRow userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
                     <TableRow userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
+                    <TableRow userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />
                 </tbody>
             </table>
         </section>
@@ -25,15 +26,13 @@ export default TaskList;
 
 const TableRow = ({ userImg, name, price, deliveryDate, itemImg }) => {
     return (
-        <tr className="table-Row">
-            <td className="table-Cell">
+        <tr className="table_Row">
+            <td className="table_Cell">
                 <div className="tiHead">
                     <div>
-                        <div>
-                            <img src={userImg} alt="Image Description" />
-                            <span>
-                            </span>
-                        </div>
+                        <img src={userImg} alt="Image Description" />
+                        <span>
+                        </span>
                     </div>
                     <div className="text">
                         <span>Name</span>
@@ -41,19 +40,19 @@ const TableRow = ({ userImg, name, price, deliveryDate, itemImg }) => {
                     </div>
                 </div>
             </td>
-            <td className="table-Cell">
+            <td className="table_Cell">
                 <div className="text">
                     <span>Price</span>
                     <p className="price">{price}</p>
                 </div>
             </td>
-            <td className="table-Cell">
+            <td className="table_Cell">
                 <div className="text">
                     <span>Delivery Date</span>
                     <p>{deliveryDate}</p>
                 </div>
             </td>
-            <td className="table-Cell">
+            <td className="table_Cell">
                 <img src={itemImg} alt="Image Description" />
             </td>
         </tr>

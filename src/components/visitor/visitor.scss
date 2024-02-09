@@ -1,5 +1,5 @@
 .visitor {
-    height: 100%;
+    // height: 100%;
     position: relative;
     // .visitorContainer {
     //     min-height: 100vh;
@@ -13,8 +13,15 @@
         display: none;
     }
 
+    .apexcharts-series {
+
+        path {
+            padding: 10rem;
+        }
+    }
+
     .visitorContainer {
-        height: 100%;
+        // height: 100%;
 
         #chart {
             height: 100%;

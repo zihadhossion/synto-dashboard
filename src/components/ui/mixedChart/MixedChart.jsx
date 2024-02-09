@@ -3,25 +3,30 @@ import ReactApexChart from 'react-apexcharts';
 
 const data = {
     series: [{
-        name: 'Income',
+        name: 'Orders',
         type: 'column',
-        data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
+        data: [60, 52, 57, 69, 54, 65, 80, 68, 50, 69, 57, 46,]
     }, {
-        name: 'Cashflow',
-        type: 'column',
-        data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5]
-    }, {
-        name: 'Revenue',
+        name: 'Sales',
         type: 'line',
-        data: [20, 29, 37, 36, 44, 45, 50, 58]
+        data: [60, 59, 77, 66, 64, 75, 80, 78, 69, 97, 76, 64]
     }],
     options: {
         chart: {
-            height: 350,
+            // height: 350,
             type: 'line',
             stacked: false,
             toolbar: {
                 show: false,
+            },
+        },
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '35%',
+                borderRadius: 7,
+                // endingShape: 'rounded',
+                // borderRadius: "50px"
             },
         },
         dataLabels: {
@@ -30,13 +35,21 @@ const data = {
         stroke: {
             width: [1, 1, 4]
         },
-        title: {
-            text: 'XYZ - Stock Analysis (2009 - 2016)',
-            align: 'left',
-            offsetX: 110
-        },
         xaxis: {
-            categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+            categories: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+            ]
         },
         yaxis: [
             {
@@ -104,21 +117,19 @@ const data = {
         },
         legend: {
             horizontalAlign: 'left',
-            offsetX: 40
+            // offsetX: 40
         }
     },
-
-
 };
 
 function MixedChart() {
     return (
-        <section className="mixedchart">
+        <div className="mixedchart">
             <div id="chart">
                 <ReactApexChart options={data.options} series={data.series} type="line" height={350} />
             </div>
             <div id="html-dist"></div>
-        </section>
+        </div>
     )
 };
 

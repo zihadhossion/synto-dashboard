@@ -1,9 +1,54 @@
 .tasklist {
-    grid-column: span 12/span 12;
-}
+    .table {
+        max-height: 100%;
+        width: 100%;
+        border-collapse: collapse;
 
-@media (min-width:1300px) {
-    .tasklist {
-        grid-column: span 6 /span 6;
+        .table_Row {
+            position: relative;
+
+            &:not(&:last-child) {
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            .table_Cell {
+                color: #1e293b;
+                // padding: 1rem 1.5rem;
+                font-size: .85rem;
+                font-weight: 500;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                    border-radius: 100%;
+                }
+
+                .tiHead {
+                    display: flex;
+                    gap: .5rem;
+                }
+
+                .text {
+                    font-size: .75rem;
+                    font-weight: 500;
+
+                    span {
+                        line-height: 1.25;
+                        color: #64748b;
+                    }
+
+                    p {
+                        color: #1e293b;
+                        line-height: 1.5;
+                        font-size: .85rem;
+                    }
+
+                    .price {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
     }
 }

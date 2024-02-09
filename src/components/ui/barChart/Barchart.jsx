@@ -20,7 +20,7 @@ const data = {
         plotOptions: {
             bar: {
                 horizontal: false,
-                columnWidth: '55%',
+                columnWidth: '50%',
                 endingShape: 'rounded',
             },
         },

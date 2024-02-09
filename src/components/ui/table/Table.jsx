@@ -53,7 +53,7 @@ const rows = [
     },
 ];
 
-function Table() {
+function Table({ theadData, rows }) {
     return (
         <table className="table">
             <thead>

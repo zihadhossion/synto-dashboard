@@ -16,7 +16,8 @@ import MixedChart from "../../components/ui/mixedChart/MixedChart";
 import CandleChart from "../../components/ui/candleChart/CandleChart";
 import { svgIcon } from "../../data/dashSource";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
-
+import ListTable from "../../components/listtable/ListTable";
+import { cryptoTHData, rows } from "../../data/tableSource";
 
 function Crypto() {
 
@@ -49,13 +50,11 @@ function Crypto() {
                     </div>
                     <div className="bottom">
                         <TaskList />
-                        <SellProduct title={"Top Selling Products"} />
+                        <SellProduct title={"Your Assets"} theadData={cryptoTHData} rows={rows} />
                     </div>
                     <section className="orderDetail">
                         <Topbar title={"Recent Order Details"} />
-                        <div className="odContainer">
-                            <Table />
-                        </div>
+                        <ListTable />
                     </section>
                 </div>
                 <Footer />

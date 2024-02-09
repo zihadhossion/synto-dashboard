@@ -2,12 +2,12 @@ import Table from "../ui/table/Table";
 import Topbar from "../ui/topbar/Topbar";
 import "./sellproduct.scss";
 
-function SellProduct({ title }) {
+function SellProduct({ title, theadData, rows }) {
     return (
         <section className="sellproduct">
             <Topbar title={title} />
             <div className="spContaier">
-                <Table />
+                <Table theadData={theadData} rows={rows} />
             </div>
         </section>
     )

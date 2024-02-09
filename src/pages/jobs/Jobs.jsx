@@ -15,6 +15,10 @@ import TaskList from "../../components/taskList/TaskList";
 import MixedChart from "../../components/ui/mixedChart/MixedChart";
 import CandleChart from "../../components/ui/candleChart/CandleChart";
 import { svgIcon } from "../../data/dashSource";
+import { theadData, rows } from "../../data/tableSource";
+import ListTable from "../../components/listtable/ListTable";
+import TitleBar from "../../components/ui/titleBar/TitleBar";
+
 
 function Jobs() {
 
@@ -23,37 +27,37 @@ function Jobs() {
             <Sidebar />
             <Navbar />
             <div className="main-container jobs-Container">
-                <div className="dashboard">
-                    <h1 className="dashboard-title">Jobs Dashboard</ h1>
-                    <div className="dashboardContainer">
-                        <div className="box">
-                            <Item title="Total Order" amount="$26,35,262" MySvg={svgIcon.one} BadgeIcon={TrendingUpIcon} badge="2.2%" />
-                        </div>
-                        <div className="box">
-                            <Item title="Total Sales" amount="$56,35,262" MySvg={svgIcon.two} BadgeIcon={TrendingUpIcon} badge="1.8%" />
-                        </div>
-                        <div className="box down">
-                            <Item title="Total Products" amount="$4,262" MySvg={svgIcon.three} BadgeIcon={TrendingDownIcon} badge="2.0%" />
-                        </div>
-                        <div className="box">
-                            <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} BadgeIcon={TrendingUpIcon} badge="1.4%" />
+                <div className="sub_container">
+                    <TitleBar text="Jobs Dashboard" />
+                    <div className="dashboard">
+                        <div className="dashboardContainer">
+                            <div className="box">
+                                <Item title="Total Order" amount="$26,35,262" MySvg={svgIcon.one} BadgeIcon={TrendingUpIcon} badge="2.2%" />
+                            </div>
+                            <div className="box">
+                                <Item title="Total Sales" amount="$56,35,262" MySvg={svgIcon.two} BadgeIcon={TrendingUpIcon} badge="1.8%" />
+                            </div>
+                            <div className="box down">
+                                <Item title="Total Products" amount="$4,262" MySvg={svgIcon.three} BadgeIcon={TrendingDownIcon} badge="2.0%" />
+                            </div>
+                            <div className="box">
+                                <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} BadgeIcon={TrendingUpIcon} badge="1.4%" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="center">
-                    <Products title={"Recent Transctions"} />
-                    <MixedChart />
-                </div>
-                <div className="bottom">
-                    <TaskList />
-                    <SellProduct title={"Top Selling Products"} />
-                </div>
-                <section className="orderDetail">
-                    <Topbar title={"Recent Order Details"} />
-                    <div className="odContainer">
-                        <Table />
+                    <div className="center">
+                        <Products title={"Recent Transctions"} />
+                        <MixedChart />
                     </div>
-                </section>
+                    <div className="bottom">
+                        <TaskList />
+                        <SellProduct title={"Top Selling Products"} theadData={theadData} rows={rows} />
+                    </div>
+                    <section className="orderDetail">
+                        <Topbar title={"Recent Order Details"} />
+                        <ListTable />
+                    </section>
+                </div>
                 <Footer />
             </div>
         </main>

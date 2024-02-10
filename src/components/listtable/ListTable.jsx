@@ -80,7 +80,7 @@ function ListTable() {
                                         <img src={item.userImg} alt="" className="image" />
                                     </div>
                                     <div className="text">
-                                        <p p className="title">{item.userName}</p>
+                                        <p className="title">{item.userName}</p>
                                         <p className="desc">{item.email}</p>
                                     </div>
                                 </div>
@@ -94,15 +94,15 @@ function ListTable() {
                                 <div className="action_btn">
                                     <div className="icon">
                                         <VisibilityOutlinedIcon />
-                                        <span class="tooltiptext">View</span>
+                                        <span className="tooltiptext">View</span>
                                     </div>
                                     <div className="icon">
                                         <EditOutlinedIcon />
-                                        <span class="tooltiptext">Edit</span>
+                                        <span className="tooltiptext">Edit</span>
                                     </div>
                                     <div className="icon">
                                         <DeleteOutlineOutlinedIcon />
-                                        <span class="tooltiptext">Delete</span>
+                                        <span className="tooltiptext">Delete</span>
                                     </div>
                                 </div>
                             </td>

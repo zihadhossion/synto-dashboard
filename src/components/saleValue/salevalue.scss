@@ -2,6 +2,7 @@
     .svContainer {
         height: 100%;
         display: grid;
+        place-items: center;
 
         .chartContainer {
             margin: 1rem 0;

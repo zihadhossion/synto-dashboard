@@ -17,7 +17,7 @@ import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import { svgIcon } from "../../data/dashSource";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
 import ListTable from "../../components/listtable/ListTable";
-
+import { thData, rows } from "../../data/tableSource";
 function Home() {
 
     return (
@@ -51,7 +51,7 @@ function Home() {
                     <div className="bottom">
                         <Products title={"Upcoming Products"} />
                         <Visitor />
-                        <SellProduct title={"Top Selling Products"} />
+                        <SellProduct title={"Top Selling Products"} theadData={thData} rows={rows} />
                     </div>
                     <section className="orderDetail">
                         <Topbar title={"Recent Order Details"} />

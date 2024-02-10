@@ -14,11 +14,14 @@ import Reviews from "../../components/reviews/Reviews";
 import TaskList from "../../components/taskList/TaskList";
 import MixedChart from "../../components/ui/mixedChart/MixedChart";
 import CandleChart from "../../components/ui/candleChart/CandleChart";
-import { svgIcon } from "../../data/dashSource";
-import { theadData, rows } from "../../data/tableSource";
+import { applicantData } from "../../data/dashSource";
+import { countryTHData, recruitersTHData, rows } from "../../data/tableSource";
 import ListTable from "../../components/listtable/ListTable";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
-
+import Statistics from "../../components/statistics/Statistics";
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
+import Applicant from "../../components/jobs/applicant/Applicant";
+import AppRatio from "../../components/jobs/appRatio/AppRatio";
 
 function Jobs() {
 
@@ -32,26 +35,27 @@ function Jobs() {
                     <div className="dashboard">
                         <div className="dashboardContainer">
                             <div className="box">
-                                <Item title="Total Order" amount="$26,35,262" MySvg={svgIcon.one} BadgeIcon={TrendingUpIcon} badge="2.2%" />
+                                <Item amount="$26,35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="2.2%" />
                             </div>
                             <div className="box">
-                                <Item title="Total Sales" amount="$56,35,262" MySvg={svgIcon.two} BadgeIcon={TrendingUpIcon} badge="1.8%" />
+                                <Item title="Total Sales" amount="$56,35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="1.8%" />
                             </div>
                             <div className="box down">
-                                <Item title="Total Products" amount="$4,262" MySvg={svgIcon.three} BadgeIcon={TrendingDownIcon} badge="2.0%" />
+                                <Item title="Total Products" amount="$4,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingDownIcon} badge="2.0%" />
                             </div>
                             <div className="box">
-                                <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} BadgeIcon={TrendingUpIcon} badge="1.4%" />
+                                <Item title="Total Expenses" amount="$35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="1.4%" />
                             </div>
                         </div>
                     </div>
+                    <Statistics title={"Application Overview"} />
                     <div className="center">
-                        <Products title={"Recent Transctions"} />
-                        <MixedChart />
+                        <Applicant />
+                        <AppRatio />
                     </div>
                     <div className="bottom">
-                        <TaskList />
-                        <SellProduct title={"Top Selling Products"} theadData={theadData} rows={rows} />
+                        <SellProduct title={"Registers By Country"} theadData={countryTHData} rows={rows} />
+                        <SellProduct title={"Top Recruiters"} theadData={recruitersTHData} rows={rows} />
                     </div>
                     <section className="orderDetail">
                         <Topbar title={"Recent Order Details"} />

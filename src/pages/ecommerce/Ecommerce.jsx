@@ -17,6 +17,7 @@ import MixedChart from "../../components/ui/mixedChart/MixedChart";
 import { svgIcon } from "../../data/dashSource";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
 import Statistics from "../../components/statistics/Statistics";
+import { thData, rows } from "../../data/tableSource";
 
 function Ecommerce() {
 
@@ -51,12 +52,12 @@ function Ecommerce() {
                     </div>
                     <div className="center">
                         <Products title={"Recent Orders"} />
-                        <Statistics />
+                        <Statistics title={"Order vs Sales"} />
                         <Reviews />
                     </div>
                     <div className="bottom">
                         <TaskList />
-                        <SellProduct title={"Top Selling Products"} />
+                        <SellProduct title={"Top Selling Products"} theadData={thData} rows={rows} />
                     </div>
                     <section className="orderDetail">
                         <Topbar title={"Recent Order Details"} />

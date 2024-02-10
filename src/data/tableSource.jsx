@@ -1,4 +1,4 @@
-export const theadData = ["PRODUCT", "CATEGORY", "STOCK", "TOTAL SALE",];
+export const thData = ["PRODUCT", "CATEGORY", "STOCK", "TOTAL SALE"];
 
 export const rows = [
     {
@@ -52,3 +52,5 @@ export const rows = [
 ];
 
 export const cryptoTHData = ["Coin", "Total", "Holding", "Status", "Action"];
+export const countryTHData = ["Country", "Date", "Total Registers", "Action"];
+export const recruitersTHData = ["Name", "Subcription", "Total Employees", "Recruiter Since"];

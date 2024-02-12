@@ -7,14 +7,14 @@ const data = {
         chart: {
             type: 'donut',
         },
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: 200
-                },
-            }
-        }],
+        // responsive: [{
+        //     breakpoint: 480,
+        //     options: {
+        //         chart: {
+        //             width: 200
+        //         },
+        //     }
+        // }],
         dataLabels: {
             enabled: false
         },
@@ -90,7 +90,7 @@ function Piechart() {
     return (
         <>
             <div id="chart">
-                <ReactApexChart options={data.options} series={data.series} type="donut" />
+                <ReactApexChart options={data.options} series={data.series} type="donut" height={250} />
             </div>
             <div id="html-dist"></div>
         </>

@@ -47,8 +47,8 @@ function ListTable() {
     ];
 
     return (
-        <div>
-            <table className="listtable">
+        <section className="listtable">
+            <table className="table">
                 <thead>
                     <tr>
                         {theadData.map((item, i) =>
@@ -110,7 +110,7 @@ function ListTable() {
                     })}
                 </tbody>
             </table>
-        </div>
+        </section>
     )
 };
 

@@ -78,8 +78,8 @@ function Visitor() {
         <section className="visitor">
             <Topbar title={"Social Visitors"} />
             <div className="visitorContainer">
-                <div id="chart" style={{ minHeight: "385px" }}>
-                    <ReactApexChart options={data.options} series={data.series} type="bar" height={"100%"} />
+                <div id="chart">
+                    <ReactApexChart options={data.options} series={data.series} type="bar" height={400} />
                 </div>
                 <div id="html-dist"></div>
             </div>

@@ -1,14 +1,13 @@
 .salevalue {
     .svContainer {
-        height: 100%;
-        display: grid;
-        place-items: center;
-
-        .chartContainer {
-            margin: 1rem 0;
-        }
+        // height: 100%;
+        // display: grid;
+        // place-items: center;
 
         .descBox {
+            width: 100%;
+            // margin-top: -3rem;
+
             .desc {
                 border-top: 1px solid rgb(226 232 240);
                 display: grid;
@@ -19,16 +18,14 @@
                 .left,
                 .right {
                     line-height: 1.4;
+                    padding: 1.5rem 1rem;
                 }
 
                 .left {
                     border-right: 1px solid rgb(226 232 240);
-                    padding: 1.25rem;
                 }
 
                 .right {
-                    padding: 1.25rem;
-
                     .icon {
                         color: rgb(244 63 94);
                     }

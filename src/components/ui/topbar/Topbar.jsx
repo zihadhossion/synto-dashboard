@@ -1,12 +1,13 @@
 import "./topbar.scss";
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-function Topbar({ title }) {
+function Topbar({ title, iconBox }) {
     return (
         <div className="top-header">
             <div className="topbar">
                 <h3>{title}</h3>
-                <MoreVertIcon />
+                <>
+                    {iconBox}
+                </>
             </div>
         </div>
 

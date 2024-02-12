@@ -12,7 +12,6 @@ const data = {
     options: {
         chart: {
             type: 'bar',
-            height: 350,
             toolbar: {
                 show: false,
             }
@@ -27,16 +26,13 @@ const data = {
         dataLabels: {
             enabled: false
         },
-        stroke: {
-            show: true,
-            width: 2,
-            colors: ['transparent']
-        },
+        // stroke: {
+        //     show: true,
+        //     width: 2,
+        //     colors: ['transparent']
+        // },
         xaxis: {
             categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        },
-        fill: {
-            opacity: 1
         },
         tooltip: {
             y: {
@@ -53,12 +49,12 @@ const data = {
 function BarChart() {
 
     return (
-        <>
+        <div>
             <div id="chart">
-                <ReactApexCharts options={data.options} series={data.series} type="bar" height={350} />
+                <ReactApexCharts options={data.options} series={data.series} type="bar" height={"250"} />
             </div>
             <div id="html-dist"></div>
-        </>
+        </div>
     )
 };
 export default BarChart;

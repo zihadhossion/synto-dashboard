@@ -1,13 +1,13 @@
 import Topbar from "../ui/topbar/Topbar";
 import "./tasklist.scss";
-import ListTable from "../listtable/ListTable";
+
 
 const tasks = { id: 1, userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg", name: 'Hugh Jackma', price: '$499.99', deliveryDate: '15 May 2022', itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/2.png" };
 
-function TaskList() {
+function TaskList({ IconBox }) {
     return (
         <section className="tasklist">
-            <Topbar title={"Task List"} />
+            <Topbar title={"Task List"} IconBox={IconBox} />
             <table className="table" key={tasks.id}>
                 <tbody className="tableBody">
                     <TableRow userImg={tasks.userImg} name={tasks.name} price={tasks.price} deliveryDate={tasks.deliveryDate} itemImg={tasks.itemImg} />

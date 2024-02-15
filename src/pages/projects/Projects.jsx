@@ -3,7 +3,7 @@ import "./projects.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Products from "../../components/products/Products";
-import SellProduct from "../../components/sellProduct/SellProduct";
+import SellProduct from "../../components/productList/ProductList";
 import Table from "../../components/ui/table/Table";
 import Topbar from "../../components/ui/topbar/Topbar";
 import Footer from "../../components/footer/Footer";

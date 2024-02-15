@@ -73,10 +73,10 @@ const data = {
 };
 
 
-function Visitor() {
+function Visitor({ IconBox }) {
     return (
         <section className="visitor">
-            <Topbar title={"Social Visitors"} />
+            <Topbar title={"Social Visitors"} IconBox={IconBox} />
             <div className="visitorContainer">
                 <div id="chart">
                     <ReactApexChart options={data.options} series={data.series} type="bar" height={400} />

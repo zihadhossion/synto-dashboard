@@ -1,13 +1,13 @@
+import "./salevalue.scss";
 import Piechart from "../ui/pieChart/Piechart";
 import Topbar from "../ui/topbar/Topbar";
-import "./salevalue.scss";
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
-function SaleValue() {
+function SaleValue({ IconBox }) {
     return (
         <section className="salevalue">
-            <Topbar title={"Sale Value"} />
+            <Topbar title={"Sale Value"} IconBox={IconBox} />
             <div className="svContainer">
                 <div className="chartContainer">
                     <Piechart />
@@ -26,7 +26,6 @@ function SaleValue() {
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     )

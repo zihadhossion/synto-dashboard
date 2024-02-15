@@ -49,20 +49,16 @@
             }
         }
 
-        // .statistics {
-        //     grid-column: span 12 / span 12;
-        // }
         .center {
             @extend %grid-base;
 
-            .appratio {
-                grid-column: span 3/ span 3;
+            .statistics {
+                grid-column: span 12/ span 12;
             }
 
-            .applicant {
-                grid-column: span 6 / span 6;
+            .datatable {
+                grid-column: span 12 / span 12;
             }
-
         }
 
         .bottom {
@@ -80,7 +76,7 @@
         .orderDetail {
 
             .odContainer {
-                padding: 1rem;
+                padding: 0 1rem;
             }
         }
     }
@@ -122,15 +118,13 @@
             }
 
             .center {
-
-                .appratio {
+                .statistics {
                     grid-column: span 6/ span 6;
                 }
 
-                .applicant {
-                    grid-column: span 3 / span 3;
+                .datatable {
+                    grid-column: span 6 / span 6;
                 }
-
             }
 
             .bottom {

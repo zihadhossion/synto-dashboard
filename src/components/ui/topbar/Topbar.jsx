@@ -1,17 +1,15 @@
 import "./topbar.scss";
 
-function Topbar({ title, iconBox }) {
+function Topbar({ title, IconBox }) {
     return (
-        <div className="top-header">
-            <div className="topbar">
+        <div className="topbar">
+            <div className="topbar_left">
                 <h3>{title}</h3>
-                <>
-                    {iconBox}
-                </>
             </div>
-        </div>
-
-    )
+            <div className="topbar_right">
+                {IconBox}
+            </div>
+        </div>)
 };
 
 export default Topbar;

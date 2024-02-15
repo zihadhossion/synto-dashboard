@@ -74,7 +74,9 @@ function Table({ theadData, rows }) {
                                 <span>{item.product}</span>
                             </div>
                         </td>
-                        <td className="table_Cell">{item.category}</td>
+                        {item.category &&
+                            <td className="table_Cell">{item.category}</td>
+                        }
                         <td className="table_Cell stock">
                             <span className={item.stock === "In Stock" ? "badge inStock" : "badge outStock"}>{item.stock}</span>
                         </td>

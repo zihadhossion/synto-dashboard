@@ -1,12 +1,11 @@
 import "./customers.scss";
-import profile from "../../assets/profile.jpg";
 import User from "../ui/user/User";
 import Topbar from "../ui/topbar/Topbar";
 
-function Customers() {
+function Customers({ IconBox }) {
     return (
         <section className="customers">
-            <Topbar title={"Top Customers"} />
+            <Topbar title={"Top Customers"} IconBox={IconBox} />
             <div className="customer-list">
                 <User />
                 <User />

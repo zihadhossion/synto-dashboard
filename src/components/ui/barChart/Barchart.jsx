@@ -49,12 +49,12 @@ const data = {
 function BarChart() {
 
     return (
-        <div>
+        <>
             <div id="chart">
                 <ReactApexCharts options={data.options} series={data.series} type="bar" height={"250"} />
             </div>
             <div id="html-dist"></div>
-        </div>
+        </>
     )
 };
 export default BarChart;

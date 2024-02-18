@@ -9,24 +9,22 @@ const data = {
     }, {
         name: 'Sales',
         type: 'line',
-        data: [60, 59, 77, 66, 64, 75, 80, 78, 69, 97, 76, 64]
+        data: [60, 59, 77, 66, 64, 75, 80, 78, 69, 57, 76, 64]
     }],
     options: {
         chart: {
-            // height: 350,
             type: 'line',
             stacked: false,
             toolbar: {
                 show: false,
             },
         },
+        colors: ['#5A66F1', '#CBD5E1'],
         plotOptions: {
             bar: {
                 horizontal: false,
                 columnWidth: '35%',
                 borderRadius: 7,
-                // endingShape: 'rounded',
-                // borderRadius: "50px"
             },
         },
         dataLabels: {
@@ -54,58 +52,12 @@ const data = {
         yaxis: [
             {
                 axisTicks: {
-                    show: true,
+                    show: false,
                 },
                 tooltip: {
                     enabled: false
                 }
             },
-            // {
-            //     seriesName: 'Income',
-            //     show: false,
-            //     opposite: true,
-            //     axisTicks: {
-            //         show: false,
-            //     },
-            //     axisBorder: {
-            //         show: false,
-            //         color: '#00E396'
-            //     },
-            //     labels: {
-            //         style: {
-            //             colors: '#00E396',
-            //         }
-            //     },
-            //     title: {
-            //         show: false,
-            //         text: "Operating Cashflow (thousand crores)",
-            //         style: {
-            //             color: '#00E396',
-            //         }
-            //     },
-            // },
-            // {
-            //     seriesName: 'Revenue',
-            //     opposite: true,
-            //     axisTicks: {
-            //         show: true,
-            //     },
-            //     axisBorder: {
-            //         show: true,
-            //         color: '#FEB019'
-            //     },
-            //     labels: {
-            //         style: {
-            //             colors: '#FEB019',
-            //         },
-            //     },
-            //     title: {
-            //         text: "Revenue (thousand crores)",
-            //         style: {
-            //             color: '#FEB019',
-            //         }
-            //     }
-            // },
         ],
         tooltip: {
             fixed: {
@@ -116,13 +68,18 @@ const data = {
             },
         },
         legend: {
-            horizontalAlign: 'left',
-            // offsetX: 40
+            horizontalAlign: 'center',
+            position: "top",
+            offsetX: 40,
+            fontSize: '12px',
+            fontFamily: 'Helvetica, Arial',
+            fontWeight: 600,
         }
     },
 };
 
 function MixedChart() {
+
     return (
         <div className="mixedchart">
             <div id="chart">

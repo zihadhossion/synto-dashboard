@@ -9,8 +9,7 @@ function Statistics({ title, IconBox }) {
             <div className="statisticsContainer">
                 <MixedChart />
             </div>
-        </section>
-    )
+        </section>)
 };
 
 export default Statistics;

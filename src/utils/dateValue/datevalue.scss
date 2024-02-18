@@ -17,8 +17,18 @@
         border-right: 1px solid #ddd;
 
         &:hover {
-            background: #5a66f1;
+            background-color: #5a66f1;
             color: #fff;
+        }
+
+        &.active {
+            background-color: #5a66f1;
+
+            color: #fff;
+
+            &:hover {
+                background-color: #0056b3;
+            }
         }
 
         &:first-child {

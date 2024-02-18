@@ -6,6 +6,7 @@
     cursor: pointer;
     transition: all .2s linear;
     box-shadow: 1px 1px 3px 1px rgba(226, 232, 240, .1);
+    position: relative;
 
     &:hover {
         background-color: rgb(226, 232, 240);
@@ -13,5 +14,25 @@
 
     svg {
         font-size: 1rem;
+    }
+}
+
+.dropdown-content {
+    position: absolute;
+    background: #fff;
+    min-width: 150px;
+    text-align: center;
+    padding: 1rem 0;
+    top: 100%;
+    right: 0%;
+    z-index: 9;
+
+    li {
+        transition: all .2s linear;
+        padding: .5rem;
+
+        &:hover {
+            background-color: rgb(226, 232, 240);
+        }
     }
 }

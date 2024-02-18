@@ -61,59 +61,62 @@ import ActionBtn from "../../../utils/actionBtn/ActionBtn";
 // ];
 
 
-export default function ListTable({ theadData, rows }) {
+export default function ListTable({ children }) {
 
     return (
         <section className="listtable">
-            <table className="table">
-                <thead>
-                    <tr>
-                        {theadData.map((item, i) =>
-                            <th key={i} className="table_head">{item}</th>
-                        )}
-                    </tr>
-                </thead>
-                <tbody>
-                    {rows.map((item) => {
-                        return <tr key={item.id} className="table_row">
-                            <td className="table_Cell">{item.slNo}</td>
-                            <td className="table_Cell">
-                                <div className="cellWrapper">
-                                    <div className="imgBox">
-                                        <img src={item.itemImg} alt="" className="image" />
-                                    </div>
-                                    <div className="text">
-                                        <p className="title">{item.itemTitle}</p>
-                                        {/* <p className="desc">#215{item.slNo}</p> */}
-                                    </div>
-                                </div>
-                            </td>
-                            <td className="table_Cell">
-                                #{item.id}
-                            </td>
-                            <td className="table_Cell">
-                                <div className="cellWrapper">
-                                    <div className="imgBox">
-                                        <img src={item.userImg} alt="" className="image" />
-                                    </div>
-                                    <div className="text">
-                                        <p className="title">{item.userName}</p>
-                                        <p className="desc">{item.email}</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td className="table_Cell">
-                                {item.date}
-                            </td>
-                            <td className="table_Cell">{item.status}</td>
-                            <td className="table_Cell">{item.price}</td>
-                            <td className="table_Cell">
-                                <ActionBtn />
-                            </td>
-                        </tr>
-                    })}
-                </tbody>
-            </table>
+            {children}
         </section>
     )
 };
+
+
+{/* <table className="table">
+<thead>
+    <tr>
+        {theadData.map((item, i) =>
+            <th key={i} className="table_head">{item}</th>
+        )}
+    </tr>
+</thead>
+<tbody>
+    {rows.map((item) => {
+        return <tr key={item.id} className="table_row">
+            <td className="table_Cell">{item.slNo}</td>
+            <td className="table_Cell">
+                <div className="cellWrapper">
+                    <div className="imgBox">
+                        <img src={item?.itemImg} alt="" className="image" />
+                    </div>
+                    <div className="text">
+                        <p className="title">{item.itemTitle}</p>
+                        <p className="desc">#215{item?.slNo}</p>
+                    </div>
+                </div>
+            </td>
+            <td className="table_Cell">
+                #{item.id}
+            </td>
+            <td className="table_Cell">
+                <div className="cellWrapper">
+                    <div className="imgBox">
+                        <img src={item.userImg} alt="" className="image" />
+                    </div>
+                    <div className="text">
+                        <p className="title">{item.userName}</p>
+                        <p className="desc">{item.email}</p>
+                    </div>
+                </div>
+            </td>
+            <td className="table_Cell">
+                {item.date}
+            </td>
+            <td className="table_Cell">{item.status}</td>
+            <td className="table_Cell">{item.price}</td>
+            <td className="table_Cell">
+                <ActionBtn />
+            </td>
+        </tr>
+    })}
+</tbody>
+</table> */}

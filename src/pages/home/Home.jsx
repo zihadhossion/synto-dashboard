@@ -19,11 +19,7 @@ import { svgIcon } from "../../data/dashSource";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import MoreIcon from "../../utils/moreIcon/MoreIcon";
-
-const dashboardStyle = {
-    gridColumn: "span 3/ span 3",
-    height: "100 %"
-}
+import ActionBtn from "../../utils/actionBtn/ActionBtn";
 
 function Home() {
 
@@ -35,10 +31,10 @@ function Home() {
                 <div className="sub_container">
                     <TitleBar />
                     <Dashboard>
-                        <Item title="Total Revenue" amount="$26,35,262" MySvg={svgIcon.one} BadgeIcon={TrendingUpIcon} badge="2.2%" boxStyle={dashboardStyle} desc={"in the last week"} />
-                        <Item title="Total Sales" amount="$56,35,262" MySvg={svgIcon.two} BadgeIcon={TrendingUpIcon} badge="1.8%" boxStyle={dashboardStyle} />
-                        <Item title="Total Products" amount="$4,262" MySvg={svgIcon.three} BadgeIcon={TrendingDownIcon} badge="2.0%" boxStyle={dashboardStyle} />
-                        <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} BadgeIcon={TrendingUpIcon} badge="1.4%" boxStyle={dashboardStyle} />
+                        <Item title="Total Revenue" amount="$26,35,262" MySvg={svgIcon.one} BadgeIcon={TrendingUpIcon} badge="2.2%" desc={"in the last week"} />
+                        <Item title="Total Sales" amount="$56,35,262" MySvg={svgIcon.two} BadgeIcon={TrendingUpIcon} badge="1.8%" />
+                        <Item title="Total Products" amount="$4,262" MySvg={svgIcon.three} BadgeIcon={TrendingDownIcon} badge="2.0%" />
+                        <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} BadgeIcon={TrendingUpIcon} badge="1.4%" />
                     </Dashboard>
                     <div className="center">
                         <SaleChart IconBox={<MoreIcon />} />
@@ -52,7 +48,57 @@ function Home() {
                     </div>
                     <section className="orderDetail">
                         <Topbar title={"Recent Order Details"} IconBox={<MoreIcon />} />
-                        <ListTable theadData={homeTHdata} rows={homeRows} />
+                        <ListTable>
+                            <table className="table">
+                                <thead>
+                                    <tr>
+                                        {homeTHdata.map((item, i) =>
+                                            <th key={i} className="table_head">{item}</th>
+                                        )}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {homeRows.map((item) => {
+                                        return <tr key={item.id} className="table_row">
+                                            <td className="table_Cell">{item.slNo}</td>
+                                            <td className="table_Cell">
+                                                <div className="cellWrapper">
+                                                    <div className="imgBox">
+                                                        <img src={item?.itemImg} alt="" className="image" />
+                                                    </div>
+                                                    <div className="text">
+                                                        <p className="title">{item.itemTitle}</p>
+                                                        <p className="desc">#215{item?.slNo}</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className="table_Cell">
+                                                #{item.id}
+                                            </td>
+                                            <td className="table_Cell">
+                                                <div className="cellWrapper">
+                                                    <div className="imgBox">
+                                                        <img src={item.userImg} alt="" className="image" />
+                                                    </div>
+                                                    <div className="text">
+                                                        <p className="title">{item.userName}</p>
+                                                        <p className="desc">{item.email}</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className="table_Cell">
+                                                {item.date}
+                                            </td>
+                                            <td className="table_Cell">{item.status}</td>
+                                            <td className="table_Cell">{item.price}</td>
+                                            <td className="table_Cell">
+                                                <ActionBtn />
+                                            </td>
+                                        </tr>
+                                    })}
+                                </tbody>
+                            </table>
+                        </ListTable>
                     </section>
                 </div>
                 <Footer />

@@ -1,7 +1,7 @@
 .sidebar {
     height: 100%;
     background-color: #1E293B;
-    border-right: .1px solid rgb(255 255 255 / 0.1);
+    border-right: .1px solid rgba(255, 255, 255, 0.1);
     position: fixed;
     top: 0;
     right: auto;
@@ -12,11 +12,37 @@
     overflow-y: scroll;
     transition: all .150s cubic-bezier(0, 0, 0.2, 1);
 
+    &:hover {
+        width: 15rem !important;
+
+        .content {
+            .top {
+                display: block !important;
+            }
+
+            .links-list {
+                margin: 0 3rem !important;
+                display: block !important;
+
+                li {
+                    width: 100% !important;
+
+                    svg {
+                        font-size: 1rem !important;
+                    }
+
+                    span {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+    }
+
     &.active {
         width: 5rem;
 
         .content {
-
             .top {
                 display: none;
             }
@@ -38,6 +64,12 @@
                     }
                 }
             }
+        }
+    }
+
+    @media (max-width:550px) {
+        &.active {
+            width: 3rem;
         }
     }
 

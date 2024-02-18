@@ -4,7 +4,7 @@ import Topbar from "../ui/topbar/Topbar";
 
 function ProductList({ title, theadData, rows, IconBox }) {
     return (
-        <section className="sellproduct">
+        <section className="productList">
             <Topbar title={title} IconBox={IconBox} />
             <div className="spContainer">
                 <Table theadData={theadData} rows={rows} />

@@ -1,3 +1,10 @@
+%grid-base {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
 .crypto {
     background-color: #F2F6F9;
     transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
@@ -8,33 +15,8 @@
         transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
 
         .dashboard {
-            margin-bottom: 1rem;
-
-            .dashboardContainer {
-                display: grid;
-                grid-template-columns: repeat(12, minmax(0, 1fr));
-                align-items: center;
-                gap: 1rem;
-
-                .box {
-                    grid-column: span 3/ span 3;
-                    height: 100%;
-                }
-
-                .box.down {
-                    .item {
-                        .left {
-                            .icon {
-                                background-color: #FDF7E6;
-                            }
-                        }
-
-                        .badge {
-                            background-color: #FDF7E6;
-                        }
-                    }
-
-                }
+            .itemBox {
+                grid-column: span 12/span 12;
             }
         }
 
@@ -42,11 +24,11 @@
             @extend %grid-base;
 
             .products {
-                grid-column: span 3 /span 3;
+                grid-column: span 12/span 12;
             }
 
             .candleChart {
-                grid-column: span 9 / span 9;
+                grid-column: span 12/span 12;
             }
         }
 
@@ -54,51 +36,74 @@
             @extend %grid-base;
 
             .tasklist {
-                grid-column: span 6 /span 6;
+                grid-column: span 12/span 12;
             }
 
-            .sellproduct {
-                grid-column: span 6 /span 6;
-            }
-        }
-    }
-}
-
-.main {
-    .main-container {
-        margin-left: 15rem;
-    }
-}
-
-%grid-base {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.app {
-    &.active {
-        .main {
-            .main-container {
-                margin-left: 5rem !important;
+            .productList {
+                grid-column: span 12/span 12;
             }
         }
     }
 }
 
-@media (min-width:1100px) {
-    .ecommerce {
-
+@media (min-width:768px) {
+    .crypto {
         &-Container {
-
             .dashboard {
-                .dashboardContainer {
-                    .box {
-                        grid-column: span 4/ span 4;
-                    }
+                .itemBox {
+                    grid-column: span 6/span 6;
                 }
             }
+        }
+    }
+}
+
+@media (min-width:992px) {
+    .crypto {
+        &-Container {
+
+            .center {
+                .products {
+                    grid-column: span 4/span 4;
+                }
+
+                .candleChart {
+                    grid-column: span 8/span 8;
+                }
+            }
+
+            .bottom {
+                .tasklist {
+                    grid-column: span 6 /span 6;
+                }
+
+                .productList {
+                    grid-column: span 6 /span 6;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .crypto {
+        &-Container {
+            .dashboard {
+                .itemBox {
+                    grid-column: span 3/span 3;
+                }
+            }
+
+            .center {
+                .products {
+                    grid-column: span 3/span 3;
+                }
+
+                .candleChart {
+                    grid-column: span 9/span 9;
+                }
+            }
+
         }
     }
 }

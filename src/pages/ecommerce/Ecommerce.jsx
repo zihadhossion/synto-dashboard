@@ -19,11 +19,7 @@ import MoreIcon from "../../utils/moreIcon/MoreIcon";
 import DateValue from "../../utils/dateValue/DateValue";
 import { svgIcon } from "../../data/dashSource";
 import { ecommerceTHdata1, ecommerceTHdata2, ecommerceRows1, ecommerceRows2 } from "../../data/tableSource";
-
-const dashboardStyle = {
-    gridColumn: "span 4/ span 4",
-    height: "100%"
-}
+import ActionBtn from "../../utils/actionBtn/ActionBtn";
 
 function Ecommerce() {
 
@@ -35,12 +31,12 @@ function Ecommerce() {
                 <div className="sub_container">
                     <TitleBar text={"Ecommerce Dashboard"} />
                     <Dashboard>
-                        <Item title="Total Revenue" amount="$26,35,262" MySvg={svgIcon.one} badge="+22%" boxStyle={dashboardStyle} desc={"Increase by"} />
-                        <Item title="Total Sales" amount="$56,35,262" MySvg={svgIcon.two} badge="18%" boxStyle={dashboardStyle} desc={"Increase by"} />
-                        <Item title="Total Products" amount="$4,262" MySvg={svgIcon.three} badge="20%" boxStyle={dashboardStyle} desc={"Increase by"} />
-                        <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} badge="14%" boxStyle={dashboardStyle} desc={"Increase by"} />
-                        <Item title="Total Products" amount="$4,262" MySvg={svgIcon.three} badge="20%" boxStyle={dashboardStyle} desc={"Increase by"} />
-                        <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} badge="14%" boxStyle={dashboardStyle} desc={"Increase by"} />
+                        <Item title="Total Revenue" amount="$26,35,262" MySvg={svgIcon.one} badge="+22%" desc={"Increase by"} />
+                        <Item title="Total Sales" amount="$56,35,262" MySvg={svgIcon.two} badge="18%" desc={"Increase by"} />
+                        <Item title="Total Products" amount="$4,262" MySvg={svgIcon.three} badge="20%" desc={"Increase by"} />
+                        <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} badge="14%" desc={"Increase by"} />
+                        <Item title="Total Products" amount="$4,262" MySvg={svgIcon.three} badge="20%" desc={"Increase by"} />
+                        <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} badge="14%" desc={"Increase by"} />
                     </Dashboard>
                     <div className="center">
                         <Products title={"Recent Orders"} IconBox={<MoreIcon />} />
@@ -53,7 +49,50 @@ function Ecommerce() {
                     </div>
                     <section className="orderDetail">
                         <Topbar title={"Recent Order Details"} />
-                        <ListTable theadData={ecommerceTHdata2} rows={ecommerceRows2} />
+                        <ListTable>
+                            <table className="table">
+                                <thead>
+                                    <tr>
+                                        {ecommerceTHdata2.map((item, i) =>
+                                            <th key={i} className="table_head">{item}</th>
+                                        )}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {ecommerceRows2.map((item) => {
+                                        return <tr key={item.id} className="table_row">
+                                            <td className="table_Cell">{item.date}</td>
+                                            <td className="table_Cell">
+                                                <div className="cellWrapper">
+                                                    <div className="imgBox">
+                                                        <img src={item?.itemImg} alt="" className="image" />
+                                                    </div>
+                                                    <div className="text">
+                                                        <p className="title">{item.itemTitle}</p>
+                                                        <p className="desc">#215{item?.slNo}</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className="table_Cell">
+                                                #{item.id}
+                                            </td>
+                                            <td className="table_Cell">
+                                                #2024{item.id}{item.slNo}
+                                            </td>
+                                            <td className="table_Cell">{item.price}</td>
+                                            <td className="table_Cell">{item.paymentMethod}</td>
+                                            <td className="table_Cell">{item.status}</td>
+                                            <td className="table_Cell">{item.id}</td>
+                                            <td className="table_Cell">{item.id}{item.slNo}</td>
+
+                                            <td className="table_Cell">
+                                                <ActionBtn />
+                                            </td>
+                                        </tr>
+                                    })}
+                                </tbody>
+                            </table>
+                        </ListTable>
                     </section>
                 </div>
                 <Footer />

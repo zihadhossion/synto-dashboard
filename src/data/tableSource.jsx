@@ -142,36 +142,69 @@ export const ecommerceRows2 = [
     {
         slNo: 1,
         id: 145315,
-        itemTitle: "CSS Zero to Hero Master Class",
-        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/media/1.jpg",
-        numClass: '99',
+        itemTitle: "Acer Nitro 5",
+        itemImg: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+        price: '$999.99',
         date: '15 May 2023',
-        category: "UI/UX",
-        userName: "Jhon Doe",
+        userName: "John Smith",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        email: "romankillon143@gmail.com",
+        status: "Success",
+        paymentMethod: "Online",
     },
     {
         slNo: 2,
         id: 143554,
-        itemTitle: "Digital Marketing Course From Scratch",
-        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/media/4.jpg",
-        numClass: '49',
+        itemTitle: "Airpods",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/4.png",
+        price: '$49.99',
         date: '15 May 2023',
-        userName: "Jhon Doe",
-        category: "UI/UX",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/9.jpg",
+        userName: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Cancelled",
+        paymentMethod: "Cash On Delivery",
     },
     {
         slNo: 3,
         id: 149454,
-        itemTitle: "Data Structures & Algorithms For Beginners",
-        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/media/10.jpg",
-        numClass: '59',
+        itemTitle: "White T-Shirt",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/2.png",
+        price: '$499.99',
         date: '15 May 2023',
-        userName: "Jhon Doe",
-        category: "UI/UX",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        name: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Shipping",
+        paymentMethod: "Online",
+    }
+]
+
+export const cryptoTHData1 = ["Coin", "Total", "Holding", "Status", "Action"];
+export const cryptoTHData2 = ["SL No", "Name", "Symbol", "Price", "Market Cap", "Price Graph", "Volume", "price change", "actions"];
+export const cryptoRows = [
+    {
+        slNo: 1,
+        name: "Bitcoin",
+        symbol: "",
+        id: 145315,
+        price: '$9989',
+    },
+    {
+        slNo: 2,
+        id: 143554,
+        name: "Bitcoin",
+        symbol: "",
+        price: '$9989',
+    },
+    {
+        slNo: 3,
+        id: 149454,
+        name: "Bitcoin",
+        symbol: "",
+        price: '$9989',
     }
 ];
-
-export const cryptoTHData = ["Coin", "Total", "Holding", "Status", "Action"];
 export const countryTHData = ["Country", "Date", "Total Registers", "Action"];
 export const recruitersTHData = ["Name", "Subcription", "Total Employees", "Recruiter Since"];
 

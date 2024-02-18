@@ -1,3 +1,10 @@
+%grid-base {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
 .home {
     background-color: #F2F6F9;
     transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
@@ -7,36 +14,11 @@
         margin-top: 70px;
         transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
 
-        // .dashboard {
-        //     margin-bottom: 1rem;
-
-        //     .dashboardContainer {
-        //         display: grid;
-        //         grid-template-columns: repeat(12, minmax(0, 1fr));
-        //         align-items: center;
-        //         gap: 1rem;
-
-        //         .box {
-        //             grid-column: span 3/ span 3;
-        //             height: 100%;
-        //         }
-
-        //         .box.down {
-        //             .item {
-        //                 .left {
-        //                     .icon {
-        //                         background-color: #FDF7E6;
-        //                     }
-        //                 }
-
-        //                 .badge {
-        //                     background-color: #FDF7E6;
-        //                 }
-        //             }
-
-        //         }
-        //     }
-        // }
+        .dashboard {
+            .itemBox {
+                grid-column: span 12/span 12;
+            }
+        }
 
         .center {
             @extend %grid-base;
@@ -47,11 +29,11 @@
 
             .customers {
                 width: 100%;
-                grid-column: span 6/span 6;
+                grid-column: span 12/span 12;
             }
 
             .salevalue {
-                grid-column: span 6/span 6;
+                grid-column: span 12/span 12;
             }
         }
 
@@ -59,15 +41,14 @@
             @extend %grid-base;
 
             .products {
-                grid-column: span 6 /span 6;
+                grid-column: span 12/span 12;
             }
 
             .visitor {
-                grid-column: span 6 /span 6;
+                grid-column: span 12/span 12;
             }
 
-
-            .sellproduct {
+            .productList {
                 grid-column: span 12 /span 12;
             }
         }
@@ -80,30 +61,43 @@
     }
 }
 
-.main {
-    .main-container {
-        margin-left: 15rem;
-    }
-}
+@media (min-width:768px) {
+    .home {
+        &-Container {
+            .dashboard {
+                .itemBox {
+                    grid-column: span 6/span 6;
+                }
+            }
 
-%grid-base {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
+            .center {
+                .customers {
+                    grid-column: span 6/span 6;
+                }
 
-.app {
-    &.active {
-        .main {
-            .main-container {
-                margin-left: 5rem !important;
+                .salevalue {
+                    grid-column: span 6/span 6;
+                }
+            }
+
+            .bottom {
+                .products {
+                    grid-column: span 6/span 6;
+                }
+
+                .visitor {
+                    grid-column: span 6/span 6;
+                }
+
+                .productList {
+                    grid-column: span 12 /span 12;
+                }
             }
         }
     }
 }
 
-@media (min-width:1400px) {
+@media (min-width:992px) {
     .home {
         &-Container {
             .center {
@@ -123,9 +117,16 @@
     }
 }
 
-@media (min-width:1300px) {
+
+@media (min-width:1200px) {
     .home {
         &-Container {
+            .dashboard {
+                .itemBox {
+                    grid-column: span 3/span 3;
+                }
+            }
+
             .bottom {
                 .products {
                     grid-column: span 3 /span 3;
@@ -135,35 +136,10 @@
                     grid-column: span 3 /span 3;
                 }
 
-                .sellproduct {
+                .productList {
                     grid-column: span 6 /span 6;
                 }
             }
         }
     }
-
-    .dashboard {
-        .dashboardContainer {
-            .box {
-                grid-column: span 6/ span 6;
-                position: relative;
-            }
-        }
-    }
 }
-
-// @media (min-width:1100px) {
-//     .home {
-//         &-Container {
-//             .bottom {
-//                 .products {
-//                     grid-column: span 3 /span 3;
-//                 }
-
-//                 .visitor {
-//                     grid-column: span 3 /span 3;
-//                 }
-//             }
-//         }
-//     }
-// }

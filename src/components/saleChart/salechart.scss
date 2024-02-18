@@ -1,7 +1,6 @@
 .salechart {
     .saleContainer {
         padding: 1rem;
-        display: grid;
 
         ul {
             display: flex;
@@ -40,4 +39,19 @@
             }
         }
     }
+}
+
+
+@media (max-width:550px) {
+    .salechart {
+        .saleContainer {
+            padding: .75rem;
+
+            ul {
+                flex-direction: column;
+                gap: .5rem;
+            }
+        }
+    }
+
 }

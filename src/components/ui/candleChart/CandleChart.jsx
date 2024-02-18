@@ -1,6 +1,8 @@
 import "./candleChart.scss";
 import ReactApexChart from 'react-apexcharts';
 import dayjs from 'dayjs';
+import Topbar from "../topbar/Topbar";
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
 
 const data = {
     series: [{
@@ -252,15 +254,13 @@ const data = {
         chart: {
             height: 350,
             type: 'candlestick',
-        },
-        title: {
-            text: 'CandleStick Chart - Category X-axis',
-            align: 'left'
+            toolbar: {
+                show: false,
+            }
         },
         tooltip: {
             enabled: true,
         },
-
         xaxis: {
             labels: {
                 type: 'category',
@@ -291,13 +291,34 @@ const data = {
             }
         }
     },
-
-
 };
 
-function CandleChart() {
+function CandleChart({ title, IconBox }) {
     return (
         <section className="candleChart">
+            <Topbar title={title} IconBox={IconBox} />
+            <article>
+                <div className="logo"><CurrencyBitcoinIcon /></div>
+                <div className="symbol">
+                    <p>symbol</p>
+                    <p>BTC</p>
+                </div>
+                <div className="benchMark">
+                    <p>benchmark</p>
+                    <p>128</p>
+                </div>
+                <div className="price">
+                    <p>Price (USD)</p>
+                    <p>$4253.00</p>
+                </div>
+                <div className="change">
+                    <p>Change (24H)</p>
+                    <p>-0.24%</p>
+                </div>
+                <div className="market">
+                    <p>Market Cap</p>
+                </div>
+            </article>
             <div id="chart">
                 <ReactApexChart options={data.options} series={data.series} type="candlestick" height={350} />
             </div>

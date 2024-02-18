@@ -3,7 +3,6 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    // display: block;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -314,5 +313,43 @@
     100% {
         transform: scale(2);
         opacity: 0;
+    }
+}
+
+@media (max-width:550px) {
+    .header {
+        &.active {
+            padding-left: 3rem;
+        }
+
+        .navbar {
+            .right {
+                .header {
+                    &-country {
+                        display: none;
+                    }
+
+                    &-darkmode {
+                        display: none;
+                    }
+
+                    &-fullscreen {
+                        display: none;
+                    }
+
+                    &-shopcart {
+                        display: none;
+                    }
+
+                    &-notification {
+                        display: none;
+                    }
+
+                    &-bookmark {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }

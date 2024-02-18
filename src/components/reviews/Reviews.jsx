@@ -41,7 +41,6 @@ function Reviews({ IconBox }) {
                     </div>
                     <p>4.3</p>
                 </div>
-
                 {
                     data.map((item, i) =>
                         <div className="review" key={i}>

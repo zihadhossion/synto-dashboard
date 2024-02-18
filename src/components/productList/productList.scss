@@ -1,14 +1,6 @@
-.sellproduct {
-    grid-column: span 12 /span 12;
-
-    // ::-webkit-scrollbar {
-    //     width: .1px;
-    //     background: #ddd;
-    // }
-}
-
-@media (min-width:1300px) {
-    .sellproduct {
-        grid-column: span 6 /span 6;
+.productList {
+    .spContainer {
+        overflow-x: scroll;
+        // overflow-y: hidden;
     }
 }

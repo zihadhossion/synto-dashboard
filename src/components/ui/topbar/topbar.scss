@@ -6,10 +6,13 @@
     justify-content: space-between;
     padding: 1rem;
 
-    h3 {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #1e293b;
+    &_left {
+        .title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e293b;
+            text-transform: capitalize;
+        }
     }
 
     svg {

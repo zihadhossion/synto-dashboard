@@ -53,11 +53,43 @@ html {
 }
 
 
-@media (max-width:768px) {
+/* @media (max-width:768px) {
   .app {
     .home {
       .sidebar {
         display: none;
+      }
+    }
+  }
+} */
+
+.main {
+  .main-container {
+    margin-left: 15rem;
+  }
+}
+
+.app {
+  &.active {
+    .main {
+      .main-container {
+        margin-left: 5rem !important;
+      }
+    }
+  }
+}
+
+@media (max-width:550px) {
+  .sub_container {
+    padding: .75rem .75rem 0 .75rem;
+  }
+
+  .app {
+    &.active {
+      .main {
+        .main-container {
+          margin-left: 3rem !important;
+        }
       }
     }
   }

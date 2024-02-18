@@ -16,12 +16,14 @@ import MixedChart from "../../components/ui/mixedChart/MixedChart";
 import CandleChart from "../../components/ui/candleChart/CandleChart";
 import { applicantData } from "../../data/dashSource";
 import { countryTHData, recruitersTHData, rows } from "../../data/tableSource";
-import ListTable from "../../components/listtable/ListTable";
+// import ListTable from "../../components/listtable/ListTable";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
 import Statistics from "../../components/statistics/Statistics";
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import Applicant from "../../components/jobs/applicant/Applicant";
 import AppRatio from "../../components/jobs/appRatio/AppRatio";
+import DateValue from "../../utils/dateValue/DateValue";
+
 
 function Jobs() {
 
@@ -58,8 +60,8 @@ function Jobs() {
                         <SellProduct title={"Top Recruiters"} theadData={recruitersTHData} rows={rows} />
                     </div>
                     <section className="orderDetail">
-                        <Topbar title={"Recent Order Details"} />
-                        <ListTable />
+                        <Topbar title={"Crypto currency market details"} IconBox={<DateValue />} />
+                        {/* <ListTable /> */}
                     </section>
                 </div>
                 <Footer />

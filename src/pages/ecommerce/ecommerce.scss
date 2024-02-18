@@ -1,3 +1,10 @@
+%grid-base {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
 .ecommerce {
     background-color: #F2F6F9;
     transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
@@ -7,15 +14,18 @@
         margin-top: 70px;
         transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
 
-        // .dashboard {
-        //     margin-bottom: 1rem;
-        // }
+        .dashboard {
+            .itemBox {
+                grid-column: span 12/span 12;
+            }
+        }
 
         .center {
             @extend %grid-base;
 
             .products {
-                grid-column: span 6 /span 6;
+                order: 2;
+                grid-column: span 12/span 12;
             }
 
             .statistics {
@@ -24,8 +34,8 @@
             }
 
             .reviews {
-                grid-column: span 6 /span 6;
-
+                order: 3;
+                grid-column: span 12/span 12;
             }
         }
 
@@ -36,59 +46,59 @@
                 grid-column: span 12 /span 12;
             }
 
-            .sellproduct {
+            .productList {
                 grid-column: span 12 /span 12;
             }
         }
     }
 }
 
-.main {
-    .main-container {
-        margin-left: 15rem;
-    }
-}
-
-%grid-base {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.app {
-    &.active {
-        .main {
-            .main-container {
-                margin-left: 5rem !important;
-            }
-        }
-    }
-}
-
-@media (min-width:1300px) {
+@media (min-width:600px) {
     .ecommerce {
         &-Container {
             .dashboard {
-                .dashboardContainer {
-                    .box {
-                        grid-column: span 4/ span 4;
-                    }
+                .itemBox {
+                    grid-column: span 6/span 6;
                 }
             }
 
             .center {
                 .products {
-                    grid-column: span 3 /span 3;
+                    grid-column: span 6/span 6;
+                }
+
+                .statistics {
+                    grid-column: span 12 /span 12;
+                }
+
+                .reviews {
+                    grid-column: span 6/span 6;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:992px) {
+    .ecommerce {
+        &-Container {
+            .dashboard {
+                .itemBox {
+                    grid-column: span 4/span 4;
+                }
+            }
+
+            .center {
+                .products {
+                    grid-column: span 3/span 3;
                 }
 
                 .statistics {
                     grid-column: span 6 /span 6;
-                    order: 0;
                 }
 
                 .reviews {
-                    grid-column: span 3 /span 3;
+                    grid-column: span 3/span 3;
                 }
             }
 
@@ -97,48 +107,10 @@
                     grid-column: span 6 /span 6;
                 }
 
-                .sellproduct {
+                .productList {
                     grid-column: span 6 /span 6;
                 }
             }
         }
     }
 }
-
-// @media (min-width:1100px) {
-//     .ecommerce {
-//         &-Container {
-//             .dashboard {
-//                 .dashboardContainer {
-//                     .box {
-//                         grid-column: span 4/ span 4;
-//                     }
-//                 }
-//             }
-
-//             .center {
-//                 .products {
-//                     grid-column: span 3 /span 3;
-//                 }
-
-//                 .mixedchart {
-//                     grid-column: span 6 /span 6;
-//                 }
-
-//                 .reviews {
-//                     grid-column: span 3 /span 3;
-//                 }
-//             }
-
-//             .bottom {
-//                 .tasklist {
-//                     grid-column: span 6 /span 6;
-//                 }
-
-//                 .sellproduct {
-//                     grid-column: span 6 /span 6;
-//                 }
-//             }
-//         }
-//     }
-// }

@@ -1,10 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import {
     Link,
     NavLink,
 } from "react-router-dom";
 import "./sidebar.scss";
-import DashboardIcon from '@mui/icons-material/Dashboard';
 import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
 import AnalyticsOutlinedIcon from '@mui/icons-material/AnalyticsOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -18,19 +17,18 @@ import SettingsAccessibilityOutlinedIcon from '@mui/icons-material/SettingsAcces
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 import { SidebarContext } from "../../context/SidebarContext";
-import logo from "../../assets/desktop-logo.png";
 import darkLogo from "../../assets/desktop-dark.png";
 import toggleLogo from "../../assets/toggle-logo.png";
 
 function Sidebar() {
-    const { sidebarActive } = useContext(SidebarContext);
+    const { sidebarActive, setSidebarActive } = useContext(SidebarContext);
+    const [isHover, setIsHover] = useState(true);
 
     return (
-        <aside className={sidebarActive ? "sidebar" : "sidebar active"} >
+        <aside className={sidebarActive ? "sidebar" : "sidebar active"} onMouseEnter={() => setIsHover(false)} onMouseLeave={() => setIsHover(true)}>
             <div className="logo-image">
                 <Link to={"/"}>
-                    {sidebarActive ? <img src={darkLogo} alt="" /> : <img src={toggleLogo} alt="" />}
-                    {/* <img src={logo} alt="" /> */}
+                    {sidebarActive ? <img src={darkLogo} alt="" /> : isHover ? <img src={toggleLogo} alt="" /> : <img src={darkLogo} alt="" />}
                 </Link>
             </div>
             <div className="content">

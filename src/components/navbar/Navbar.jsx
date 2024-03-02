@@ -1,4 +1,5 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
+import { Link, } from "react-router-dom";
 import "./navbar.scss";
 import SearchIcon from '@mui/icons-material/Search';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
@@ -13,6 +14,66 @@ import profile from "../../assets/profile.jpg";
 import { SidebarContext } from "../../context/SidebarContext";
 
 function Navbar() {
+    const { sidebarActive, setSidebarActive } = useContext(SidebarContext);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        // Attach event listener to window resize
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    return (
+        <>
+            {windowWidth > 768 ? <DeskNavbar /> : <MobNavbar />}
+        </>
+    )
+};
+
+export default Navbar;
+
+function MobNavbar() {
+    const { sidebarActive, setSidebarActive } = useContext(SidebarContext);
+
+    return (
+        <header className="mobHeader">
+            <nav className="mobNavbar">
+                <div className="left">
+                    <div className="arrowIcon" onClick={() => setSidebarActive((e) => !e)}>
+                        {sidebarActive ? <ArrowBackIcon /> : <ArrowForwardIcon />}
+                    </div>
+                    <div className="logoImage">
+                        <Link to={"/"}>
+                            <img src={"https://spruko.com/demo/synto/Synto/dist/assets/img/brand-logos/desktop-logo.png"} alt="" />
+                        </Link>
+                    </div>
+                </div>
+                <div className="right">
+                    <div className="header-search">
+                        <button className="search">
+                            <SearchIcon />
+                        </button>
+                    </div>
+                    <div className="header-user">
+                        <button className="profile">
+                            <img src={profile} alt="" />
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    )
+};
+
+function DeskNavbar() {
     const { sidebarActive, setSidebarActive } = useContext(SidebarContext);
 
     return (
@@ -72,5 +133,3 @@ function Navbar() {
         </header>
     )
 };
-
-export default Navbar;

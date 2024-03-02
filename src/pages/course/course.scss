@@ -1,3 +1,10 @@
+%grid-base {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
 .course {
     background-color: #F2F6F9;
     transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
@@ -8,44 +15,8 @@
         transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
 
         .dashboard {
-            margin-bottom: 1rem;
-
-            &-title {
-                font-size: 1.5rem;
-                font-weight: 500;
-                color: rgb(51 65 85);
-                margin-bottom: 1.5rem;
-                transition: all .2s linear;
-
-                &:hover {
-                    color: #000;
-                }
-            }
-
-            .dashboardContainer {
-                display: grid;
-                grid-template-columns: repeat(12, minmax(0, 1fr));
-                align-items: center;
-                gap: 1rem;
-
-                .box {
-                    grid-column: span 6/ span 6;
-                    height: 100%;
-                }
-
-                .box.down {
-                    .item {
-                        .left {
-                            .icon {
-                                background-color: #FDF7E6;
-                            }
-                        }
-
-                        .badge {
-                            background-color: #FDF7E6;
-                        }
-                    }
-                }
+            .itemBox {
+                grid-column: span 12/ span 12;
             }
         }
 
@@ -56,7 +27,7 @@
                 grid-column: span 12/ span 12;
             }
 
-            .datatable {
+            .lists {
                 grid-column: span 12 / span 12;
             }
         }
@@ -64,42 +35,42 @@
         .bottom {
             @extend %grid-base;
 
-            .tasklist {
+            .courseList {
                 grid-column: span 12 /span 12;
             }
 
-            .sellproduct {
+            .products {
                 grid-column: span 12 /span 12;
             }
         }
 
-        .orderDetail {
-
-            .odContainer {
-                padding: 0 1rem;
+        .mainList {
+            &_Box {
+                padding: 1rem;
             }
         }
     }
 }
 
-.main {
-    .main-container {
-        margin-left: 15rem;
-    }
-}
+@media (min-width:768px) {
+    .course {
+        &-Container {
+            .dashboard {
+                .itemBox {
+                    grid-column: span 6/ span 6;
+                }
+            }
 
-%grid-base {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 1rem;
-    margin: 1rem 0;
-}
 
-.app {
-    &.active {
-        .main {
-            .main-container {
-                margin-left: 5rem !important;
+            .bottom {
+                .courseList {
+                    grid-column: span 12 /span 12;
+                    order: 1;
+                }
+
+                .products {
+                    grid-column: span 6 /span 6;
+                }
             }
         }
     }
@@ -108,12 +79,9 @@
 @media (min-width:1100px) {
     .course {
         &-Container {
-
             .dashboard {
-                .dashboardContainer {
-                    .box {
-                        grid-column: span 3/ span 3;
-                    }
+                .itemBox {
+                    grid-column: span 3/ span 3;
                 }
             }
 
@@ -122,18 +90,19 @@
                     grid-column: span 6/ span 6;
                 }
 
-                .datatable {
+                .lists {
                     grid-column: span 6 / span 6;
                 }
             }
 
             .bottom {
-                .tasklist {
+                .courseList {
                     grid-column: span 6 /span 6;
+                    order: 0;
                 }
 
-                .sellproduct {
-                    grid-column: span 6 /span 6;
+                .products {
+                    grid-column: span 3 /span 3;
                 }
             }
         }

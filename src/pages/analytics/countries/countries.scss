@@ -1,0 +1,38 @@
+.countries {
+    &Container {
+        padding: 2rem 2rem 0 2rem;
+
+        .country {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+
+            .left {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                object-fit: cover;
+
+                img {
+                    width: 25px;
+                    height: 25px;
+                }
+
+                .title {
+                    font-size: .95rem;
+                    color: #1e293b;
+                }
+            }
+
+            .population {
+                padding: 5px 10px;
+                color: rgb(100, 116, 139);
+                background-color: rgba(100, 116, 139, .1);
+                border-radius: 5px;
+                font-size: .85rem;
+                font-weight: 500;
+            }
+        }
+    }
+}

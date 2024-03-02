@@ -1,0 +1,63 @@
+.salechart {
+    position: relative;
+
+    .saleContainer {
+        padding: 1rem;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            margin: .75rem;
+
+            li {
+                list-style-type: bullet;
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: rgb(30 41 59);
+                display: inline-flex;
+                align-items: center;
+                gap: .5rem;
+
+                .bullet {
+                    width: .75rem;
+                    height: .75rem;
+                    border-width: 4px;
+                    border-style: solid;
+                    border-color: rgb(90 102 241);
+                    border-radius: 100%;
+
+                    &.expanse {
+                        border-color: #d2d8f0;
+                    }
+                }
+
+                .desc {
+                    font-size: .875rem;
+                    color: rgb(148 163 184);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .apexcharts-bar-series.apexcharts-plot-series .apexcharts-series path {
+        clip-path: inset(10% 0% -10% 1% round 50px);
+    }
+}
+
+
+@media (max-width:550px) {
+    .salechart {
+        .saleContainer {
+            padding: .75rem;
+
+            ul {
+                flex-direction: column;
+                gap: .5rem;
+            }
+        }
+    }
+
+}

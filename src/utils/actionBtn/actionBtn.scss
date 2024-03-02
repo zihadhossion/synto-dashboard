@@ -6,8 +6,8 @@
     .icon {
         width: 35px;
         height: 35px;
-        color: rgb(96, 165, 250);
-        background: rgba(96, 165, 250, .1);
+        color: rgb(88, 152, 231);
+        background: rgba(88, 152, 231, .1);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -18,7 +18,7 @@
 
         &:hover {
             color: #fff;
-            background: rgb(96, 165, 250);
+            background: rgb(88, 141, 178);
 
             .tooltiptext {
                 visibility: visible;
@@ -51,6 +51,7 @@
         }
 
         .tooltiptext {
+            font-size: .65rem;
             visibility: hidden;
             background-color: #555;
             color: #fff;

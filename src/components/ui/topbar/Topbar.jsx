@@ -7,9 +7,7 @@ function Topbar({ title, IconBox }) {
             <div className="topbar_left">
                 <h3 className="title">{title}</h3>
             </div>
-            <>
-                {IconBox}
-            </>
+            {IconBox}
         </div>)
 };
 

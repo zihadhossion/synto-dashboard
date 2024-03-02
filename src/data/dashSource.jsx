@@ -56,3 +56,63 @@ export const courseIcon =
     four: <CardGiftcardOutlinedIcon />
 }
 
+export const nftItem = [
+    {
+        id: 1,
+        bgImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/nft-images/1.png",
+        title: "Color Abstract - NFT",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/10.jpg",
+        userName: "Ergos",
+    },
+    {
+        id: 2,
+        bgImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/nft-images/2.png",
+        title: "Fluid Abstract - NFT",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/5.jpg",
+        userName: "Ergos",
+    },
+    {
+        id: 3,
+        bgImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/nft-images/3.png",
+        title: "Space Fluid - NFT",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/7.jpg",
+        userName: "Ergos",
+    },
+    {
+        id: 4,
+        bgImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/nft-images/2.png",
+        title: "Fluid Abstract - NFT",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/5.jpg",
+        userName: "Ergos",
+    },
+]
+
+export const courseCard = [
+    {
+        courseImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/media/1.jpg",
+        category: " UI/UX",
+        title: "CSS Zero to Hero Class-11: What are Pseudo Classes In CSS? How To Write Pseudo Classes?",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/3.jpg",
+        userName: "Natasha Sil",
+        views: "2,189",
+        rating: 4.2,
+    },
+    {
+        courseImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/media/1.jpg",
+        category: " UI/UX",
+        title: "CSS Zero to Hero Class-11: What are Pseudo Classes In CSS? How To Write Pseudo Classes?",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/3.jpg",
+        userName: "Natasha Sil",
+        views: "2,189",
+        rating: 4.2,
+    },
+    {
+        courseImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/media/1.jpg",
+        category: " UI/UX",
+        title: "CSS Zero to Hero Class-11: What are Pseudo Classes In CSS? How To Write Pseudo Classes?",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/3.jpg",
+        userName: "Natasha Sil",
+        views: "2,189",
+        rating: 4.2,
+    },
+]

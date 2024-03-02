@@ -1,3 +1,4 @@
+import LinesChart from "../components/ui/linesChart/LinesChart";
 export const thData = ["PRODUCT", "CATEGORY", "STOCK", "TOTAL SALE"];
 
 export const rows = [
@@ -51,6 +52,53 @@ export const rows = [
         stock: "Out Of Stock",
     },
 ];
+
+export const analyticsTHData1 = ["browser", "sessions", "traffic"];
+export const analyticsRows1 = [];
+
+export const analyticsTHData2 = ["SL No", "Name", "Symbol", "Price", "Market Cap", "Price Graph", "Volume", "price change", "actions"];
+export const analyticsRows2 = [
+    {
+        slNo: 1,
+        id: 145315,
+        itemTitle: "Acer Nitro 5",
+        itemImg: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+        price: '$999.99',
+        date: '15 May 2023',
+        userName: "John Smith",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        email: "romankillon143@gmail.com",
+        status: "Success",
+        paymentMethod: "Online",
+    },
+    {
+        slNo: 2,
+        id: 143554,
+        itemTitle: "Airpods",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/4.png",
+        price: '$49.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/9.jpg",
+        userName: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Cancelled",
+        paymentMethod: "Cash On Delivery",
+    },
+    {
+        slNo: 3,
+        id: 149454,
+        itemTitle: "White T-Shirt",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/2.png",
+        price: '$499.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        name: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Shipping",
+        paymentMethod: "Online",
+    }
+]
+
 export const homeTHdata = ["SL. No", "Item Details", "Customer ID", "Customer Details", "Ordered Date", "Status", "Price", "Action"];
 export const homeRows = [
     {
@@ -85,7 +133,7 @@ export const homeRows = [
         price: '$499.99',
         date: '15 May 2023',
         userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
-        name: 'Hugh Jackma',
+        userName: 'Hugh Jackma',
         email: "romankillon143@gmail.com",
         status: "Shipping"
     }
@@ -185,28 +233,241 @@ export const cryptoTHData2 = ["SL No", "Name", "Symbol", "Price", "Market Cap", 
 export const cryptoRows = [
     {
         slNo: 1,
-        name: "Bitcoin",
-        symbol: "",
         id: 145315,
+        name: "Bitcoin",
+        symbol: "https://spruko.com/demo/synto/Synto/dist/assets/img/crypto-currencies/regular/Bitcoin.svg",
         price: '$9989',
+        graph: <LinesChart />,
     },
     {
         slNo: 2,
         id: 143554,
         name: "Bitcoin",
-        symbol: "",
+        symbol: "https://spruko.com/demo/synto/Synto/dist/assets/img/crypto-currencies/regular/Bitcoin.svg",
         price: '$9989',
+        graph: <LinesChart />,
     },
     {
         slNo: 3,
         id: 149454,
         name: "Bitcoin",
-        symbol: "",
+        symbol: "https://spruko.com/demo/synto/Synto/dist/assets/img/crypto-currencies/regular/Bitcoin.svg",
         price: '$9989',
+        graph: <LinesChart />,
     }
 ];
 export const countryTHData = ["Country", "Date", "Total Registers", "Action"];
 export const recruitersTHData = ["Name", "Subcription", "Total Employees", "Recruiter Since"];
+export const jobsTHData1 = ["SL No", "Name", "Symbol", "Price", "Market Cap", "Price Graph", "Volume", "price change", "actions"];
+export const jobsRows1 = [
+    {
+        slNo: 1,
+        id: 145315,
+        itemTitle: "Acer Nitro 5",
+        itemImg: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+        price: '$999.99',
+        date: '15 May 2023',
+        userName: "John Smith",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        email: "romankillon143@gmail.com",
+        status: "Success",
+        paymentMethod: "Online",
+    },
+    {
+        slNo: 2,
+        id: 143554,
+        itemTitle: "Airpods",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/4.png",
+        price: '$49.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/9.jpg",
+        userName: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Cancelled",
+        paymentMethod: "Cash On Delivery",
+    },
+    {
+        slNo: 3,
+        id: 149454,
+        itemTitle: "White T-Shirt",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/2.png",
+        price: '$499.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        name: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Shipping",
+        paymentMethod: "Online",
+    }
+]
+export const nftTHData1 = ["SL No", "Name", "Symbol", "Price", "Market Cap", "Price Graph", "Volume", "price change", "actions"];
+export const nftRows1 = [
+    {
+        slNo: 1,
+        id: 145315,
+        itemTitle: "Acer Nitro 5",
+        itemImg: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+        price: '$999.99',
+        date: '15 May 2023',
+        userName: "John Smith",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        email: "romankillon143@gmail.com",
+        status: "Success",
+        paymentMethod: "Online",
+    },
+    {
+        slNo: 2,
+        id: 143554,
+        itemTitle: "Airpods",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/4.png",
+        price: '$49.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/9.jpg",
+        userName: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Cancelled",
+        paymentMethod: "Cash On Delivery",
+    },
+    {
+        slNo: 3,
+        id: 149454,
+        itemTitle: "White T-Shirt",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/2.png",
+        price: '$499.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        name: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Shipping",
+        paymentMethod: "Online",
+    }
+]
+export const projectTHData1 = ["member", "role", "hours", "tasks", "status",];
+export const projectRows1 = [
+    {
+        slNo: 1,
+        id: 145315,
+        itemTitle: "Acer Nitro 5",
+        itemImg: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+        price: '$999.99',
+        date: '15 May 2023',
+        userName: "John Smith",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        email: "romankillon143@gmail.com",
+        status: "Success",
+        paymentMethod: "Online",
+    },
+    {
+        slNo: 2,
+        id: 143554,
+        itemTitle: "Airpods",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/4.png",
+        price: '$49.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/9.jpg",
+        userName: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Cancelled",
+        paymentMethod: "Cash On Delivery",
+    },
+    {
+        slNo: 3,
+        id: 149454,
+        itemTitle: "White T-Shirt",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/2.png",
+        price: '$499.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        name: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Shipping",
+        paymentMethod: "Online",
+    }
+]
+export const projectTHData2 = ["SL No", "project title", "assigned team", "tasks", "progress", "status", "due date", "actions"];
+export const projectRows2 = [
+    {
+        slNo: 1,
+        id: 145315,
+        itemTitle: "Acer Nitro 5",
+        itemImg: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+        price: '$999.99',
+        date: '15 May 2023',
+        userName: "John Smith",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        email: "romankillon143@gmail.com",
+        status: "Success",
+        paymentMethod: "Online",
+    },
+    {
+        slNo: 2,
+        id: 143554,
+        itemTitle: "Airpods",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/4.png",
+        price: '$49.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/9.jpg",
+        userName: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Cancelled",
+        paymentMethod: "Cash On Delivery",
+    },
+    {
+        slNo: 3,
+        id: 149454,
+        itemTitle: "White T-Shirt",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/2.png",
+        price: '$499.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        name: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Shipping",
+        paymentMethod: "Online",
+    }
+]
+export const personalTHData1 = ["SL No", "Name", "Symbol", "Price", "Market Cap", "Price Graph", "Volume", "price change", "action"];
+export const personalRows1 = [
+    {
+        slNo: 1,
+        id: 145315,
+        itemTitle: "Acer Nitro 5",
+        itemImg: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
+        price: '$999.99',
+        date: '15 May 2023',
+        userName: "John Smith",
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        email: "romankillon143@gmail.com",
+        status: "Success",
+        paymentMethod: "Online",
+    },
+    {
+        slNo: 2,
+        id: 143554,
+        itemTitle: "Airpods",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/4.png",
+        price: '$49.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/9.jpg",
+        userName: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Cancelled",
+        paymentMethod: "Cash On Delivery",
+    },
+    {
+        slNo: 3,
+        id: 149454,
+        itemTitle: "White T-Shirt",
+        itemImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/products/2.png",
+        price: '$499.99',
+        date: '15 May 2023',
+        userImg: "https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg",
+        name: 'Hugh Jackma',
+        email: "romankillon143@gmail.com",
+        status: "Shipping",
+        paymentMethod: "Online",
+    }
+]
 
 export const courseTH1 = ["Name", "Courses", "Completed", "Actions"];
 export const courseTH2 = ["sl no", "Course", "Category", "Classes", "Last Updated", "Instructor", "students", "Actions"];

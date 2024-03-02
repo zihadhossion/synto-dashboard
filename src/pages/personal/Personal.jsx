@@ -3,25 +3,29 @@ import "./personal.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Products from "../../components/products/Products";
-import SellProduct from "../../components/productList/ProductList";
+import Lists from "../../components/lists/Lists";
 import Table from "../../components/ui/table/Table";
 import Topbar from "../../components/ui/topbar/Topbar";
 import Footer from "../../components/footer/Footer";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import Item from "../../components/ui/item/Item";
-import Reviews from "../../components/reviews/Reviews";
-import TaskList from "../../components/taskList/TaskList";
-import MixedChart from "../../components/ui/mixedChart/MixedChart";
-import CandleChart from "../../components/ui/candleChart/CandleChart";
 import { applicantData } from "../../data/dashSource";
-import { countryTHData, recruitersTHData, rows } from "../../data/tableSource";
-import ListTable from "../../components/listtable/ListTable";
+import { countryTHData, recruitersTHData, rows, personalTHData1, personalRows1 } from "../../data/tableSource";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
-import Statistics from "../../components/statistics/Statistics";
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
-import Applicant from "../../components/jobs/applicant/Applicant";
-import AppRatio from "../../components/jobs/appRatio/AppRatio";
+// import Applicant from "../../components/jobs/applicant/Applicant";
+// import AppRatio from "../../components/jobs/appRatio/AppRatio";
+import ListTable from "../../components/ui/listtable/ListTable";
+import Dashboard from "../../components/dashboard/Dashboard";
+import { svgIcon } from "../../data/dashSource";
+import ColumnChart from "../../components/ui/columnChart/ColumnChart";
+import Contact from "./contact/Contact";
+import DateValue from "../../utils/dateValue/DateValue";
+import MoreIcon from "../../utils/moreIcon/MoreIcon";
+import { personalData } from "../../data/chartData";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+
 
 function Personal() {
     return (
@@ -30,35 +34,71 @@ function Personal() {
             <Navbar />
             <div className="main-container personal-Container">
                 <div className="sub_container">
-                    <TitleBar text="CRM Dashboard" />
-                    <div className="dashboard">
-                        <div className="dashboardContainer">
-                            <div className="box">
-                                <Item amount="$26,35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="2.2%" />
-                            </div>
-                            <div className="box">
-                                <Item title="Total Sales" amount="$56,35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="1.8%" />
-                            </div>
-                            <div className="box down">
-                                <Item title="Total Products" amount="$4,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingDownIcon} badge="2.0%" />
-                            </div>
-                            <div className="box">
-                                <Item title="Total Expenses" amount="$35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="1.4%" />
-                            </div>
-                        </div>
-                    </div>
-                    <Statistics title={"Application Overview"} />
+                    <TitleBar text="Personal Dashboard" />
+                    <Dashboard>
+                        <Item title="Total balance" amount="$26,35,262" MySvg={svgIcon.one} BadgeIcon={TrendingUpIcon} badge="2.2%" desc={"in the last week"} />
+                        <Item title="Total income" amount="$56,35,262" MySvg={svgIcon.two} BadgeIcon={TrendingUpIcon} badge="1.8%" />
+                        <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} BadgeIcon={TrendingUpIcon} badge="1.4%" />
+                        <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} BadgeIcon={TrendingUpIcon} badge="1.4%" />
+                    </Dashboard>
                     <div className="center">
-                        <Applicant />
-                        <AppRatio />
+                        <section className="statistics">
+                            <Topbar title={"statistics"} IconBox={<DateValue />} />
+                            <div className="statisBox">
+                                <ColumnChart data={personalData} />
+                            </div>
+                        </section>
+                        <section className="contacts">
+                            <Topbar title={"contacts"} IconBox={<MoreIcon Icon={<MoreVertIcon />} />} />
+                            <div className="contactBox">
+                                <Contact />
+                                <Contact />
+                                <Contact />
+                                <Contact />
+                                <Contact />
+                            </div>
+                        </section>
+                        {/* <Applicant />
+                        <AppRatio /> */}
                     </div>
                     <div className="bottom">
-                        <SellProduct title={"Registers By Country"} theadData={countryTHData} rows={rows} />
-                        <SellProduct title={"Top Recruiters"} theadData={recruitersTHData} rows={rows} />
+                        <Lists title={"Registers By Country"} theadData={countryTHData} rows={rows} />
+                        <Lists title={"Top Recruiters"} theadData={recruitersTHData} rows={rows} />
                     </div>
                     <section className="orderDetail">
                         <Topbar title={"Recent Order Details"} />
-                        <ListTable />
+                        <ListTable>
+                            <table className="table">
+                                <thead>
+                                    <tr>
+                                        {personalTHData1.map((item, i) =>
+                                            <th key={i} className="table_head">{item}</th>
+                                        )}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {personalRows1.map((item) => {
+                                        return <tr key={item.id} className="table_row">
+                                            <td className="table_Cell">{item.slNo}</td>
+                                            <td className="table_Cell">
+                                                {item.name}
+                                            </td>
+                                            <td className="table_Cell">
+                                                #2024{item.id}{item.slNo}
+                                            </td>
+                                            <td className="table_Cell">{item.price}</td>
+                                            <td className="table_Cell">
+                                                20{item.id}24{item.slNo}
+                                            </td>
+
+                                            {/* <td className="table_Cell">
+                                                <ActionBtn />
+                                            </td> */}
+                                        </tr>
+                                    })}
+                                </tbody>
+                            </table>
+                        </ListTable>
                     </section>
                 </div>
                 <Footer />

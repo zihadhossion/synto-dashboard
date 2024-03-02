@@ -1,3 +1,10 @@
+%grid-base {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
 .crm {
     background-color: #F2F6F9;
     transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
@@ -68,11 +75,26 @@
         .bottom {
             @extend %grid-base;
 
-            .tasklist {
+            .lead {
                 grid-column: span 12 /span 12;
+
+                .apexcharts-bar-series.apexcharts-plot-series .apexcharts-series path {
+                    clip-path: inset(0% 0% 0% -10% round 10px);
+                }
+
+                .apexcharts-xaxistooltip-bottom {
+                    display: none;
+                }
+
+                .apexcharts-series {
+                    path {
+                        padding: 10rem;
+                    }
+                }
+
             }
 
-            .sellproduct {
+            .lists {
                 grid-column: span 12 /span 12;
             }
         }
@@ -86,28 +108,7 @@
     }
 }
 
-.main {
-    .main-container {
-        margin-left: 15rem;
-    }
-}
 
-%grid-base {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.app {
-    &.active {
-        .main {
-            .main-container {
-                margin-left: 5rem !important;
-            }
-        }
-    }
-}
 
 @media (min-width:1100px) {
     .crm {
@@ -130,15 +131,14 @@
                 .applicant {
                     grid-column: span 3 / span 3;
                 }
-
             }
 
             .bottom {
-                .tasklist {
-                    grid-column: span 6 /span 6;
+                .lead {
+                    grid-column: span 3 /span 3;
                 }
 
-                .sellproduct {
+                .lists {
                     grid-column: span 6 /span 6;
                 }
             }

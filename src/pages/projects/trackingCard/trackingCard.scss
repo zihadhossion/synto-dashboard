@@ -1,0 +1,25 @@
+.trackingCard {
+    // display: grid;
+    // grid-template-columns: repeat(12, 1fr);
+    // gap: 1rem;
+
+
+    .box {
+        background-color: #fff;
+        margin-bottom: 1.5rem;
+        text-align: center;
+
+    }
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .description {
+
+        .imageContainer {
+            display: flex;
+        }
+    }
+}

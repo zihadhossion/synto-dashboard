@@ -2,26 +2,26 @@ import { useContext } from "react";
 import "./crm.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import Products from "../../components/products/Products";
-import SellProduct from "../../components/productList/ProductList";
-import Table from "../../components/ui/table/Table";
+import Lists from "../../components/lists/Lists";
 import Topbar from "../../components/ui/topbar/Topbar";
 import Footer from "../../components/footer/Footer";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import Item from "../../components/ui/item/Item";
-import Reviews from "../../components/reviews/Reviews";
-import TaskList from "../../components/taskList/TaskList";
-import MixedChart from "../../components/ui/mixedChart/MixedChart";
-import CandleChart from "../../components/ui/candleChart/CandleChart";
 import { applicantData } from "../../data/dashSource";
 import { countryTHData, recruitersTHData, rows } from "../../data/tableSource";
-import ListTable from "../../components/listtable/ListTable";
+import ListTable from "../../components/ui/listtable/ListTable";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
-import Statistics from "../../components/statistics/Statistics";
-import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
-import Applicant from "../../components/jobs/applicant/Applicant";
-import AppRatio from "../../components/jobs/appRatio/AppRatio";
+// import Applicant from "../../components/jobs/applicant/Applicant";
+// import AppRatio from "../../components/jobs/appRatio/AppRatio";
+import Dashboard from "../../components/dashboard/Dashboard";
+import { svgIcon } from "../../data/dashSource";
+import ActionBtn from "../../utils/actionBtn/ActionBtn";
+import { projectTHData1, projectRows1, projectTHData2, projectRows2 } from "../../data/tableSource";
+import BarChart from "../../components/ui/barChart/BarChart";
+import { crmBarData } from "../../data/chartData";
+import MoreIcon from "../../utils/moreIcon/MoreIcon";
+import BtnDrop from "../../utils/btnDrop/BtnDrop";
 
 function CRM() {
     return (
@@ -31,34 +31,70 @@ function CRM() {
             <div className="main-container crm-Container">
                 <div className="sub_container">
                     <TitleBar text="CRM Dashboard" />
-                    <div className="dashboard">
-                        <div className="dashboardContainer">
-                            <div className="box">
-                                <Item amount="$26,35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="2.2%" />
-                            </div>
-                            <div className="box">
-                                <Item title="Total Sales" amount="$56,35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="1.8%" />
-                            </div>
-                            <div className="box down">
-                                <Item title="Total Products" amount="$4,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingDownIcon} badge="2.0%" />
-                            </div>
-                            <div className="box">
-                                <Item title="Total Expenses" amount="$35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="1.4%" />
-                            </div>
-                        </div>
-                    </div>
-                    <Statistics title={"Application Overview"} />
+                    <Dashboard>
+                        <Item title="Total Revenue" amount="$26,35,262" MySvg={svgIcon.one} BadgeIcon={TrendingUpIcon} badge="2.2%" desc={"in the last week"} />
+                        <Item title="Total Sales" amount="$56,35,262" MySvg={svgIcon.two} BadgeIcon={TrendingUpIcon} badge="1.8%" />
+                        <Item title="Total Products" amount="$4,262" MySvg={svgIcon.three} BadgeIcon={TrendingDownIcon} badge="2.0%" />
+                        <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} BadgeIcon={TrendingUpIcon} badge="1.4%" />
+                    </Dashboard>
                     <div className="center">
-                        <Applicant />
-                        <AppRatio />
+                        {/* <Applicant />
+                        <AppRatio /> */}
                     </div>
                     <div className="bottom">
-                        <SellProduct title={"Registers By Country"} theadData={countryTHData} rows={rows} />
-                        <SellProduct title={"Top Recruiters"} theadData={recruitersTHData} rows={rows} />
+                        <section className="lead">
+                            <Topbar title={"leads by source"} IconBox={<MoreIcon Icon={<BtnDrop title={"This Week"} />} />} />
+                            <div className="visitorContainer">
+                                <BarChart data={crmBarData} />
+                            </div>
+                        </section>
+                        <Lists title={"Deals overview"} theadData={countryTHData} rows={rows} />
                     </div>
                     <section className="orderDetail">
                         <Topbar title={"Recent Order Details"} />
-                        <ListTable />
+                        <ListTable>
+                            <table className="table">
+                                <thead>
+                                    <tr>
+                                        {projectTHData2.map((item, i) =>
+                                            <th key={i} className="table_head">{item}</th>
+                                        )}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {projectRows2.map((item) => {
+                                        return <tr key={item.id} className="table_row">
+                                            <td className="table_Cell">{item.date}</td>
+                                            <td className="table_Cell">
+                                                <div className="cellWrapper">
+                                                    <div className="imgBox">
+                                                        <img src={item?.itemImg} alt="" className="image" />
+                                                    </div>
+                                                    <div className="text">
+                                                        <p className="title">{item.itemTitle}</p>
+                                                        <p className="desc">#215{item?.slNo}</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className="table_Cell">
+                                                #{item.id}
+                                            </td>
+                                            <td className="table_Cell">
+                                                #2024{item.id}{item.slNo}
+                                            </td>
+                                            <td className="table_Cell">{item.price}</td>
+                                            <td className="table_Cell">{item.paymentMethod}</td>
+                                            <td className="table_Cell">{item.status}</td>
+                                            <td className="table_Cell">{item.id}</td>
+                                            <td className="table_Cell">{item.id}{item.slNo}</td>
+                                            <td className="table_Cell">
+                                                <ActionBtn />
+                                            </td>
+                                        </tr>
+                                    })}
+                                </tbody>
+                            </table>
+                        </ListTable>
                     </section>
                 </div>
                 <Footer />

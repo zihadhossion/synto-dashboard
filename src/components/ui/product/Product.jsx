@@ -1,9 +1,9 @@
 import "./product.scss";
 
-function Product({ product, title, desc, price, date }) {
+function Product({ image, title, desc, price, date }) {
     return (
         <div className="product">
-            <img src={product} alt="product image" />
+            <img src={image} alt="product image" />
             <article className="content">
                 <div className="left">
                     <p className="title">{title}</p>

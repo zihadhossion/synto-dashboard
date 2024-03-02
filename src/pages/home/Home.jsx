@@ -1,33 +1,36 @@
-import { useContext } from "react";
 import "./home.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Customers from "../../components/customers/Customers";
-import SaleChart from "../../components/saleChart/SaleChart";
-import SaleValue from "../../components/saleValue/SaleValue";
 import Products from "../../components/products/Products";
-import Visitor from "../../components/visitor/Visitor";
-import ProductList from "../../components/productList/ProductList";
-import Topbar from "../../components/ui/topbar/Topbar";
+import Lists from "../../components/lists/Lists";
 import Footer from "../../components/footer/Footer";
+import Dashboard from "../../components/dashboard/Dashboard";
+import Topbar from "../../components/ui/topbar/Topbar";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
 import ListTable from "../../components/ui/listtable/ListTable";
+import BarChart from "../../components/ui/barChart/BarChart";
+import Product from "../../components/ui/product/Product";
+import ActionBtn from "../../utils/actionBtn/ActionBtn";
+import MoreIcon from "../../utils/moreIcon/MoreIcon";
+import BtnDrop from "../../utils/btnDrop/BtnDrop";
+import SaleChart from "./saleChart/SaleChart";
+import SaleValue from "./saleValue/SaleValue";
+import Item from "./item/Item";
 import { thData, homeTHdata, rows, homeRows } from "../../data/tableSource";
-import Dashboard from "../../components/dashboard/Dashboard";
-import Item from "../../components/home/item/Item";
 import { svgIcon } from "../../data/dashSource";
+import { homeBarData, homePieData } from "../../data/chartData";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
-import MoreIcon from "../../utils/moreIcon/MoreIcon";
-import ActionBtn from "../../utils/actionBtn/ActionBtn";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 function Home() {
 
     return (
-        <main className="main home">
+        <main className="main">
             <Sidebar />
             <Navbar />
-            <div className="main-container home-Container">
+            <div className="main-container home">
                 <div className="sub_container">
                     <TitleBar />
                     <Dashboard>
@@ -37,17 +40,30 @@ function Home() {
                         <Item title="Total Expenses" amount="$35,262" MySvg={svgIcon.four} BadgeIcon={TrendingUpIcon} badge="1.4%" />
                     </Dashboard>
                     <div className="center">
-                        <SaleChart IconBox={<MoreIcon />} />
-                        <Customers IconBox={<MoreIcon />} />
-                        <SaleValue IconBox={<MoreIcon />} />
+                        <SaleChart IconBox={<MoreIcon Icon={<MoreVertIcon />} />} />
+                        <Customers IconBox={<MoreIcon Icon={<MoreVertIcon />} />} />
+                        <SaleValue IconBox={<MoreIcon Icon={<MoreVertIcon />} />} data={homePieData} />
                     </div>
                     <div className="bottom">
-                        <Products title={"Upcoming Products"} IconBox={<MoreIcon />} />
-                        <Visitor IconBox={<MoreIcon />} />
-                        <ProductList title={"Top Selling Products"} theadData={thData} rows={rows} IconBox={<MoreIcon />} />
+                        <Products title={"Upcoming Products"} IconBox={<MoreIcon Icon={<MoreVertIcon />} />} >
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/jpg/4.jpg"} title={"Smart Phone"} desc={"Mobiles"} price={"$199.99"} date={"1 Apr 2023"} />
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/jpg/4.jpg"} title={"Nikon Camera"} desc={"Electronics"} price={"$899.00"} date={"1 Apr 2023"} />
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/jpg/4.jpg"} title={"Stop Watch"} desc={"Electronics"} price={"$39.99"} date={"1 Apr 2023"} />
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/jpg/4.jpg"} title={"Smart Phone"} desc={"Mobiles"} price={"$199.99"} date={"1 Apr 2023"} />
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/jpg/4.jpg"} title={"Nikon Camera"} desc={"Electronics"} price={"$899.00"} date={"1 Apr 2023"} />
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/jpg/4.jpg"} title={"Stop Watch"} desc={"Electronics"} price={"$39.99"} date={"1 Apr 2023"} />
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/ecommerce/jpg/4.jpg"} title={"Stop Watch"} desc={"Electronics"} price={"$39.99"} date={"1 Apr 2023"} />
+                        </Products>
+                        <section className="visitor">
+                            <Topbar title={"Social Visitors"} IconBox={<MoreIcon Icon={<BtnDrop title={"This Week"} />} />} />
+                            <div className="visitorContainer">
+                                <BarChart data={homeBarData} />
+                            </div>
+                        </section>
+                        <Lists title={"Top Selling Products"} theadData={thData} rows={rows} IconBox={<MoreIcon Icon={<MoreVertIcon />} />} />
                     </div>
                     <section className="orderDetail">
-                        <Topbar title={"Recent Order Details"} IconBox={<MoreIcon />} />
+                        <Topbar title={"Recent Order Details"} IconBox={<MoreIcon Icon={<BtnDrop title={"View all"} />} />} />
                         <ListTable>
                             <table className="table">
                                 <thead>
@@ -103,7 +119,7 @@ function Home() {
                 </div>
                 <Footer />
             </div>
-        </main>
+        </main >
     )
 };
 

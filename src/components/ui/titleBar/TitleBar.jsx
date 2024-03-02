@@ -1,20 +1,16 @@
 import "./titlebar.scss";
-import {
-    Link,
-    NavLink,
-} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 
 function TitleBar({ text = "Dashboard" }) {
+    const navigate = useNavigate();
     return (
         <div className="titlebar">
             <div className="left">
                 {text}
             </div>
             <div className="right">
-                <Link to={"/"}>
-                    <span className="txt">Home</span>
-                </Link>
+                <span className="homeBtn" onClick={() => navigate("/")}>Home</span>
                 <DoubleArrowIcon />
                 <span className="text">{text}</span>
             </div>

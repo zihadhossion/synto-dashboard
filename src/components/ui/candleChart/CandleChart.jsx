@@ -256,6 +256,11 @@ const data = {
             type: 'candlestick',
             toolbar: {
                 show: false,
+            },
+            events: {
+                mounted: (chart) => {
+                    chart.windowResizeHandler();
+                }
             }
         },
         tooltip: {
@@ -297,26 +302,27 @@ function CandleChart({ title, IconBox }) {
     return (
         <section className="candleChart">
             <Topbar title={title} IconBox={IconBox} />
-            <article>
+            <article className="text_content">
                 <div className="logo"><CurrencyBitcoinIcon /></div>
                 <div className="symbol">
-                    <p>symbol</p>
+                    <h3>symbol</h3>
                     <p>BTC</p>
                 </div>
                 <div className="benchMark">
-                    <p>benchmark</p>
+                    <h3>price benchmark</h3>
                     <p>128</p>
                 </div>
                 <div className="price">
-                    <p>Price (USD)</p>
+                    <h3>Price (USD)</h3>
                     <p>$4253.00</p>
                 </div>
                 <div className="change">
-                    <p>Change (24H)</p>
+                    <h3>Change (24H)</h3>
                     <p>-0.24%</p>
                 </div>
                 <div className="market">
-                    <p>Market Cap</p>
+                    <h3>Market Cap</h3>
+                    <p>$123.50B</p>
                 </div>
             </article>
             <div id="chart">

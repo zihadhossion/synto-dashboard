@@ -3,26 +3,29 @@ import "./crypto.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Products from "../../components/products/Products";
-import SellProduct from "../../components/productList/ProductList";
-import Table from "../../components/ui/table/Table";
+import Lists from "../../components/lists/Lists";
 import Topbar from "../../components/ui/topbar/Topbar";
 import Footer from "../../components/footer/Footer";
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import TrendingDownIcon from '@mui/icons-material/TrendingDown';
-// import Item from "../../components/ui/item/Item";
-import Reviews from "../../components/reviews/Reviews";
 import TaskList from "../../components/taskList/TaskList";
-import MixedChart from "../../components/ui/mixedChart/MixedChart";
 import CandleChart from "../../components/ui/candleChart/CandleChart";
-import { svgIcon } from "../../data/dashSource";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
 import ListTable from "../../components/ui/listtable/ListTable";
-import { cryptoTHData1, cryptoTHData2, cryptoRows, rows } from "../../data/tableSource";
 import Dashboard from "../../components/dashboard/Dashboard";
-import Item from "../../components/crypto/item/Item";
+import Item from "./item/Item";
+import { cryptoTHData1, cryptoTHData2, cryptoRows, rows } from "../../data/tableSource";
 import DateValue from "../../utils/dateValue/DateValue";
-import MoreIcon from "../../utils/moreIcon/MoreIcon";
 import Button from "../../utils/button/Button";
+import MoreIcon from "../../utils/moreIcon/MoreIcon";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import Product from "../../components/ui/product/Product";
+import item1 from "../../assets/item-1.jpg";
+import item2 from "../../assets/item-2.jpg";
+import item3 from "../../assets/item-3.jpg";
+
+
 function Crypto() {
 
     return (
@@ -33,18 +36,32 @@ function Crypto() {
                 <div className="sub_container">
                     <TitleBar text={"Crypto Dashboard"} />
                     <Dashboard>
-                        <Item title="Bitcoin" amount="$26,35,262" MySvg={svgIcon.one} badge="+22%" desc={"btc/usd"} />
-                        <Item title="Bitcoin" amount="$56,35,262" MySvg={svgIcon.two} badge="18%" desc={"btc/usd"} />
-                        <Item title="Bitcoin" amount="$4,262" MySvg={svgIcon.three} badge="20%" desc={"btc/usd"} />
-                        <Item title="Bitcoin" amount="$35,262" MySvg={svgIcon.four} badge="14%" desc={"btc/usd"} />
+                        <Item title="Bitcoin" amount="$2,35,262" MySvg={<CurrencyBitcoinIcon />} badge="-0.52%" BadgeIcon={<ArrowDownwardIcon />} desc={"btc/usd"} cls={"down"} />
+                        <Item title="Bitcoin" amount="$5,35,262" MySvg={<CurrencyBitcoinIcon />} badge="+1.2%" BadgeIcon={<ArrowUpwardIcon />} desc={"btc/usd"} />
+                        <Item title="Bitcoin" amount="$45,262" MySvg={<CurrencyBitcoinIcon />} badge="+1.2%" BadgeIcon={<ArrowUpwardIcon />} desc={"btc/usd"} />
+                        <Item title="Bitcoin" amount="$35,262" MySvg={<CurrencyBitcoinIcon />} badge="+1.2%" BadgeIcon={<ArrowUpwardIcon />} desc={"btc/usd"} />
                     </Dashboard>
                     <div className="center">
                         <CandleChart title={"Sales Overview"} IconBox={<DateValue />} />
-                        <Products title={"Recent Transctions"} IconBox={<MoreIcon />} />
+                        <Products title={"Recent Transctions"} IconBox={<MoreIcon Icon={<MoreVertIcon />} />} >
+                            <Product image={item1} title={"Smart Phone"} desc={"Mobiles"} price={"$199.99"} date={"1 Apr 2023"} />
+                            <Product image={item2} title={"Nikon Camera"} desc={"Electronics"} price={"$899.00"} date={"1 Apr 2023"} />
+                            <Product image={item3} title={"Stop Watch"} desc={"Electronics"} price={"$39.99"} date={"1 Apr 2023"} />
+                            <Product image={item1} title={"Smart Phone"} desc={"Mobiles"} price={"$199.99"} date={"1 Apr 2023"} />
+                            <Product image={item2} title={"Nikon Camera"} desc={"Electronics"} price={"$899.00"} date={"1 Apr 2023"} />
+                            <Product image={item3} title={"Stop Watch"} desc={"Electronics"} price={"$39.99"} date={"1 Apr 2023"} />
+                        </Products>
                     </div>
                     <div className="bottom">
-                        <TaskList />
-                        <SellProduct title={"Your Assets"} theadData={cryptoTHData1} rows={rows} IconBox={<Button title={"Add new"} />} />
+                        <Lists title={"Your Assets"} theadData={cryptoTHData1} rows={rows} IconBox={<Button title={"Add new"} />} />
+                        <Products title={"Recent Transctions"} IconBox={<MoreIcon Icon={<MoreVertIcon />} />} >
+                            <Product image={item1} title={"Smart Phone"} desc={"Mobiles"} price={"$199.99"} date={"1 Apr 2023"} />
+                            <Product image={item2} title={"Nikon Camera"} desc={"Electronics"} price={"$899.00"} date={"1 Apr 2023"} />
+                            <Product image={item3} title={"Stop Watch"} desc={"Electronics"} price={"$39.99"} date={"1 Apr 2023"} />
+                            <Product image={item1} title={"Smart Phone"} desc={"Mobiles"} price={"$199.99"} date={"1 Apr 2023"} />
+                            <Product image={item2} title={"Nikon Camera"} desc={"Electronics"} price={"$899.00"} date={"1 Apr 2023"} />
+                            <Product image={item3} title={"Stop Watch"} desc={"Electronics"} price={"$39.99"} date={"1 Apr 2023"} />
+                        </Products>
                     </div>
                     <section className="orderDetail">
                         <Topbar title={"Crypto currency market details"} IconBox={<DateValue />} />
@@ -65,9 +82,21 @@ function Crypto() {
                                                 {item.name}
                                             </td>
                                             <td className="table_Cell">
-                                                #2024{item.id}{item.slNo}
+                                                <div className="cellWrapper">
+                                                    <img className="imgBox" src={item.symbol} alt="" />
+                                                    <span>{item.name}</span>
+                                                </div>
                                             </td>
                                             <td className="table_Cell">{item.price}</td>
+                                            <td className="table_Cell">
+                                                ${Math.floor(Math.random() * 1)}24{item.id}{Math.ceil(Math.random() * 1)}
+                                            </td>
+                                            <td className="table_Cell">
+                                                {item.graph}
+                                            </td>
+                                            <td className="table_Cell">
+                                                .{item.slNo}%
+                                            </td>
                                             <td className="table_Cell">
                                                 20{item.id}24{item.slNo}
                                             </td>
@@ -84,7 +113,7 @@ function Crypto() {
                 </div>
                 <Footer />
             </div>
-        </main>
+        </main >
     )
 };
 

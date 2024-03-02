@@ -2,9 +2,9 @@ import "./button.scss";
 
 function Button({ title }) {
     return (
-        <div className="button">
+        <button className="button">
             {title}
-        </div>
+        </button>
     )
 };
 

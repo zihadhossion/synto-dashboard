@@ -2,28 +2,24 @@ import { useContext } from "react";
 import "./analytics.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import Products from "../../components/products/Products";
-import SellProduct from "../../components/productList/ProductList";
-import Table from "../../components/ui/table/Table";
+import Lists from "../../components/lists/Lists";
 import Topbar from "../../components/ui/topbar/Topbar";
 import Footer from "../../components/footer/Footer";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import Item from "../../components/ui/item/Item";
-import Reviews from "../../components/reviews/Reviews";
-import TaskList from "../../components/taskList/TaskList";
-import MixedChart from "../../components/ui/mixedChart/MixedChart";
-import CandleChart from "../../components/ui/candleChart/CandleChart";
 import { applicantData } from "../../data/dashSource";
-import { countryTHData, recruitersTHData, rows } from "../../data/tableSource";
-import ListTable from "../../components/listtable/ListTable";
+import { analyticsTHData1, analyticsRows1, analyticsTHData2, analyticsRows2 } from "../../data/tableSource";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
-import Statistics from "../../components/statistics/Statistics";
-import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
-import Applicant from "../../components/jobs/applicant/Applicant";
-import AppRatio from "../../components/jobs/appRatio/AppRatio";
-
-
+import ListTable from "../../components/ui/listtable/ListTable";
+import Dashboard from "../../components/dashboard/Dashboard";
+import { svgIcon } from "../../data/dashSource";
+import SessionView from "./sessionView/SessionView";
+import AudienceView from "./audienceView/AudienceView";
+import DeviceView from "./deviceView/DeviceView";
+import Countries from "./countries/Countries";
+import GenderView from "./genderView/GenderView";
+import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 
 function Analytics() {
     return (
@@ -33,34 +29,56 @@ function Analytics() {
             <div className="main-container analytics-Container">
                 <div className="sub_container">
                     <TitleBar text="Analytics Dashboard" />
-                    <div className="dashboard">
-                        <div className="dashboardContainer">
-                            <div className="box">
-                                <Item amount="$26,35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="2.2%" />
-                            </div>
-                            <div className="box">
-                                <Item title="Total Sales" amount="$56,35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="1.8%" />
-                            </div>
-                            <div className="box down">
-                                <Item title="Total Products" amount="$4,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingDownIcon} badge="2.0%" />
-                            </div>
-                            <div className="box">
-                                <Item title="Total Expenses" amount="$35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="1.4%" />
-                            </div>
-                        </div>
-                    </div>
-                    <Statistics title={"Application Overview"} />
+                    <Dashboard>
+                        <Item title="Total sessions" amount="1,262" MySvg={<RemoveRedEyeOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="12.2%" desc={"since last 2 months"} />
+                        <Item title="Total sessions" amount="1,262" MySvg={<RemoveRedEyeOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="12.2%" desc={"since last 2 months"} />
+                        <Item title="Total sessions" amount="1,262" MySvg={<RemoveRedEyeOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="12.2%" desc={"since last 2 months"} />
+                        <Item title="Total sessions" amount="1,262" MySvg={<RemoveRedEyeOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="12.2%" desc={"since last 2 months"} />
+                    </Dashboard>
                     <div className="center">
-                        <Applicant />
-                        <AppRatio />
+                        <SessionView />
+                        <Countries />
+                        <DeviceView />
                     </div>
                     <div className="bottom">
-                        <SellProduct title={"Registers By Country"} theadData={countryTHData} rows={rows} />
-                        <SellProduct title={"Top Recruiters"} theadData={recruitersTHData} rows={rows} />
+                        <GenderView />
+                        <Lists title={"Registers By Country"} theadData={analyticsTHData1} rows={analyticsRows1} />
+                        <AudienceView />
                     </div>
                     <section className="orderDetail">
-                        <Topbar title={"Recent Order Details"} />
-                        <ListTable />
+                        <Topbar title={"Visitors by channel"} />
+                        <ListTable>
+                            <table className="table">
+                                <thead>
+                                    <tr>
+                                        {analyticsTHData2.map((item, i) =>
+                                            <th key={i} className="table_head">{item}</th>
+                                        )}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {analyticsRows2.map((item) => {
+                                        return <tr key={item.id} className="table_row">
+                                            <td className="table_Cell">{item.slNo}</td>
+                                            <td className="table_Cell">
+                                                {item.name}
+                                            </td>
+                                            <td className="table_Cell">
+                                                #2024{item.id}{item.slNo}
+                                            </td>
+                                            <td className="table_Cell">{item.price}</td>
+                                            <td className="table_Cell">
+                                                20{item.id}24{item.slNo}
+                                            </td>
+
+                                            {/* <td className="table_Cell">
+                                                <ActionBtn />
+                                            </td> */}
+                                        </tr>
+                                    })}
+                                </tbody>
+                            </table>
+                        </ListTable>
                     </section>
                 </div>
                 <Footer />

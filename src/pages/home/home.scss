@@ -9,89 +9,103 @@
     background-color: #F2F6F9;
     transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
 
-    &-Container {
-        margin-left: 15rem;
-        margin-top: 70px;
-        transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
+    .dashboard {
+        .itemBox {
+            grid-column: span 12/span 12;
+        }
+    }
 
-        .dashboard {
-            .itemBox {
-                grid-column: span 12/span 12;
+    .center {
+        @extend %grid-base;
+
+        .salechart {
+            grid-column: span 12/span 12;
+        }
+
+        .customers {
+            width: 100%;
+            grid-column: span 12/span 12;
+        }
+
+        .salevalue {
+            grid-column: span 12/span 12;
+        }
+    }
+
+    .bottom {
+        @extend %grid-base;
+
+        .products {
+            grid-column: span 12/span 12;
+        }
+
+        .visitor {
+            grid-column: span 12/span 12;
+            position: relative;
+
+            .apexcharts-bar-series.apexcharts-plot-series .apexcharts-series path {
+                clip-path: inset(0% 0% 0% -10% round 10px);
+            }
+
+            .apexcharts-xaxistooltip-bottom {
+                display: none;
+            }
+
+            .apexcharts-series {
+                path {
+                    padding: 10rem;
+                }
+            }
+
+            .visitorContainer {
+                #chart {
+                    height: 100%;
+                }
             }
         }
 
-        .center {
-            @extend %grid-base;
-
-            .salechart {
-                grid-column: span 12/span 12;
-            }
-
-            .customers {
-                width: 100%;
-                grid-column: span 12/span 12;
-            }
-
-            .salevalue {
-                grid-column: span 12/span 12;
-            }
+        .lists {
+            grid-column: span 12 /span 12;
         }
+    }
 
-        .bottom {
-            @extend %grid-base;
-
-            .products {
-                grid-column: span 12/span 12;
-            }
-
-            .visitor {
-                grid-column: span 12/span 12;
-            }
-
-            .productList {
-                grid-column: span 12 /span 12;
-            }
-        }
-
-        .orderDetail {
-            .odContainer {
-                padding: 1rem;
-            }
+    .orderDetail {
+        .odContainer {
+            padding: 1rem;
         }
     }
 }
 
+
 @media (min-width:768px) {
     .home {
-        &-Container {
-            .dashboard {
-                .itemBox {
-                    grid-column: span 6/span 6;
-                }
+        .dashboard {
+            .itemBox {
+                grid-column: span 6/span 6;
+            }
+        }
+
+        .center {
+            .customers {
+                grid-column: span 6/span 6;
             }
 
-            .center {
-                .customers {
-                    grid-column: span 6/span 6;
-                }
+            .salevalue {
+                grid-column: span 6/span 6;
+            }
+        }
 
-                .salevalue {
-                    grid-column: span 6/span 6;
-                }
+        .bottom {
+            .products {
+                grid-column: span 6/span 6;
             }
 
-            .bottom {
-                .products {
-                    grid-column: span 6/span 6;
-                }
+            .visitor {
+                grid-column: span 6/span 6;
+            }
 
-                .visitor {
-                    grid-column: span 6/span 6;
-                }
-
-                .productList {
-                    grid-column: span 12 /span 12;
-                }
+            .lists {
+                grid-column: span 12 /span 12;
             }
         }
     }
@@ -99,46 +113,55 @@
 
 @media (min-width:992px) {
     .home {
-        &-Container {
-            .center {
-                .salechart {
-                    grid-column: span 6/span 6;
-                }
+        .center {
+            .salechart {
+                grid-column: span 12/span 12;
+            }
 
-                .customers {
-                    grid-column: span 3/span 3;
-                }
+            .customers {
+                grid-column: span 6/span 6;
+            }
 
-                .salevalue {
-                    grid-column: span 3/span 3;
-                }
+            .salevalue {
+                grid-column: span 6/span 6
             }
         }
     }
 }
 
-
-@media (min-width:1200px) {
+@media (min-width:1250px) {
     .home {
-        &-Container {
-            .dashboard {
-                .itemBox {
-                    grid-column: span 3/span 3;
-                }
+        .dashboard {
+            .itemBox {
+                grid-column: span 3/span 3;
+            }
+        }
+
+        .center {
+            .salechart {
+                grid-column: span 6/span 6;
             }
 
-            .bottom {
-                .products {
-                    grid-column: span 3 /span 3;
-                }
+            .customers {
+                grid-column: span 3/span 3;
+            }
 
-                .visitor {
-                    grid-column: span 3 /span 3;
-                }
+            .salevalue {
+                grid-column: span 3/span 3;
+            }
+        }
 
-                .productList {
-                    grid-column: span 6 /span 6;
-                }
+        .bottom {
+            .products {
+                grid-column: span 3 /span 3;
+            }
+
+            .visitor {
+                grid-column: span 4 /span 4;
+            }
+
+            .lists {
+                grid-column: span 5 /span 5;
             }
         }
     }

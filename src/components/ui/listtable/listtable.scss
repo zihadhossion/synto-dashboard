@@ -1,6 +1,7 @@
 .listtable {
     overflow-y: hidden;
     overflow-x: scroll;
+    padding: 1rem;
 
     .table {
         min-width: 100%;
@@ -140,17 +141,17 @@
                 //     }
                 // }
 
-                span {
-                    color: #64748b;
-                    font-size: .75rem;
-                    line-height: 1.5;
-                }
+                // span {
+                //     color: #64748b;
+                //     font-size: .75rem;
+                //     line-height: 1.5;
+                // }
 
-                p {
-                    color: #1e293b;
-                    line-height: 1.5;
-                    font-size: .85rem;
-                }
+                // p {
+                //     color: #1e293b;
+                //     line-height: 1.5;
+                //     font-size: .85rem;
+                // }
 
                 .price {
                     font-weight: 600;

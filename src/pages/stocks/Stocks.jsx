@@ -3,26 +3,27 @@ import "./stocks.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Products from "../../components/products/Products";
-import SellProduct from "../../components/productList/ProductList";
-import Table from "../../components/ui/table/Table";
+import Lists from "../../components/lists/Lists"
 import Topbar from "../../components/ui/topbar/Topbar";
 import Footer from "../../components/footer/Footer";
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import TrendingDownIcon from '@mui/icons-material/TrendingDown';
-import Item from "../../components/ui/item/Item";
-import Reviews from "../../components/reviews/Reviews";
-import TaskList from "../../components/taskList/TaskList";
-import MixedChart from "../../components/ui/mixedChart/MixedChart";
-import CandleChart from "../../components/ui/candleChart/CandleChart";
 import { applicantData } from "../../data/dashSource";
 import { countryTHData, recruitersTHData, rows } from "../../data/tableSource";
-import ListTable from "../../components/listtable/ListTable";
+import ListTable from "../../components/ui/listtable/ListTable";
 import TitleBar from "../../components/ui/titleBar/TitleBar";
-import Statistics from "../../components/statistics/Statistics";
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
-import Applicant from "../../components/jobs/applicant/Applicant";
-import AppRatio from "../../components/jobs/appRatio/AppRatio";
-import Donut from "../../components/ui/donut/Donut";
+import Dashboard from "../../components/dashboard/Dashboard";
+import LinesChart from "../../components/ui/linesChart/LinesChart";
+import StockItem from "./stockItem/StockItem";
+import ActionBtn from "../../utils/actionBtn/ActionBtn";
+import Button from "../../utils/button/Button";
+import MoreIcon from "../../utils/moreIcon/MoreIcon";
+import BtnDrop from "../../utils/btnDrop/BtnDrop";
+import DateValue from "../../utils/dateValue/DateValue";
+import MixedChart from "../../components/ui/mixedChart/MixedChart";
+import { stocksMixedData } from "../../data/chartData";
+import SellBox from "./sellBox/SellBox";
+import Product from "../../components/ui/product/Product";
+import CodeIcon from '@mui/icons-material/Code';
 
 function Stocks() {
     return (
@@ -32,35 +33,38 @@ function Stocks() {
             <div className="main-container stocks-Container">
                 <div className="sub_container">
                     <TitleBar text="Stocks Dashboard" />
-                    <div className="dashboard">
-                        <div className="dashboardContainer">
-                            <div className="box">
-                                <Item amount="$26,35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="2.2%" />
-                            </div>
-                            <div className="box">
-                                <Item title="Total Sales" amount="$56,35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="1.8%" />
-                            </div>
-                            <div className="box down">
-                                <Item title="Total Products" amount="$4,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingDownIcon} badge="2.0%" />
-                            </div>
-                            <div className="box">
-                                <Item title="Total Expenses" amount="$35,262" MySvg={<PeopleAltOutlinedIcon />} BadgeIcon={TrendingUpIcon} badge="1.4%" />
-                            </div>
-                        </div>
-                    </div>
-                    <Statistics title={"Application Overview"} />
+                    <Dashboard>
+                        <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
+                        <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
+                        <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
+                        <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
+                    </Dashboard>
                     <div className="center">
-                        <Applicant />
-                        <AppRatio />
+                        <section className="statistics">
+                            <Topbar title={"total investments"} IconBox={<DateValue />} />
+                            <div className="statisticsContainer">
+                                <MixedChart data={stocksMixedData} />
+                            </div>
+                        </section>
+                        <Products title={"my stocks"} IconBox={<MoreIcon Icon={<BtnDrop title={"all stocks"} />} />} >
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                        </Products>
+                    </div>
+                    <div className="sellBoxContainer">
+                        <SellBox />
+                        <SellBox />
+                        <SellBox />
+                        <SellBox />
                     </div>
                     <div className="bottom">
-                        <SellProduct title={"Registers By Country"} theadData={countryTHData} rows={rows} />
-                        <SellProduct title={"Top Recruiters"} theadData={recruitersTHData} rows={rows} />
+                        <Lists title={"Transaction History"} theadData={countryTHData} rows={rows} />
+                        <Lists title={"Top Recruiters"} theadData={recruitersTHData} rows={rows} />
                     </div>
-                    <section className="orderDetail">
-                        <Topbar title={"Recent Order Details"} />
-                        <ListTable />
-                    </section>
                 </div>
                 <Footer />
             </div>

@@ -46,7 +46,7 @@
                 grid-column: span 12 /span 12;
             }
 
-            .productList {
+            .lists {
                 grid-column: span 12 /span 12;
             }
         }
@@ -107,10 +107,19 @@
                     grid-column: span 6 /span 6;
                 }
 
-                .productList {
+                .lists {
                     grid-column: span 6 /span 6;
                 }
             }
+        }
+    }
+}
+
+@media (max-width:550px) {
+    .statistics {
+        .topbar {
+            flex-direction: column;
+            gap: 1rem;
         }
     }
 }

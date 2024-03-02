@@ -207,6 +207,166 @@
             }
         }
     }
+
+    .mobNavbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0rem 1.5rem;
+
+        .left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem, ;
+            color: #808793;
+            background-color: transparent;
+
+            .arrowIcon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid #808793;
+                border-radius: 50%;
+                width: 1.5rem;
+                height: 1.5rem;
+                cursor: pointer;
+
+                svg {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+
+            .header {
+
+                &-search {
+                    @extend %common-style;
+
+                    .search {
+                        background: transparent;
+                    }
+                }
+
+                &-user {
+                    .profile {
+                        width: 40px;
+                        height: 40px;
+                        background: transparent;
+
+                        img {
+                            border: none;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            object-fit: contain;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mobHeader {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgb(226, 232, 240);
+    height: 60px;
+    color: rgb(51 65 85);
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 49;
+    transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
+
+    .mobNavbar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .5rem 1.5rem;
+
+        .left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: #808793;
+            background-color: transparent;
+
+            .arrowIcon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid #808793;
+                border-radius: 50%;
+                width: 1.5rem;
+                height: 1.5rem;
+                cursor: pointer;
+
+                svg {
+                    font-size: 1rem;
+                }
+            }
+
+            .logoImage {
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 90px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+
+            .header {
+
+                &-search {
+                    @extend %common-style;
+
+                    .search {
+                        background: transparent;
+                    }
+                }
+
+                &-user {
+                    .profile {
+                        width: 40px;
+                        height: 40px;
+                        background: transparent;
+
+                        img {
+                            border: none;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            object-fit: contain;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes ring {
@@ -316,40 +476,18 @@
     }
 }
 
-@media (max-width:550px) {
-    .header {
-        &.active {
-            padding-left: 3rem;
-        }
+// @media (max-width:768px) {
+//     .header {
+//         &.active {
+//             padding-left: 3rem;
+//         }
+//     }
+// }
 
-        .navbar {
-            .right {
-                .header {
-                    &-country {
-                        display: none;
-                    }
-
-                    &-darkmode {
-                        display: none;
-                    }
-
-                    &-fullscreen {
-                        display: none;
-                    }
-
-                    &-shopcart {
-                        display: none;
-                    }
-
-                    &-notification {
-                        display: none;
-                    }
-
-                    &-bookmark {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-}
+// @media (max-width:500px) {
+//     .header {
+//         &.active {
+//             padding-left: 0rem;
+//         }
+//     }
+// }

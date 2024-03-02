@@ -1,0 +1,94 @@
+.nftItem {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 1rem;
+
+    .box {
+        position: relative;
+        grid-column: span 3 / span 3;
+
+        .bgImg {
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .likeSection {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: 1rem;
+            padding: 0 1rem;
+
+            .leftIcon {
+                width: 40px;
+                height: 40px;
+                background-color: #22C55E;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                svg {
+                    fill: #fff;
+                    font-size: 1.25rem;
+                }
+            }
+
+            .likedText {
+                font-size: .75rem;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                color: #fff;
+                background-color: rgba(255, 255, 255, .1);
+                backdrop-filter: blur(1.875rem);
+                padding: 6px 15px;
+                border-radius: 5px;
+
+                svg {
+                    font-size: .95rem;
+                    color: #F43F5E;
+                }
+            }
+        }
+
+        &_body {
+            position: absolute;
+            bottom: 1.25rem;
+            top: auto;
+            left: 1rem;
+            right: 1rem;
+            background-color: rgba(255, 255, 255, .1);
+            backdrop-filter: blur(1.875rem);
+            border-radius: 5px;
+            padding: 1rem;
+
+            img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .profile {
+                display: flex;
+                align-items: center;
+            }
+
+            .txtContent {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            button {
+                width: 100%;
+                padding: 6px 15px;
+                border-radius: 4px;
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import "./item.scss";
 
-function Item({ MySvg, title, amount, badge, BadgeIcon, boxStyle, contentStyle }) {
+function Item({ MySvg, title, amount, badge, BadgeIcon, boxStyle, contentStyle, desc }) {
 
     return (
         <div className="itemBox" style={boxStyle}>
@@ -15,7 +15,7 @@ function Item({ MySvg, title, amount, badge, BadgeIcon, boxStyle, contentStyle }
                         <h1>{amount}</h1>
                     </div>
                 </article>
-                <p className="desc">in the last week</p>
+                <p className="desc">{desc}</p>
             </section>
         </div>
 

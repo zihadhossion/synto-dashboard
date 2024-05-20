@@ -4,7 +4,6 @@ import Topbar from "../../../components/ui/topbar/Topbar";
 import MoreIcon from "../../../utils/moreIcon/MoreIcon";
 import BtnDrop from "../../../utils/btnDrop/BtnDrop";
 
-
 export default function SessionView() {
     return (
         <section className="sessionView">
@@ -26,6 +25,11 @@ function ColumnChart() {
                 type: 'bar',
                 toolbar: {
                     show: false,
+                },
+                events: {
+                    mounted: (chart) => {
+                        chart.windowResizeHandler();
+                    }
                 }
             },
             plotOptions: {

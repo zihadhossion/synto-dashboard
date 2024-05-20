@@ -44,6 +44,13 @@ function SaleChart({ IconBox }) {
             },
             xaxis: {
                 categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                labels: {
+                    show: true,
+                    style: {
+                        color: 'blue',
+                        fontSize: '12px'
+                    },
+                }
             },
             tooltip: {
                 y: {
@@ -51,11 +58,11 @@ function SaleChart({ IconBox }) {
                         return "$ " + val
                     }
                 }
-            }
-            ,
+            },
             colors: ['#5a66f1', '#cbd5e1'],
         },
         height: 260,
+        // colors: ['#fff', '#fff',]
     }
 
     return (

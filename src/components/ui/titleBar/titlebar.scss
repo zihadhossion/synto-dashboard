@@ -7,7 +7,7 @@
     .left {
         font-size: 1.5rem;
         font-weight: 500;
-        color: #0f172a;
+        color: var(--primaryColor);
         line-height: 2rem;
     }
 
@@ -17,7 +17,7 @@
         gap: .5rem;
         font-size: .85rem;
         line-height: 1.5;
-        color: rgb(100 116 139);
+        color: var(--titleTxtColor);
         font-weight: 400;
 
         .homeBtn {
@@ -36,8 +36,6 @@
 
 @media (max-width:768px) {
     .titlebar {
-        // flex-direction: column;
-        // gap: .5rem;
         padding: 0 .5rem;
 
         .left {
@@ -47,7 +45,6 @@
 
         .right {
             font-size: .7rem;
-            // align-self: flex-end;
             gap: 5px;
 
             svg {

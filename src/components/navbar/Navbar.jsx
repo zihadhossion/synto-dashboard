@@ -4,6 +4,7 @@ import "./navbar.scss";
 import SearchIcon from '@mui/icons-material/Search';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
@@ -12,9 +13,10 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import flag from "../../assets/flag.png";
 import profile from "../../assets/profile.jpg";
 import { SidebarContext } from "../../context/SidebarContext";
+import { DarkModeContext } from "../../context/DarkModeContext";
 
 function Navbar() {
-    const { sidebarActive, setSidebarActive } = useContext(SidebarContext);
+    // const { sidebarActive, setSidebarActive } = useContext(SidebarContext);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -62,6 +64,11 @@ function MobNavbar() {
                             <SearchIcon />
                         </button>
                     </div>
+                    <div className="header-search">
+                        <button className="search">
+                            <SearchIcon />
+                        </button>
+                    </div>
                     <div className="header-user">
                         <button className="profile">
                             <img src={profile} alt="" />
@@ -74,6 +81,7 @@ function MobNavbar() {
 };
 
 function DeskNavbar() {
+    const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
     const { sidebarActive, setSidebarActive } = useContext(SidebarContext);
 
     return (
@@ -94,8 +102,9 @@ function DeskNavbar() {
                         </button>
                     </div>
                     <div className="header-darkmode">
-                        <button className="darkmode">
-                            <DarkModeOutlinedIcon />
+                        <button className="darkmode" onClick={toggleDarkMode}>
+                            {isDarkMode ? <DarkModeOutlinedIcon /> : <LightModeOutlinedIcon />}
+
                         </button>
                     </div>
                     <div className="header-fullscreen">

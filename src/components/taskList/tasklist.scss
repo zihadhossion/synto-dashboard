@@ -8,12 +8,11 @@
             position: relative;
 
             &:not(&:last-child) {
-                border-bottom: 1px solid #e2e8f0;
+                border-bottom: 1px solid var(--borderColor);
             }
 
             .table_Cell {
-                color: #1e293b;
-                // padding: 1rem 1.5rem;
+                color: var(--primaryColor);
                 font-size: .85rem;
                 font-weight: 500;
 
@@ -35,11 +34,11 @@
 
                     span {
                         line-height: 1.25;
-                        color: #64748b;
+                        color: var(--titleTxtColor);
                     }
 
                     p {
-                        color: #1e293b;
+                        color: var(--primaryColor);
                         line-height: 1.5;
                         font-size: .85rem;
                     }

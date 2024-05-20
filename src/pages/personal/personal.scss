@@ -1,56 +1,39 @@
 .personal {
-    background-color: #F2F6F9;
-    transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
+    // .dashboard {
+    //     margin-bottom: 1rem;}
 
-    &-Container {
-        margin-left: 15rem;
-        margin-top: 70px;
-        transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
+    .center {
+        @extend %grid-base;
 
-        // .dashboard {
-        //     margin-bottom: 1rem;}
+        .statistics {
+            grid-column: span 12 /span 12;
 
-        .center {
-            @extend %grid-base;
-
-            .statistics {
-                grid-column: span 12 /span 12;
-
-                .statisBox {
-                    padding: 1rem;
-                }
-            }
-
-            .contacts {
-                grid-column: span 3/ span 3;
-
-                .contactBox {
-                    padding: 1rem;
-                }
-            }
-
-            .applicant {
-                grid-column: span 6 / span 6;
-            }
-        }
-
-        .bottom {
-            @extend %grid-base;
-
-            .tasklist {
-                grid-column: span 12 /span 12;
-            }
-
-            .sellproduct {
-                grid-column: span 12 /span 12;
-            }
-        }
-
-        .orderDetail {
-
-            .odContainer {
+            .statisBox {
                 padding: 1rem;
             }
+        }
+
+        .contacts {
+            grid-column: span 3/ span 3;
+
+            .contactBox {
+                padding: 1rem;
+            }
+        }
+    }
+
+    .bottom {
+        @extend %grid-base;
+
+        .lists {
+            grid-column: span 12 /span 12;
+        }
+    }
+
+    .orderDetail {
+
+        .odContainer {
+            padding: 1rem;
         }
     }
 }
@@ -64,38 +47,31 @@
 
 @media (min-width:1100px) {
     .personal {
-        &-Container {
+        // .dashboard {
+        //     .dashboardContainer {
+        //         .box {
+        //             grid-column: span 3/ span 3;
+        //         }
+        //     }
+        // }
 
-            // .dashboard {
-            //     .dashboardContainer {
-            //         .box {
-            //             grid-column: span 3/ span 3;
-            //         }
-            //     }
-            // }
-
-            .center {
-                .statistics {
-                    grid-column: span 6/span 6;
-                }
-
-                .appratio {
-                    grid-column: span 3/ span 3;
-                }
-
-                .applicant {
-                    grid-column: span 3 / span 3;
-                }
+        .center {
+            .statistics {
+                grid-column: span 6/span 6;
             }
 
-            .bottom {
-                .tasklist {
-                    grid-column: span 6 /span 6;
-                }
+            .appratio {
+                grid-column: span 3/ span 3;
+            }
 
-                .sellproduct {
-                    grid-column: span 6 /span 6;
-                }
+            .applicant {
+                grid-column: span 3 / span 3;
+            }
+        }
+
+        .bottom {
+            .lists {
+                grid-column: span 6 /span 6;
             }
         }
     }

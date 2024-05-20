@@ -432,11 +432,11 @@ export const jobPieData = {
 };
 export const stocksMixedData = {
     series: [{
-        name: 'Orders',
+        name: 'Students',
         type: 'column',
         data: [60, 52, 57, 69, 54, 65, 80, 68, 50, 69, 57, 46,]
     }, {
-        name: 'Sales',
+        name: 'Earning',
         type: 'area',
         data: [60, 59, 77, 66, 64, 75, 80, 78, 69, 57, 76, 64]
     }],
@@ -510,7 +510,89 @@ export const stocksMixedData = {
             fontWeight: 600,
         }
     },
-    height: 300
+    height: 350
+};
+export const courseMixedData = {
+    series: [{
+        name: 'Students',
+        type: 'column',
+        data: [60, 52, 57, 69, 54, 65, 80, 68, 50, 69, 57, 46,]
+    }, {
+        name: 'Earning',
+        type: 'line',
+        data: [60, 59, 77, 66, 64, 75, 80, 78, 69, 57, 76, 64]
+    }],
+    options: {
+        chart: {
+            type: 'line',
+            stacked: false,
+            toolbar: {
+                show: false,
+            },
+            events: {
+                mounted: (chart) => {
+                    chart.windowResizeHandler();
+                }
+            }
+        },
+        colors: ['#5A66F1', '#CBD5E1'],
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '35%',
+                borderRadius: 7,
+            },
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            width: [1, 1, 4]
+        },
+        xaxis: {
+            categories: [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec",
+            ]
+        },
+        yaxis: [
+            {
+                axisTicks: {
+                    show: false,
+                },
+                tooltip: {
+                    enabled: false
+                }
+            },
+        ],
+        tooltip: {
+            fixed: {
+                enabled: false,
+                position: 'topLeft', // topRight, topLeft, bottomRight, bottomLeft
+                // offsetY: 30,
+                // offsetX: 60
+            },
+        },
+        legend: {
+            horizontalAlign: 'center',
+            position: "top",
+            // offsetX: 40,
+            fontSize: '12px',
+            fontFamily: 'Helvetica, Arial',
+            fontWeight: 600,
+        }
+    },
+    height: 400
 };
 
 

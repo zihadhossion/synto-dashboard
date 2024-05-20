@@ -1,10 +1,13 @@
-.card {
-    color: #1e293b;
-    background-color: #FFFFFF;
-    border: 1px solid rgb(226 232 240);
-    // padding: 1rem 1.2rem;
-    position: relative;
+%common-flex {
+    display: flex;
+    align-items: center;
+}
 
+.card {
+    color: var(--primaryColor);
+    background-color: var(--rePrimaryColor);
+    border: 1px solid var(--borderColor);
+    position: relative;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -12,10 +15,6 @@
     padding: 1rem;
 
     .left {
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // line-height: 1.6;
         width: 100px;
         height: 100px;
         border-radius: 5px;
@@ -31,22 +30,23 @@
 
     .right {
         flex: 1;
-        // text-align: center;
 
         .category {
             font-size: .75rem;
             font-weight: 500;
-            color: #64748b;
+            color: var(--titleTxtColor);
         }
 
         .title {
             font-size: 1rem;
             font-weight: 500;
+            margin-top: 5px;
         }
 
         .info {
             @extend %common-flex;
             justify-content: space-between;
+            margin-top: 8px;
 
             .profile {
                 @extend %common-flex;
@@ -62,7 +62,7 @@
                 .userName {
                     font-size: .9rem;
                     font-weight: 500;
-                    color: #64748b;
+                    color: var(--titleTxtColor);
                 }
             }
 
@@ -76,23 +76,5 @@
                 }
             }
         }
-
-        // h1 {
-        //     font-size: 1.5rem;
-        //     font-weight: 600;
-        //     line-height: 1.6;
-        // }
-
-        // h3 {
-        //     font-weight: 500;
-        //     font-size: 1rem;
-        //     line-height: 1.6;
-        //     color: #475569;
-        // }
     }
-}
-
-%common-flex {
-    display: flex;
-    align-items: center;
 }

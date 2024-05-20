@@ -1,7 +1,7 @@
 .ecommerceitem {
-    color: #1e293b;
-    background-color: #FFFFFF;
-    border: 1px solid rgb(226 232 240);
+    color: var(--primaryColor);
+    background-color: var(--rePrimaryColor);
+    border: 1px solid var(--borderColor);
     padding: 1rem 1.2rem;
     position: relative;
     display: flex;
@@ -15,7 +15,7 @@
         line-height: 1.6;
         width: 3.434rem;
         height: 3.434rem;
-        background: rgb(226, 232, 240);
+        background-color: var(--borderColor);
         border-radius: .25rem;
         padding: .75rem;
     }
@@ -27,7 +27,7 @@
             font-weight: 500;
             font-size: 1rem;
             line-height: 1.6;
-            color: #475569;
+            color: var(--textColor);
             text-transform: capitalize;
         }
 
@@ -35,14 +35,14 @@
             font-size: 1.25rem;
             font-weight: 600;
             line-height: 1.6;
-            color: #1e293b;
+            color: var(--primaryColor);
             text-transform: capitalize;
 
         }
 
         .desc {
             font-size: .8rem;
-            color: #475569;
+            color: var(--textColor);
             line-height: 1.6;
             text-transform: capitalize;
 

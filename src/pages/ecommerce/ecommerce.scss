@@ -6,74 +6,63 @@
 }
 
 .ecommerce {
-    background-color: #F2F6F9;
-    transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
+    .dashboard {
+        .itemBox {
+            grid-column: span 12/span 12;
+        }
+    }
 
-    &-Container {
-        margin-left: 15rem;
-        margin-top: 70px;
-        transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
+    .center {
+        @extend %grid-base;
 
-        .dashboard {
-            .itemBox {
-                grid-column: span 12/span 12;
-            }
+        .products {
+            // order: 2;
+            grid-column: span 12/span 12;
         }
 
-        .center {
-            @extend %grid-base;
-
-            .products {
-                order: 2;
-                grid-column: span 12/span 12;
-            }
-
-            .statistics {
-                order: 1;
-                grid-column: span 12 /span 12;
-            }
-
-            .reviews {
-                order: 3;
-                grid-column: span 12/span 12;
-            }
+        .statistics {
+            // order: 1;
+            grid-column: span 12 /span 12;
         }
 
-        .bottom {
-            @extend %grid-base;
+        .reviews {
+            // order: 3;
+            grid-column: span 12/span 12;
+        }
+    }
 
-            .tasklist {
-                grid-column: span 12 /span 12;
-            }
+    .bottom {
+        @extend %grid-base;
 
-            .lists {
-                grid-column: span 12 /span 12;
-            }
+        .tasklist {
+            grid-column: span 12 /span 12;
+        }
+
+        .lists {
+            grid-column: span 12 /span 12;
         }
     }
 }
 
 @media (min-width:600px) {
     .ecommerce {
-        &-Container {
-            .dashboard {
-                .itemBox {
-                    grid-column: span 6/span 6;
-                }
+        .dashboard {
+            .itemBox {
+                grid-column: span 6/span 6;
+            }
+        }
+
+        .center {
+            .products {
+                grid-column: span 6/span 6;
             }
 
-            .center {
-                .products {
-                    grid-column: span 6/span 6;
-                }
+            .statistics {
+                grid-column: span 12 /span 12;
+            }
 
-                .statistics {
-                    grid-column: span 12 /span 12;
-                }
-
-                .reviews {
-                    grid-column: span 6/span 6;
-                }
+            .reviews {
+                grid-column: span 6/span 6;
             }
         }
     }
@@ -81,35 +70,37 @@
 
 @media (min-width:992px) {
     .ecommerce {
-        &-Container {
-            .dashboard {
-                .itemBox {
-                    grid-column: span 4/span 4;
-                }
+        .dashboard {
+            .itemBox {
+                grid-column: span 4/span 4;
+            }
+        }
+
+        .bottom {
+            .tasklist {
+                grid-column: span 6 /span 6;
             }
 
-            .center {
-                .products {
-                    grid-column: span 3/span 3;
-                }
+            .lists {
+                grid-column: span 6 /span 6;
+            }
+        }
+    }
+}
 
-                .statistics {
-                    grid-column: span 6 /span 6;
-                }
-
-                .reviews {
-                    grid-column: span 3/span 3;
-                }
+@media (min-width:1200px) {
+    .ecommerce {
+        .center {
+            .products {
+                grid-column: span 3/span 3;
             }
 
-            .bottom {
-                .tasklist {
-                    grid-column: span 6 /span 6;
-                }
+            .statistics {
+                grid-column: span 6 /span 6;
+            }
 
-                .lists {
-                    grid-column: span 6 /span 6;
-                }
+            .reviews {
+                grid-column: span 3/span 3;
             }
         }
     }

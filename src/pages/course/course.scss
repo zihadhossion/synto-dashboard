@@ -6,71 +6,61 @@
 }
 
 .course {
-    background-color: #F2F6F9;
-    transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
-
-    &-Container {
-        margin-left: 15rem;
-        margin-top: 70px;
-        transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
-
-        .dashboard {
-            .itemBox {
-                grid-column: span 12/ span 12;
-            }
-        }
-
-        .center {
-            @extend %grid-base;
-
-            .statistics {
-                grid-column: span 12/ span 12;
-            }
-
-            .lists {
-                grid-column: span 12 / span 12;
-            }
-        }
-
-        .bottom {
-            @extend %grid-base;
-
-            .courseList {
-                grid-column: span 12 /span 12;
-            }
-
-            .products {
-                grid-column: span 12 /span 12;
-            }
-        }
-
-        .mainList {
-            &_Box {
-                padding: 1rem;
-            }
+    .dashboard {
+        .itemBox {
+            grid-column: span 12/ span 12;
         }
     }
+
+    .center {
+        @extend %grid-base;
+
+        .statistics {
+            grid-column: span 12/ span 12;
+        }
+
+        .lists {
+            grid-column: span 12 / span 12;
+        }
+    }
+
+    .bottom {
+        @extend %grid-base;
+
+        .courseList {
+            grid-column: span 12 /span 12;
+        }
+
+        .products {
+            grid-column: span 12 /span 12;
+        }
+    }
+
+    // .mainList {
+    //     &_Box {
+    //         padding: .25rem;
+    //     }
+    // }
 }
 
 @media (min-width:768px) {
     .course {
-        &-Container {
-            .dashboard {
-                .itemBox {
-                    grid-column: span 6/ span 6;
-                }
+
+        .dashboard {
+            .itemBox {
+                grid-column: span 6/ span 6;
+            }
+        }
+
+
+        .bottom {
+            .courseList {
+                grid-column: span 12 /span 12;
+                order: 1;
             }
 
-
-            .bottom {
-                .courseList {
-                    grid-column: span 12 /span 12;
-                    order: 1;
-                }
-
-                .products {
-                    grid-column: span 6 /span 6;
-                }
+            .products {
+                grid-column: span 6 /span 6;
             }
         }
     }
@@ -78,32 +68,30 @@
 
 @media (min-width:1100px) {
     .course {
-        &-Container {
-            .dashboard {
-                .itemBox {
-                    grid-column: span 3/ span 3;
-                }
+        .dashboard {
+            .itemBox {
+                grid-column: span 3/ span 3;
+            }
+        }
+
+        .center {
+            .statistics {
+                grid-column: span 6/ span 6;
             }
 
-            .center {
-                .statistics {
-                    grid-column: span 6/ span 6;
-                }
+            .lists {
+                grid-column: span 6 / span 6;
+            }
+        }
 
-                .lists {
-                    grid-column: span 6 / span 6;
-                }
+        .bottom {
+            .courseList {
+                grid-column: span 6 /span 6;
+                order: 0;
             }
 
-            .bottom {
-                .courseList {
-                    grid-column: span 6 /span 6;
-                    order: 0;
-                }
-
-                .products {
-                    grid-column: span 3 /span 3;
-                }
+            .products {
+                grid-column: span 3 /span 3;
             }
         }
     }

@@ -1,5 +1,8 @@
+// @import "../../../styles/variables.scss";
+
 .salechart {
     position: relative;
+    background-color: var(--bwColor);
 
     .saleContainer {
         padding: 1rem;
@@ -15,7 +18,7 @@
                 list-style-type: bullet;
                 font-size: 1.5rem;
                 font-weight: 600;
-                color: rgb(30 41 59);
+                color: var(--primaryColor);
                 display: inline-flex;
                 align-items: center;
                 gap: .5rem;
@@ -25,7 +28,7 @@
                     height: .75rem;
                     border-width: 4px;
                     border-style: solid;
-                    border-color: rgb(90 102 241);
+                    border-color: var(--blue-1);
                     border-radius: 100%;
 
                     &.expanse {
@@ -35,18 +38,26 @@
 
                 .desc {
                     font-size: .875rem;
-                    color: rgb(148 163 184);
+                    color: var(--secondColor);
                     font-weight: 400;
                 }
             }
         }
     }
 
+    // .apexcharts-yaxis {
+
+    //     tspan {
+    //         color: #fff !important;
+    //     }
+
+    //     color: #d2d8f0;
+    // }
+
     .apexcharts-bar-series.apexcharts-plot-series .apexcharts-series path {
         clip-path: inset(10% 0% -10% 1% round 50px);
     }
 }
-
 
 @media (max-width:550px) {
     .salechart {
@@ -59,5 +70,4 @@
             }
         }
     }
-
 }

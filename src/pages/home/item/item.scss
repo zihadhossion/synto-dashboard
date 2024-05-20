@@ -1,7 +1,7 @@
 .item {
-    color: #1e293b;
-    background-color: #FFFFFF;
-    border: 1px solid rgb(226 232 240);
+    color: var(--primaryColor);
+    background-color: var(--bgColor);
+    border: 1px solid var(--borderColor);
     padding: 1rem 1.2rem;
     position: relative;
 
@@ -14,7 +14,7 @@
         position: absolute;
         top: .5rem;
         right: .5rem;
-        background: rgb(226, 232, 240);
+        background-color: var(--borderColor);
         border-radius: 15rem;
         padding: 0.1rem .5rem;
         line-height: 1.6;
@@ -46,7 +46,7 @@
             line-height: 1.6;
             width: 3.434rem;
             height: 3.434rem;
-            background: rgb(226, 232, 240);
+            background-color: var(--borderColor);
             border-radius: .25rem;
             padding: .75rem;
         }

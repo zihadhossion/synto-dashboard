@@ -12,7 +12,7 @@ function SaleValue({ IconBox, data }) {
                 <div className="chartContainer">
                     <Piechart data={data} />
                 </div>
-                <div className="descBox">
+                <div className="descContainer">
                     <div className="desc">
                         <div className="left">
                             <p className="title">Sale Items</p>

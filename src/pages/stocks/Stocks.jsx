@@ -1,11 +1,7 @@
-import { useContext } from "react";
 import "./stocks.scss";
-import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
 import Products from "../../components/products/Products";
 import Lists from "../../components/lists/Lists"
 import Topbar from "../../components/ui/topbar/Topbar";
-import Footer from "../../components/footer/Footer";
 import { applicantData } from "../../data/dashSource";
 import { countryTHData, recruitersTHData, rows } from "../../data/tableSource";
 import ListTable from "../../components/ui/listtable/ListTable";
@@ -24,51 +20,45 @@ import { stocksMixedData } from "../../data/chartData";
 import SellBox from "./sellBox/SellBox";
 import Product from "../../components/ui/product/Product";
 import CodeIcon from '@mui/icons-material/Code';
+import Main from "../../utils/main/Main";
 
 function Stocks() {
     return (
-        <main className="main stocks">
-            <Sidebar />
-            <Navbar />
-            <div className="main-container stocks-Container">
-                <div className="sub_container">
-                    <TitleBar text="Stocks Dashboard" />
-                    <Dashboard>
-                        <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
-                        <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
-                        <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
-                        <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
-                    </Dashboard>
-                    <div className="center">
-                        <section className="statistics">
-                            <Topbar title={"total investments"} IconBox={<DateValue />} />
-                            <div className="statisticsContainer">
-                                <MixedChart data={stocksMixedData} />
-                            </div>
-                        </section>
-                        <Products title={"my stocks"} IconBox={<MoreIcon Icon={<BtnDrop title={"all stocks"} />} />} >
-                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
-                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
-                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
-                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
-                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
-                            <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
-                        </Products>
+        <Main containerName="stocks">
+            <TitleBar text="Stocks Dashboard" />
+            <Dashboard>
+                <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
+                <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
+                <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
+                <StockItem amount="$26,35,262" SvgLogo={<PeopleAltOutlinedIcon />} title={"Total Amount Invested"} graph={<LinesChart />} />
+            </Dashboard>
+            <div className="center">
+                <section className="statistics">
+                    <Topbar title={"total investments"} IconBox={<DateValue />} />
+                    <div className="statisticsContainer">
+                        <MixedChart data={stocksMixedData} />
                     </div>
-                    <div className="sellBoxContainer">
-                        <SellBox />
-                        <SellBox />
-                        <SellBox />
-                        <SellBox />
-                    </div>
-                    <div className="bottom">
-                        <Lists title={"Transaction History"} theadData={countryTHData} rows={rows} />
-                        <Lists title={"Top Recruiters"} theadData={recruitersTHData} rows={rows} />
-                    </div>
-                </div>
-                <Footer />
+                </section>
+                <Products title={"my stocks"} IconBox={<MoreIcon Icon={<BtnDrop title={"all stocks"} />} />} >
+                    <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                    <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                    <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                    <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                    <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                    <Product image={"https://spruko.com/demo/synto/Synto/dist/assets/img/users/12.jpg"} title={"Mortal Yun"} desc={"Phd"} price={"25 Courses"} date={"Stocks & Trading"} />
+                </Products>
             </div>
-        </main>
+            <div className="sellBoxContainer">
+                <SellBox />
+                <SellBox />
+                <SellBox />
+                <SellBox />
+            </div>
+            <div className="bottom">
+                <Lists title={"Transaction History"} theadData={countryTHData} rows={rows} />
+                <Lists title={"Top Recruiters"} theadData={recruitersTHData} rows={rows} />
+            </div>
+        </Main>
     )
 };
 

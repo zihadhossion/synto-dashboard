@@ -3,6 +3,7 @@
         text-align: center;
 
         .star-list {
+            color: var(--textColor);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -25,7 +26,7 @@
                 align-items: center;
                 justify-content: space-between;
                 font-size: .85rem;
-                color: #475569;
+                color: var(--textColor);
                 font-weight: 400;
             }
 
@@ -39,7 +40,7 @@
                     border-radius: 6px;
 
                     &::-webkit-progress-bar {
-                        background-color: #E2E8F0;
+                        background-color: var(--borderColor);
                         border-bottom-right-radius: 6px;
                         border-top-right-radius: 6px;
                     }

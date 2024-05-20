@@ -1,52 +1,3 @@
-.jobs {
-    background-color: #F2F6F9;
-    transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
-
-    &-Container {
-        // margin-left: 15rem;
-        // margin-top: 70px;
-        transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
-
-        .top {
-            @extend %grid-base;
-
-            .statistics {
-                grid-column: span 12 / span 12;
-
-                .content {
-                    padding: 1rem;
-                }
-            }
-
-            .applicant {
-                grid-column: span 12 / span 12;
-            }
-        }
-
-        .center {
-            @extend %grid-base;
-
-            .appratio {
-                grid-column: span 3/ span 3;
-            }
-        }
-
-        .bottom {
-            @extend %grid-base;
-        }
-
-        .lists {
-            grid-column: span 12 /span 12;
-        }
-
-        .orderDetail {
-            .odContainer {
-                padding: 1rem;
-            }
-        }
-    }
-}
-
 %grid-base {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -54,35 +5,75 @@
     margin: 1rem 0;
 }
 
-@media (min-width:992px) {
-    .jobs {
-        &-Container {
+.jobs {
+    .top {
+        @extend %grid-base;
 
-            .top {
-                @extend %grid-base;
+        .statistics {
+            grid-column: span 12 / span 12;
 
-                .statistics {
-                    grid-column: span 9 / span 9;
-                }
-
-                .applicant {
-                    grid-column: span 3 / span 3;
-                }
+            .content {
+                padding: 1rem;
             }
+        }
 
-            .center {
+        .applicant {
+            grid-column: span 12 / span 12;
+        }
+    }
 
-                .appratio {
-                    grid-column: span 6/ span 6;
-                }
-            }
+    .center {
+        @extend %grid-base;
 
-            .lists {
-                grid-column: span 6 /span 6;
-            }
+        .appratio {
+            grid-column: span 3/ span 3;
+        }
+    }
+
+    .bottom {
+        @extend %grid-base;
+    }
+
+    .lists {
+        grid-column: span 12 /span 12;
+    }
+
+    .orderDetail {
+        .odContainer {
+            padding: 1rem;
         }
     }
 }
+
+@media (min-width:992px) {
+    .jobs {
+
+
+        .top {
+            @extend %grid-base;
+
+            .statistics {
+                grid-column: span 9 / span 9;
+            }
+
+            .applicant {
+                grid-column: span 3 / span 3;
+            }
+        }
+
+        .center {
+
+            .appratio {
+                grid-column: span 6/ span 6;
+            }
+        }
+
+        .lists {
+            grid-column: span 6 /span 6;
+        }
+    }
+}
+
 
 // @media (min-width:1100px) {
 //     .jobs {

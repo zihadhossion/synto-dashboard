@@ -1,87 +1,78 @@
 .projects {
-    background-color: #F2F6F9;
-    transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
+    .top {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 1.5rem;
 
-    &-Container {
-        margin-left: 15rem;
-        margin-top: 70px;
-        transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
+        .projectDashboard {
+            grid-column: span 12 /span 12;
+            // display: grid;
+            // gap: 1rem;
 
-        .top {
-            display: grid;
-            grid-template-columns: repeat(12, minmax(0, 1fr));
-            gap: 1.5rem;
+            &-title {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: rgb(51 65 85);
+                margin-bottom: 1.5rem;
+                transition: all .2s linear;
 
-            .projectDashboard {
-                grid-column: span 12 /span 12;
-                // display: grid;
-                // gap: 1rem;
-
-                &-title {
-                    font-size: 1.5rem;
-                    font-weight: 500;
-                    color: rgb(51 65 85);
-                    margin-bottom: 1.5rem;
-                    transition: all .2s linear;
-
-                    &:hover {
-                        color: #000;
-                    }
+                &:hover {
+                    color: #000;
                 }
+            }
 
-                .box.down {
-                    .item {
-                        .left {
-                            .icon {
-                                background-color: #FDF7E6;
-                            }
-                        }
-
-                        .badge {
+            .box.down {
+                .item {
+                    .left {
+                        .icon {
                             background-color: #FDF7E6;
                         }
                     }
+
+                    .badge {
+                        background-color: #FDF7E6;
+                    }
                 }
             }
-
-            .statistics {
-                grid-column: span 12 /span 12;
-            }
-
-            .trackingCard {
-                grid-column: span 12 /span 12;
-            }
         }
 
-        .center {
-            @extend %grid-base;
-
-            .appratio {
-                grid-column: span 3/ span 3;
-            }
-
-            .applicant {
-                grid-column: span 6 / span 6;
-            }
+        .statistics {
+            grid-column: span 12 /span 12;
         }
 
-        .bottom {
-            @extend %grid-base;
+        .trackingCard {
+            grid-column: span 12 /span 12;
+        }
+    }
 
-            .tasklist {
-                grid-column: span 12 /span 12;
-            }
+    .center {
+        @extend %grid-base;
 
-            .sellproduct {
-                grid-column: span 12 /span 12;
-            }
+        .appratio {
+            grid-column: span 3/ span 3;
         }
 
-        .orderDetail {
+        .applicant {
+            grid-column: span 6 / span 6;
+        }
+    }
 
-            .odContainer {
-                padding: 1rem;
-            }
+    .bottom {
+        @extend %grid-base;
+
+        .tasklist {
+            grid-column: span 12 /span 12;
+        }
+
+        .sellproduct {
+            grid-column: span 12 /span 12;
+        }
+    }
+
+    .orderDetail {
+
+        .odContainer {
+            padding: 1rem;
         }
     }
 }
@@ -95,53 +86,50 @@
 
 @media (min-width:1100px) {
     .projects {
-        &-Container {
-
-            .dashboard {
-                .dashboardContainer {
-                    .box {
-                        grid-column: span 3/ span 3;
-                    }
+        .dashboard {
+            .dashboardContainer {
+                .box {
+                    grid-column: span 3/ span 3;
                 }
             }
+        }
 
-            .top {
-                .projectDashboard {
-                    grid-column: span 3 /span 3;
-                }
-
-                .statistics {
-                    grid-column: span 6 /span 6;
-                }
-
-                .trackingCard {
-                    grid-column: span 3 /span 3;
-                }
+        .top {
+            .projectDashboard {
+                grid-column: span 3 /span 3;
             }
 
-            .center {
-                .lists {
-                    grid-column: span 6/ span 6;
-                }
-
-                .appratio {
-                    grid-column: span 6/ span 6;
-                }
-
-                .applicant {
-                    grid-column: span 3 / span 3;
-                }
-
+            .statistics {
+                grid-column: span 6 /span 6;
             }
 
-            .bottom {
-                .tasklist {
-                    grid-column: span 6 /span 6;
-                }
+            .trackingCard {
+                grid-column: span 3 /span 3;
+            }
+        }
 
-                .sellproduct {
-                    grid-column: span 6 /span 6;
-                }
+        .center {
+            .lists {
+                grid-column: span 6/ span 6;
+            }
+
+            .appratio {
+                grid-column: span 6/ span 6;
+            }
+
+            .applicant {
+                grid-column: span 3 / span 3;
+            }
+
+        }
+
+        .bottom {
+            .tasklist {
+                grid-column: span 6 /span 6;
+            }
+
+            .sellproduct {
+                grid-column: span 6 /span 6;
             }
         }
     }

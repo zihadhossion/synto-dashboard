@@ -14,9 +14,13 @@ import Personal from "./pages/personal/Personal";
 import Stocks from "./pages/stocks/Stocks";
 import Course from "./pages/course/Course";
 import NotFound from './pages/notFound/NotFound';
+// import './index.scss';
+import { DarkModeContext } from './context/DarkModeContext.jsx';
+
 
 function App() {
   const { sidebarActive } = useContext(SidebarContext);
+  const { isDarkMode } = useContext(DarkModeContext);
 
   return (
     <div className={sidebarActive ? "app" : "app active"}>

@@ -21,13 +21,13 @@
 
                 .title {
                     font-size: .95rem;
-                    color: #1e293b;
+                    color: var(--primaryColor);
                 }
             }
 
             .population {
                 padding: 5px 10px;
-                color: rgb(100, 116, 139);
+                color: var(--titleTxtColor);
                 background-color: rgba(100, 116, 139, .1);
                 border-radius: 5px;
                 font-size: .85rem;

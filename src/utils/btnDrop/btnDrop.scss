@@ -6,11 +6,11 @@
     .title {
         font-size: .9rem;
         font-weight: 500;
-        color: rgb(100, 116, 139);
+        color: var(--titleTxtColor);
         text-transform: capitalize;
     }
 
     svg {
-        fill: rgb(100, 116, 139);
+        fill: var(--titleTxtColor);
     }
 }

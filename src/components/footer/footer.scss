@@ -1,17 +1,17 @@
 .footer {
     text-align: center;
-    background: #fff;
+    background-color: var(--bgColor);
     margin-top: 2rem;
     padding: 1rem 0;
 
     .content {
         font-size: .85rem;
         font-weight: 400;
-        color: #475569;
+        color: var(--color-1);
         line-height: 1.5;
 
         a {
-            color: #5a66f1;
+            color: var(--blue-1);
             font-weight: 500;
         }
     }

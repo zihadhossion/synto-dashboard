@@ -7,15 +7,15 @@
         min-width: 100%;
         text-align: center;
         border-collapse: collapse;
-        color: #475569;
+        color: var(--textColor);
 
         th,
         td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid var(--borderColor);
         }
 
         thead {
-            background: #F8FAFC;
+            background-color: var(--mainBG);
 
             .table_head {
                 text-transform: uppercase;
@@ -42,7 +42,7 @@
                     .imgBox {
                         width: 35px;
                         height: 35px;
-                        background: #F1F5F9;
+                        background-color: var(--mainBG);
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -60,12 +60,12 @@
                         text-align: left;
 
                         .title {
-                            color: #1e293b;
+                            color: var(--primaryColor);
                             font-weight: 600;
                         }
 
                         .desc {
-                            color: #94a3b8;
+                            color: var(--secondColor);
                             font-size: .75rem;
                             font-weight: 400;
                         }

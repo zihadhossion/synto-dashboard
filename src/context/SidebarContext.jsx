@@ -19,7 +19,7 @@ export const SidebarContextProvider = ({ children }) => {
     }, []);
 
     useEffect(() => {
-        windowWidth > 550 ? setSidebarActive(true) : setSidebarActive(false)
+        windowWidth > 768 ? setSidebarActive(true) : setSidebarActive(false)
     }, [windowWidth])
 
     return (

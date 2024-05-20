@@ -6,65 +6,56 @@
 }
 
 .crypto {
-    background-color: #F2F6F9;
-    transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
-
-    &-Container {
-        margin-left: 15rem;
-        transition: all .150s cubic-bezier(0.4, 0, 0.2, 1);
-
-        .dashboard {
-            .itemBox {
-                grid-column: span 12/span 12;
-            }
+    .dashboard {
+        .itemBox {
+            grid-column: span 12/span 12;
         }
-
-        .center {
-            @extend %grid-base;
-
-            .products {
-                grid-column: span 12/span 12;
-            }
-
-            .candleChart {
-                grid-column: span 12/span 12;
-
-                .topbar {
-                    display: flex;
-                    gap: 1rem;
-                    flex-direction: column;
-                }
-            }
-        }
-
-        .bottom {
-            @extend %grid-base;
-
-            .products {
-                grid-column: span 12/span 12;
-            }
-
-            .lists {
-                grid-column: span 12/span 12;
-            }
-        }
-
-        // .orderDetail {
-        //     .topbar {
-        //         flex-direction: column;
-        //         gap: 1rem;
-        //     }
-        // }
     }
+
+    .center {
+        @extend %grid-base;
+
+        .products {
+            grid-column: span 12/span 12;
+        }
+
+        .candleChart {
+            grid-column: span 12/span 12;
+
+            .topbar {
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .bottom {
+        @extend %grid-base;
+
+        .products {
+            grid-column: span 12/span 12;
+        }
+
+        .lists {
+            grid-column: span 12/span 12;
+        }
+    }
+
+    // .orderDetail {
+    //     .topbar {
+    //         flex-direction: column;
+    //         gap: 1rem;
+    //     }
+    // }
+
 }
 
 @media (min-width:768px) {
     .crypto {
-        &-Container {
-            .dashboard {
-                .itemBox {
-                    grid-column: span 6/span 6;
-                }
+        .dashboard {
+            .itemBox {
+                grid-column: span 6/span 6;
             }
         }
     }
@@ -72,30 +63,27 @@
 
 @media (min-width:992px) {
     .crypto {
-        &-Container {
-
-            .center {
-                .products {
-                    grid-column: span 4/span 4;
-                }
-
-                .candleChart {
-                    grid-column: span 8/span 8;
-
-                    .topbar {
-                        flex-direction: row;
-                    }
-                }
+        .center {
+            .products {
+                grid-column: span 4/span 4;
             }
 
-            .bottom {
-                .products {
-                    grid-column: span 4/span 4;
-                }
+            .candleChart {
+                grid-column: span 8/span 8;
 
-                .lists {
-                    grid-column: span 8 /span 8;
+                .topbar {
+                    flex-direction: row;
                 }
+            }
+        }
+
+        .bottom {
+            .products {
+                grid-column: span 4/span 4;
+            }
+
+            .lists {
+                grid-column: span 8 /span 8;
             }
         }
     }
@@ -103,23 +91,22 @@
 
 @media (min-width:1200px) {
     .crypto {
-        &-Container {
-            .dashboard {
-                .itemBox {
-                    grid-column: span 3/span 3;
-                }
+
+        .dashboard {
+            .itemBox {
+                grid-column: span 3/span 3;
             }
-
-            .center {
-                .products {
-                    grid-column: span 3/span 3;
-                }
-
-                .candleChart {
-                    grid-column: span 9/span 9;
-                }
-            }
-
         }
+
+        .center {
+            .products {
+                grid-column: span 3/span 3;
+            }
+
+            .candleChart {
+                grid-column: span 9/span 9;
+            }
+        }
+
     }
 }

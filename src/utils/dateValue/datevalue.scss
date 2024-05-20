@@ -12,9 +12,9 @@
         color: #5a66f1;
         background-color: rgba(90, 102, 241, .1);
         padding: .5rem .75rem;
+        border-right: 1px solid var(--borderColor);
         transition: all .25s linear;
         cursor: pointer;
-        border-right: 1px solid #ddd;
 
         &:hover {
             background-color: #5a66f1;
@@ -23,7 +23,6 @@
 
         &.active {
             background-color: #5a66f1;
-
             color: #fff;
 
             &:hover {

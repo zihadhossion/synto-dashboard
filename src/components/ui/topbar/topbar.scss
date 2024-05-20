@@ -1,5 +1,7 @@
+// @import "../../../styles/variables.scss";
+
 .topbar {
-    border-bottom: 1px solid rgba(226, 232, 240, 1);
+    border-bottom: 1px solid var(--borderColor);
     width: 100%;
     display: flex;
     align-items: center;
@@ -10,13 +12,13 @@
         .title {
             font-size: 1rem;
             font-weight: 600;
-            color: #1e293b;
+            color: var(--primaryColor);
             text-transform: capitalize;
         }
     }
 
     svg {
-        fill: #1e293b;
+        fill: var(--primaryColor);
         font-size: 1.25rem;
     }
 }
